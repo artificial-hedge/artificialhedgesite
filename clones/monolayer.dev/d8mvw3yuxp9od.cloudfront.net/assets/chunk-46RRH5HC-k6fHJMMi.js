@@ -1,0 +1,1 @@
+import{j as r,r as t}from"./index-DK8HSD9y.js";var i=t.createContext(a=>{typeof a=="string"&&window.location.assign(a)}),e=({children:a,navigator:o})=>r.jsx(i.Provider,{value:o,children:a});e.displayName="NavigationProvider";var n=()=>t.useContext(i);export{e as N,n as u};

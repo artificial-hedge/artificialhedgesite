@@ -1,0 +1,1 @@
+import{r as t,j as o}from"./index-DK8HSD9y.js";var r=t.createContext({isHydrated:!0}),u=({children:e})=>{const[a,s]=t.useState(!1);return t.useEffect(()=>{s(!0)},[]),o.jsx(r.Provider,{value:{isHydrated:a},children:e})},i=()=>t.useContext(r).isHydrated;export{u as H,i as u};

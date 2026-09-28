@@ -1,0 +1,1 @@
+import{F,a as i}from"./chunk-NSYVNWS4-B-_y5bR2.js";import{j as r}from"./index-DK8HSD9y.js";var u=({title:o,description:a,formAlert:t,errorText:e,csrfInput:s,csrfError:m,formActions:x,children:n})=>r.jsx(F,{headerText:o,description:a,formAlert:t,errorText:e,csrfError:m,children:r.jsx(i,{formActions:x,csrfInput:s,children:n})});export{u as F};

@@ -1,0 +1,1 @@
+import{u as n}from"./chunk-46RRH5HC-k6fHJMMi.js";import{B as e}from"./index-6NR55Aat.js";import{j as s}from"./index-DK8HSD9y.js";var f=({href:t,label:o,...r})=>{const a=n();return s.jsx(e,{...r,onClick:i=>{i.preventDefault(),a(t)},fullWidth:!0,children:o})};export{f as N};

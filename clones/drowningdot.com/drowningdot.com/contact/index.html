@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>document.documentElement.classList.add('js')</script>
+<title>Contact · drowningdot</title>
+<meta name="description" content="Start a project with drowningdot, a one-person web design studio in Tokyo. Tell me what the site is for and I will build you nine heroes to choose from." />
+<link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+<link rel="canonical" href="index.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="drowningdot" />
+<meta property="og:title" content="Contact · drowningdot" />
+<meta property="og:description" content="Start a project with drowningdot, a one-person web design studio in Tokyo. Tell me what the site is for and I will build you nine heroes to choose from." />
+<meta property="og:url" content="index.html" />
+<meta property="og:image" content="https://drowningdot.com/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Contact · drowningdot" />
+<meta name="twitter:description" content="Start a project with drowningdot, a one-person web design studio in Tokyo. Tell me what the site is for and I will build you nine heroes to choose from." />
+<meta name="twitter:image" content="https://drowningdot.com/og.png" />
+<link rel="preload" href="../fonts/instrument-serif-400.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../fonts/instrument-sans-400.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="../styles.css" />
+<link rel="stylesheet" href="../case.css" />
+<link rel="stylesheet" href="../sections.css" />
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<a class="skip" href="index.html#top">Skip to content</a>
+
+<header class="nav">
+  <a class="mark" href="../index.html" aria-label="drowningdot, home">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <defs><clipPath id="nm"><rect x="0" y="16" width="32" height="16"/></clipPath></defs>
+      <circle cx="16" cy="16" r="8.2" fill="currentColor"/>
+      <circle cx="16" cy="16" r="8.2" fill="#C33F27" clip-path="url(#nm)"/>
+    </svg>
+    drowningdot
+  </a>
+  <a class="back" href="../index.html#contact">Home &larr;</a>
+</header>
+
+<main id="top">
+  <section class="title">
+    <div class="wrap">
+      <h1>Tell me what it is for.</h1>
+      <p class="sub">One person in Tokyo, designing and building bilingual sites. Write, or ask for a call.</p>
+    </div>
+  </section>
+  <section class="band contact page-band">
+    <div class="wrap">
+
+      <div data-reveal>
+        <!-- ADDRESS PLACEHOLDER: this is the only occurrence.
+
+             The href is a real mailto and stays one. Script intercepts the
+             click and opens the form instead, so the address is never printed
+             on the page, but a reader whose JS failed still has somewhere to
+             go: without the script this is exactly the link it used to be.
+             A button that needs JS to do anything is a dead end for the one
+             reader who cannot afford one. -->
+        <a class="cta" data-invert id="cta-start" href="mailto:hello@drowningdot.com"
+           aria-controls="cform" aria-expanded="false">
+          <span class="cta-face">
+            <span>Start a project</span>
+            <span class="cta-arrow">Email &rarr;</span>
+          </span>
+          <span class="cta-face inv-top" aria-hidden="true">
+            <span>Start a project</span>
+            <span class="cta-arrow">Email &rarr;</span>
+          </span>
+        </a>
+
+        <!-- Collapsed by CSS, not by [hidden], because the row heights have to
+             animate. The wrapper is a 0fr grid until it is opened. -->
+        <div class="cf-wrap" id="cform-wrap">
+          <form class="cform" id="cform" method="post" action="https://drowningdot.com/api/contact" novalidate>
+            <div class="cf-row">
+              <label for="cf-name">Your name</label>
+              <!-- no placeholder: it would only repeat the label, and a
+                   placeholder that repeats its label is noise that disappears
+                   the moment you need it. The other two carry real information
+                   — a format, and how much to write. -->
+              <input id="cf-name" name="name" type="text" required
+                     autocomplete="name" maxlength="120">
+            </div>
+            <div class="cf-row">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" required
+                     autocomplete="email" maxlength="254" placeholder="you@company.com">
+            </div>
+            <div class="cf-row cf-row-msg">
+              <label for="cf-msg">What it is for</label>
+              <textarea id="cf-msg" name="message" required rows="4" maxlength="4000"
+                        placeholder="A sentence is enough."></textarea>
+            </div>
+
+            <!-- the honeypot. Off screen rather than display:none, because some
+                 bots skip anything the stylesheet hides outright. -->
+            <div class="cf-pot" aria-hidden="true">
+              <label for="cf-company">Company</label>
+              <input id="cf-company" name="company" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="cf-foot">
+              <p class="cf-status" id="cf-status" role="status" aria-live="polite"></p>
+              <button class="cf-send" type="submit">Send &rarr;</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Outside the wrapper, so it is readable before the form is opened.
+             Someone who wants twenty minutes on a call is not going to press a
+             button that says "Start a project" to find out whether that is on
+             offer — the qualifier has to be legible while the form is still
+             shut. It sits under the form once opened, where it reads as a
+             footnote to the message field rather than a second CTA. -->
+        <p class="cta-note">Or ask for a call. Say so in the message and I will send times.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+</main>
+
+<footer class="next">
+    <div class="wrap">
+      <nav class="big-rows" data-reveal aria-label="Elsewhere">
+        <a class="big-row" href="../process/index.html">How it gets made <span class="arrow">Process &rarr;</span></a>
+        <a class="big-row" href="../work/index.html">All work <span class="arrow">Nine sites &rarr;</span></a>
+      </nav>
+      <div class="foot">
+        <span>drowningdot · web design studio · Tokyo</span>
+        <span>Nine shipped</span>
+      </div>
+    </div>
+</footer>
+
+<script src="../site.js"></script>
+<script src="../sections.js"></script>
+</body>
+</html>

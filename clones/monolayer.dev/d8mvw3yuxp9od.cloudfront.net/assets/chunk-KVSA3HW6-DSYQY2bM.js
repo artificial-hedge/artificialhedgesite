@@ -1,0 +1,1 @@
+import{u as e,A as i}from"./chunk-MCPRULM5-BBXsKCi3.js";import{j as n}from"./index-DK8HSD9y.js";var r=()=>{const a=e().components.multiRegionReplication.actionUnavailableAlert;return n.jsx(i,{header:a.header,type:"error",children:a.description})},c=r;export{c as a};

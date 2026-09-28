@@ -1,0 +1,1 @@
+import{_ as i,o as a,c as n,ag as e}from"./chunks/framework.DHEXrmnx.js";const d=JSON.parse('{"title":"Task","description":"","frontmatter":{},"headers":[],"relativePath":"guide/task.md","filePath":"guide/task.md"}'),t={name:"guide/task.md"};function l(p,s,h,k,r,o){return a(),n("div",null,s[0]||(s[0]=[e("",18)]))}const c=i(t,[["render",l]]);export{d as __pageData,c as default};

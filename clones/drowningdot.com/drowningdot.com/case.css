@@ -1,0 +1,79 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   drowningdot · case study layer
+   Loaded after styles.css by every page under /work.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ─── title ──────────────────────────────────────────────────────────────── */
+.title{padding:calc(60px + var(--band)) 0 var(--band)}
+.title h1{font-family:'Instrument Serif',serif;font-weight:400;
+  font-size:clamp(40px,7.4vw,116px);line-height:.96;letter-spacing:-.022em;max-width:20ch}
+.title .sub{font-size:clamp(17px,1.6vw,23px);color:var(--graphite);
+  margin-top:20px;max-width:44ch}
+
+/* the meta ledger. rows, not a boxed panel */
+.ledger{margin-top:calc(var(--band) * .55);border-top:1px solid var(--rule)}
+.ledger div{display:grid;grid-template-columns:var(--label-col) minmax(0,1fr);gap:20px;
+  padding:13px 0;border-bottom:1px solid var(--rule);font-size:var(--chrome)}
+.ledger dt{color:var(--graphite)}
+.ledger dd{color:var(--sheet)}
+.ledger a{color:var(--sheet);text-decoration:underline;text-underline-offset:3px;
+  text-decoration-color:var(--graphite)}
+.ledger a:hover{color:var(--redline-text)}
+
+/* ─── full-bleed shipped frame ───────────────────────────────────────────── */
+.bleed{padding-bottom:var(--band)}
+.bleed figure{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.bleed img{width:100%;height:auto}
+.bleed figcaption{font-size:var(--chrome);color:var(--graphite);padding-top:11px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ─── takes: the single theme inversion on a case study ──────────────────── */
+.takes{background:var(--sheet);color:var(--proof);padding:var(--band) 0}
+.takes .label,.takes .head p{color:var(--graphite-ink)}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--rule-ink);border-left:1px solid var(--rule-ink)}
+.take{position:relative;border-right:1px solid var(--rule-ink);
+  border-bottom:1px solid var(--rule-ink);border-top:0;border-left:0;
+  overflow:hidden;background:#DEDCD4;padding:0;width:100%;text-align:left;cursor:pointer}
+/* width:100% and height:auto are load-bearing. Without them the width/height
+   attributes beat aspect-ratio, the box computes portrait, and object-fit:cover
+   silently crops half the width off every variant. */
+.take img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;
+  object-position:top center;filter:grayscale(1) brightness(1.04);opacity:.78;
+  transform:scale(1.02);
+  transition:filter .42s var(--ease),opacity .42s var(--ease),transform .6s var(--ease)}
+.take:hover img,.take:focus-visible img,.take.is-on img{
+  filter:none;opacity:1;transform:scale(1)}
+.take:focus-visible{outline:2px solid var(--redline);outline-offset:-2px}
+.take .tag{position:absolute;left:9px;bottom:8px;right:9px;font-size:12px;
+  display:flex;justify-content:space-between;gap:8px;color:var(--proof);
+  background:rgba(234,232,225,.94);padding:4px 6px}
+.take .tag i{font-style:normal;color:#8A4436}
+/* the struck rule marks a take that did not ship */
+.take::after{content:"";position:absolute;left:0;right:0;top:46%;height:1.5px;
+  background:var(--redline);transform:scaleX(0);transform-origin:left;
+  transition:transform .4s var(--ease)}
+.take:hover::after,.take:focus-visible::after,.take.is-on::after{transform:scaleX(1)}
+.take.shipped::after{display:none}
+.take.shipped .tag i{color:var(--proof)}
+
+/* ─── fact ledger ────────────────────────────────────────────────────────── */
+.facts{padding:var(--band) 0}
+.facts .head{margin-bottom:calc(var(--band) * .4)}
+.rows{border-top:1px solid var(--rule)}
+.rows div{display:grid;grid-template-columns:var(--label-col) minmax(0,1fr);gap:20px;
+  padding:15px 0;border-bottom:1px solid var(--rule);font-size:var(--chrome)}
+.rows dt{color:var(--graphite)}
+
+/* ─── next ───────────────────────────────────────────────────────────────── */
+.next{border-top:1px solid var(--rule);padding:var(--band) 0 0}
+
+@media (max-width:900px){
+  .ledger div,.rows div{grid-template-columns:1fr;gap:6px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (prefers-reduced-motion:reduce){
+  .take img{filter:grayscale(1);opacity:.9}
+  .take:hover img{filter:none;opacity:1}
+}

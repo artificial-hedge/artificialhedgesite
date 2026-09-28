@@ -1,0 +1,479 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   drowningdot · shared foundation
+   Tokens, reset, chrome and the row primitives. Every page links this.
+
+   Two contrast rules are load-bearing here and were measured, not guessed:
+   1. Never put a muted colour inside an element that already carries a resting
+      opacity. graphite at .62 row opacity composites to 2.45:1. Use
+      `color:inherit` and carry hierarchy by size instead.
+   2. --redline is 3.76:1 on proof and can never hold text under 24px.
+      --redline-text exists for that and measures 4.95:1.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── faces ─────────────────────────────────────────────────────────────────
+   Self-hosted. These were ten families pulled from Google, which cost 230KB
+   over a third-party origin — five and a half times the weight of every byte
+   of HTML, CSS and JS on the site combined, and behind a render-blocking
+   stylesheet on a domain the page had to open a second connection to.
+
+   Two tiers, because the two jobs are different:
+
+   · The four UI faces set arbitrary copy, so they keep the whole latin subset
+     and can be handed any string that gets written later.
+   · The seven specimen faces only ever draw two strings, so they are cut to
+     the 23 glyphs those strings need: 119KB became 20KB. The two strings are
+     the row sample "Tone of voice" — uppercased by CSS on the Anton row — and
+     the section heading "A typeface is a tone of voice.", because pointing at
+     a row re-typesets that heading in the row's face. Both matter. Cutting to
+     the sample alone leaves the heading with holes in it the moment anyone
+     hovers, which is exactly what the first pass at this did.
+
+     So: if either string is edited, regenerate these seven or the new letters
+     will not draw. That is the trade, and it is why the UI tier above — which
+     has to take whatever copy gets written next — is not cut this way.
+
+   Filenames carry no content hash, so fonts/ is the one directory that takes a
+   long immutable cache in vercel.json: a face at a given name never changes.
+   Regenerating one means renaming it.                                       */
+@font-face{font-family:'Instrument Serif';src:url(fonts/instrument-serif-400.woff2) format('woff2');
+  font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Instrument Sans';src:url(fonts/instrument-sans-400.woff2) format('woff2');
+  font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Instrument Sans';src:url(fonts/instrument-sans-500.woff2) format('woff2');
+  font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Instrument Sans';src:url(fonts/instrument-sans-600.woff2) format('woff2');
+  font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'DM Mono';src:url(fonts/dm-mono-400.woff2) format('woff2');
+  font-weight:400;font-style:normal;font-display:swap}
+
+@font-face{font-family:'Anton';src:url(fonts/anton-400.woff2) format('woff2');
+  font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Archivo';src:url(fonts/archivo-400.woff2) format('woff2');
+  font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Bodoni Moda';src:url(fonts/bodoni-moda-400.woff2) format('woff2');
+  font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Fraunces';src:url(fonts/fraunces-500.woff2) format('woff2');
+  font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Playfair Display';src:url(fonts/playfair-display-600.woff2) format('woff2');
+  font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Space Grotesk';src:url(fonts/space-grotesk-500.woff2) format('woff2');
+  font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Syne';src:url(fonts/syne-700.woff2) format('woff2');
+  font-weight:700;font-style:normal;font-display:swap}
+
+:root{
+  --proof:#0D0D0C;         /* unexposed border of a contact sheet */
+  --sheet:#EAE8E1;         /* proofing paper */
+  --graphite:#8A877E;      /* annotation pencil. 5.4:1 on proof */
+  --graphite-ink:#656258;  /* the same role on the light band. 5.0:1 on sheet */
+  --redline:#C33F27;       /* graphics only: rules, strikes, the mark */
+  --redline-text:#D9563C;  /* text under 24px */
+
+  --rule:rgba(234,232,225,.16);
+  --rule-ink:rgba(13,13,12,.15);
+
+  /* The dot screen over the imagery. Fixed: it was driven from scroll speed and
+     from each cell's distance to the viewport centre, and repainting a gradient
+     tile per cell per frame is what made scrolling feel heavy. Only the MEDIA is
+     ever screened, never the type, which is how halftone printing actually works
+     and makes the effect safe by construction rather than by tuning an opacity. */
+  --dot:3px;
+  /* still driven from site.js by scroll speed — one fixed element, cheap */
+  --grain-scale:128px;
+
+  --chrome:13px;           /* all interface text. display is 8x this or more */
+  --gap:26px;
+  --band:clamp(72px,9vw,132px);
+  --label-col:150px;
+  --max:1480px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+/* Form controls do not inherit type, so every <button> here — the nine face
+   rows, the twelve contact-sheet cells, the six panel triggers — was rendering
+   in the UA default, which is Arial. 24 buttons, 39 visible elements. The worst
+   of it sat in the specimen: the labels naming the nine voices were set in none
+   of them. `font` and not `font-family`, because size and weight were defaulting
+   too — .cell was coming out at the UA's 13.33px rather than the body's 15px. */
+button,input,select,textarea{font:inherit;color:inherit}
+html{background:var(--proof)}
+/* Instrument Sans, not Archivo. Archivo is a free Google grotesque and reads as
+   one next to Khteka on Monolog or PP Neue Montreal on the specimen site — a
+   thesis problem on a page arguing that the typeface is the voice. Instrument
+   Sans is also free, but it is the companion to Instrument Serif, which was
+   already carrying the display, so the pairing is now one decision rather than
+   two. Archivo stays loaded at 400: it is still the ninth specimen row, the
+   neutral workhorse, which is a fair thing to show and no longer what we speak in. */
+body{background:var(--proof);color:var(--sheet);
+  font-family:'Instrument Sans',sans-serif;
+  font-size:15px;line-height:1.45;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden}
+img{max-width:100%;display:block}
+::selection{background:var(--redline);color:var(--sheet)}
+code{font-family:'DM Mono',ui-monospace,monospace;font-size:.94em}
+
+/* ── focus ─────────────────────────────────────────────────────────────────
+   One indicator, on everything that takes focus. The rows used to answer focus
+   by going from .62 opacity to 1 and then set outline:none, which is not an
+   indicator — it is the same thing hover does, at a contrast a keyboard reader
+   has no way to locate. The nav had no rule at all and fell through to Chrome's
+   blue ring, which is the one part of this site drawn by somebody else.
+
+   The mark is --redline, and it has to survive three backgrounds: the proof
+   (3.76:1), the light work band (4.2:1) and the red halftone ramp under the
+   included panels, where a red ring on red would disappear. Hence the dark
+   halo sitting just outside it — on the ramp the halo carries the contrast,
+   everywhere else it reads as weight around the line. Both are measured
+   against 2.4.11's 3:1, not eyeballed.                                      */
+:where(a,button,summary,input,select,textarea,[tabindex]):focus-visible{
+  outline:2px solid var(--redline);outline-offset:2px;
+  box-shadow:0 0 0 4px rgba(13,13,12,.55)}
+
+.skip{position:absolute;left:-9999px;top:0;padding:13px 14px;background:var(--sheet);
+  color:var(--proof);font-size:var(--chrome);z-index:100}
+.skip:focus{left:8px;top:8px}
+/* the landing's h1 is the real heading; the name itself is drawn on canvas, so
+   the text stays here for screen readers and search rather than being lost */
+/* Copy that names an input. Every reveal on this site has two drivers — hover
+   on a pointer, centre-of-viewport scroll on touch — so a sentence that says
+   "point at any of them" is instructions half the readers cannot follow, on a
+   page whose own list of what is included promises small screens get
+   restructured rather than squashed. The behaviour was always right; only the
+   words assumed a mouse. */
+.if-touch{display:none}
+@media (hover:none){ .if-pointer{display:none} .if-touch{display:inline} }
+
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;
+  overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gap)}
+.band{padding:var(--band) 0}
+
+/* ─── grain ───────────────────────────────────────────────────────────────
+   Her Monolog autopsy names texture as one of that site's only two sparks:
+   "animated grain overlay across entire page". Without it the page reads as
+   flat colour fields. Oversized and inset so the jitter can never expose an
+   edge, and stepped rather than smoothed so it flickers like film.
+   The URL resolves against this stylesheet, so /work pages get it too.      */
+/* 160%, not 300%. At 300% with inset:-100% this layer measured 4320x2700 on a
+   1440x900 screen — 11.6 megapixels, nine times the viewport, fixed, blended
+   and animating. The jitter only ever travels 3% of the element's own width,
+   so 160% with inset:-30% still keeps every edge off screen at the extremes
+   (worst case the left edge sits at -25.2%) while cutting the composited area
+   to 2.6x viewport. Nothing about the texture changes; there is simply four
+   times less of it being rasterised and blended every frame.
+   will-change keeps the transform on the compositor rather than inviting a
+   repaint of a blended full-screen layer on each step. */
+.grain{position:fixed;inset:-30%;width:160%;height:160%;
+  will-change:transform;
+  pointer-events:none;z-index:400;
+  background-image:url('img/grain.png');background-repeat:repeat;
+  /* size, not opacity: scaling symmetric noise coarsens it without shifting
+     average luminance, so speed cannot cost contrast */
+  background-size:var(--grain-scale) var(--grain-scale);
+  opacity:.42;mix-blend-mode:overlay;
+  animation:grain-shift 1.1s steps(1) infinite}
+@keyframes grain-shift{
+  0%  {transform:translate3d(0,0,0)}
+  12% {transform:translate3d(-1.5%,-2%,0)}
+  24% {transform:translate3d(-3%,1.5%,0)}
+  36% {transform:translate3d(1.5%,-3%,0)}
+  48% {transform:translate3d(-2%,2.5%,0)}
+  60% {transform:translate3d(2.5%,1%,0)}
+  72% {transform:translate3d(-1%,-1.5%,0)}
+  84% {transform:translate3d(2%,-2.5%,0)}
+  100%{transform:translate3d(0,0,0)}
+}
+
+/* ─── halftone ────────────────────────────────────────────────────────────
+   A dot screen over the photography, the other half of Monolog's texture spark.
+   Lives on a pseudo so each image's inline background-image stays untouched.
+
+   LESSONS.md #3 is the spec: Monolog's dots are "fine, dense, and clearly
+   visible on every dark section". Dark dots on multiply were invisible over dark
+   photography, which is the exact washout that lesson warns about. So light
+   dots, no blend mode, and verified by measuring pixel variance, not by eye.
+
+   It CANNOT live inside .plate: a filter blurs its own pseudo-elements, so
+   .plate's blur(1.5px) smeared a 3px pitch into a flat grey wash. Hence a
+   separate .dots layer on the index, outside the blur. */
+/* Static pitch, deliberately. This screen was driven from scroll twice over —
+   globally by velocity, and per cell by distance from the viewport centre — and
+   both are gone. Animating background-size on a gradient repaints the whole
+   tile for every cell on every frame, and with nine cells carrying blurred
+   plates underneath, that was the cost that made scrolling feel heavy. A fixed
+   3px screen reads as the printed thing it is imitating; a moving one mostly
+   read as jitter. */
+.cell .dots,.take::before{content:"";position:absolute;inset:0;
+  pointer-events:none;z-index:1;
+  background-image:radial-gradient(rgba(234,232,225,.44) 30%,transparent 32%);
+  background-size:var(--dot) var(--dot);opacity:.6}
+
+/* ─── loader ──────────────────────────────────────────────────────────────
+   Hidden by default and only shown once html.js is set, so a visitor with
+   JavaScript off never gets a black overlay they cannot dismiss.          */
+#loader{display:none}
+html.js #loader{display:block;position:fixed;inset:0;z-index:200;
+  background:var(--proof)}
+#loader canvas{display:block;width:100%;height:100%}
+#loader.done{opacity:0;pointer-events:none;transition:opacity .6s ease}
+html.loading,html.loading body{overflow:hidden}
+
+/* ─── invert reveal ───────────────────────────────────────────────────────
+   A circle grown from the cursor, inside which the element flips to white
+   ground with redline letters. Two identical faces stacked, the top one
+   clipped. Redline on white measures 5.19:1, so even 13px labels pass.
+   Driven from site.js for every [data-invert], so the nav link and the big
+   contact row share one implementation.                                    */
+[data-invert]{position:relative;overflow:hidden;isolation:isolate}
+/* the solid core carries the text, so legibility never depends on the dots */
+.inv-top{position:absolute;inset:0;background:#FFFFFF;color:var(--redline);
+  clip-path:circle(var(--ri,0px) at var(--cx,50%) var(--cy,50%))}
+/* the halftone fringe leads the core: a wider circle of redline dots that
+   resolves into the solid panel behind it. No text lives here, so a dot screen
+   costs nothing in contrast. This is the site's halftone language applied to
+   every reveal edge rather than a hard circle. */
+.inv-dots{position:absolute;inset:0;background:var(--redline);
+  clip-path:circle(var(--ro,0px) at var(--cx,50%) var(--cy,50%));
+  -webkit-mask-image:radial-gradient(#000 31%,transparent 33%);
+  mask-image:radial-gradient(#000 31%,transparent 33%);
+  -webkit-mask-size:4px 4px;mask-size:4px 4px}
+/* with no pointer the reveal can never fire, so it is removed rather than left
+   sitting there as a dead layer */
+@media (hover:none){ .inv-top,.inv-dots{display:none} }
+
+/* ─── halftone on hover ───────────────────────────────────────────────────
+   The same dot language on the row links. z-index:-1 with isolation on the
+   parent, so the screen sits behind the text and cannot touch its contrast. */
+.big-row,.work-row{isolation:isolate}
+/* inset past the edge, not to it: the screen now drifts one tile, and at
+   inset:0 that travel exposed a 4px bare strip along two sides */
+.big-row::before,.work-row::before{content:"";position:absolute;inset:-5px;
+  z-index:-1;pointer-events:none;opacity:0;
+  transition:opacity .3s var(--ease);
+  background-image:radial-gradient(var(--redline) 30%,transparent 32%);
+  background-size:4px 4px}
+.big-row,.work-row{position:relative}
+/* the same drift as the live process step, so the red screen behaves like one
+   material across the page rather than being static here and moving there.
+   Only on hover, so nothing animates until you ask it to. */
+/* the same drift as the live process step, so the red screen behaves like one
+   material across the page rather than being static here and moving there.
+   Only on hover, so nothing animates until you ask it to.
+   The name is scoped to the tile size: a keyframe travels exactly one tile so
+   the loop has no seam, and this screen is 4px where the step's is 5px. Two
+   @keyframes sharing a name would not co-exist — the later definition wins for
+   the whole document, and the rows would drift by the step's distance. */
+.big-row:hover::before,.big-row:focus-visible::before,
+.work-row:hover::before,.work-row:focus-visible::before{opacity:.16;
+  animation:dot-drift-4 3.4s linear infinite}
+@keyframes dot-drift-4{to{transform:translate3d(4px,4px,0)}}
+
+/* ─── chrome ─────────────────────────────────────────────────────────────── */
+.nav{position:fixed;inset:0 0 auto;height:60px;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 var(--gap);font-size:var(--chrome);transition:color .4s ease}
+.nav a{color:currentColor;text-decoration:none}
+/* Padding, not size: the hit area grows to 44px while the mark keeps its 19px
+   optical height. The nav is 60px, so a 44px target sits inside it with room.
+   Negative margin pulls the box back so the extra padding cannot shift the
+   mark off the --gap alignment it shares with every section below. */
+.nav .mark{font-weight:500;letter-spacing:-.01em;display:flex;align-items:center;
+  gap:8px;padding:13px 10px;margin-left:-10px}
+.nav .mark svg{width:15px;height:15px;display:block}
+.nav ul{display:flex;gap:20px;list-style:none}
+.nav ul a,.nav .back{opacity:.62;transition:opacity .22s ease}
+.nav ul a:hover,.nav ul a:focus-visible,
+.nav .back:hover,.nav .back:focus-visible{opacity:1}
+/* the only nav item, and it carries the same invert as the big contact row */
+.nav-contact{display:inline-block;text-decoration:none;color:currentColor;
+  font-size:var(--chrome)}
+/* 7px vertical gave a 33px target on the page's primary conversion action.
+   13px takes it to 45px without moving the label, and the invert circle scales
+   with the box so the reveal still fills it. */
+.nc-face{display:block;padding:13px 12px;letter-spacing:normal;white-space:nowrap}
+/* the nav inverts over the one light band rather than sitting on a scrim */
+body.nav-ink .nav{color:var(--proof)}
+
+/* ─── nav scrim ───────────────────────────────────────────────────────────
+   The bar is fixed, 60px tall and fully transparent, so it floated over live
+   type: "Contact" landed ten pixels off the specimen's first kind label, and
+   the mark landed on the descenders of "Creating the message". A solid bar
+   would cut a hard edge across sections that are deliberately full bleed, so
+   this is a gradient that has faded out before it reaches content — a
+   vignette, not a chrome bar.
+
+   It stays off over the pleat. There is nothing to collide with up there, and
+   a scrim would dull the top of the curtain, which is the one thing on this
+   page that has to arrive at full strength. site.js turns it on past 60vh. */
+.nav::before{content:"";position:absolute;inset:0 0 auto;height:128px;
+  pointer-events:none;z-index:-1;opacity:0;transition:opacity .4s ease;
+  background:linear-gradient(to bottom,
+    rgba(13,13,12,.9) 0%,rgba(13,13,12,.6) 44%,rgba(13,13,12,0) 100%)}
+body.nav-scrim .nav::before{opacity:1}
+body.nav-ink .nav::before{background:linear-gradient(to bottom,
+  rgba(234,232,225,.9) 0%,rgba(234,232,225,.6) 44%,rgba(234,232,225,0) 100%)}
+
+/* ─── section header: margin label plus content ─────────────────────────── */
+.head{display:grid;grid-template-columns:var(--label-col) minmax(0,1fr);gap:30px;
+  margin-bottom:calc(var(--band) * .5)}
+.head .label{font-size:var(--chrome);color:var(--graphite)}
+.head h2{font-family:'Instrument Serif',serif;font-weight:400;
+  font-size:clamp(28px,3.9vw,56px);line-height:1.02;letter-spacing:-.02em;max-width:24ch}
+.head p{font-size:var(--chrome);color:var(--graphite);max-width:54ch;margin-top:14px}
+
+/* ─── solo head ───────────────────────────────────────────────────────────
+   Work and Included drop the sentence and the caption entirely and let one
+   word carry the section. At 15vw that word is ~216px on a 1440 field, which
+   is the scale both reference sites open at and a scale nothing else on this
+   page reaches — the hero is capped at 11vw by the canvas wordmark sitting
+   beside it, and these have the full measure to themselves.
+
+   Still an h2: it is the section heading now, not a margin label, and the
+   markup should say so rather than leaving the outline with a hole in it. */
+.head-solo{display:block;text-align:center;
+  margin-bottom:calc(var(--band) * .62)}
+.head-solo .label{font-family:'Instrument Serif',serif;font-weight:400;
+  color:var(--sheet);font-size:clamp(64px,15vw,232px);line-height:.9;
+  letter-spacing:-.035em;max-width:none}
+/* the light band runs ink, and .label's graphite would sit at 2.4:1 on it */
+.work .head-solo .label{color:var(--proof)}
+
+/* ─── giant conversion rows ──────────────────────────────────────────────── */
+.big-rows{border-top:1px solid var(--rule)}
+.big-row{display:flex;align-items:baseline;justify-content:space-between;gap:20px;
+  padding:26px 0;border-bottom:1px solid var(--rule);text-decoration:none;
+  color:var(--sheet);font-family:'Instrument Serif',serif;
+  font-size:clamp(28px,4.4vw,68px);line-height:1.04;letter-spacing:-.022em;
+  opacity:.72;transition:opacity .26s var(--ease)}
+.big-row:hover,.big-row:focus-visible{opacity:1}
+/* inherit, not graphite: graphite at the row's .72 opacity measured 3.33:1.
+   letter-spacing MUST be reset. An em value computes against the declaring
+   element's font-size and then inherits as an absolute length, so the row's
+   -.022em at 63px becomes -1.39px on this 13px label and eats the spaces:
+   "Eight sites" rendered as "Eightsites". */
+.big-row .arrow{font-family:'Instrument Sans',sans-serif;font-size:var(--chrome);
+  letter-spacing:normal;color:inherit;white-space:nowrap}
+
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  font-size:var(--chrome);color:var(--graphite);padding:22px 0 30px}
+
+/* ─── site footer ─────────────────────────────────────────────────────────
+   Monolog treats the footer as a full section: giant links, studio details, a
+   live local clock. One line of text was leaving a whole beat on the table.  */
+/* ─── moiré band ──────────────────────────────────────────────────────────
+   Two dot grids, 5px and 5.6px pitch, 1.6deg apart. The beat between those
+   pitches lands around 47px, which is the scale the interference reads at —
+   close enough to see, far enough not to buzz. One grid drifts exactly one
+   tile along its own rotated axis per cycle, so the loop has no seam while
+   the interference sweeps across.
+
+   Masked top and bottom rather than cut: a hard edge on a dot field reads as
+   a crop, and this is meant to be a section of air with something happening
+   in it, not a panel. */
+.moire{position:relative;overflow:hidden;isolation:isolate;
+  height:clamp(150px,17vh,230px);background:var(--proof)}
+.moire::before,.moire::after{content:"";position:absolute;inset:-25%;
+  pointer-events:none;opacity:.2;
+  background-image:radial-gradient(var(--redline) 30%,transparent 32%);
+  -webkit-mask-image:linear-gradient(to bottom,transparent,#000 26%,#000 74%,transparent);
+  mask-image:linear-gradient(to bottom,transparent,#000 26%,#000 74%,transparent)}
+.moire::before{background-size:11px 11px}
+.moire::after{background-size:11.9px 11.9px;
+  transform:rotate(1.2deg);animation:moire-drift 24s linear infinite}
+@keyframes moire-drift{to{transform:rotate(1.2deg) translate3d(11.9px,0,0)}}
+
+/* the cursor lens. A circle of dots that follows the pointer, which is the
+   same halftone-from-the-cursor idea [data-invert] already uses on the contact
+   link, extended into open field.
+
+   The mask is STATIC and the element moves. A radial mask whose centre follows
+   the pointer repaints the layer on every mousemove across the full band; a
+   fixed circle moved by transform is composited and costs nothing. */
+.moire .lens{position:absolute;left:0;top:0;width:250px;height:250px;
+  margin:-125px 0 0 -125px;pointer-events:none;opacity:0;
+  transition:opacity .35s var(--ease);will-change:transform;
+  background-image:radial-gradient(var(--redline) 30%,transparent 32%);
+  background-size:5px 5px;
+  -webkit-mask-image:radial-gradient(circle,#000 26%,transparent 66%);
+  mask-image:radial-gradient(circle,#000 26%,transparent 66%)}
+.moire.lit .lens{opacity:.6}
+/* with no pointer the lens can never be summoned, so it is not left as a dead
+   layer for the compositor to carry */
+@media (hover:none){ .moire .lens{display:none} }
+
+.site-foot{border-top:1px solid var(--rule);padding-top:calc(var(--band) * .42)}
+/* the moiré above is masked soft at both edges on purpose — a hard edge on a
+   dot field reads as a crop, per the note on .moire. This border was drawing
+   exactly that crop across its bottom. Colour, not the border itself, so the
+   1px stays reserved and nothing below it shifts. */
+.moire + .site-foot{border-top-color:transparent}
+.foot-ledger{margin-top:calc(var(--band) * .6);
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  border-top:1px solid var(--rule)}
+.foot-ledger div{padding:17px 0;border-bottom:1px solid var(--rule);
+  display:flex;flex-direction:column;gap:5px;font-size:var(--chrome)}
+.foot-ledger dt{color:var(--graphite)}
+.foot-ledger dd{color:var(--sheet)}
+.foot-ledger dd b{font-weight:500;font-variant-numeric:tabular-nums}
+/* space-between again: the small print gives the row a second child, so the
+   pair reads as a deliberate spread rather than a link parked at a margin. */
+.foot-tail{display:flex;justify-content:space-between;align-items:baseline;
+  gap:20px;flex-wrap:wrap;
+  font-size:var(--chrome);color:var(--graphite);padding:20px 0 36px}
+.foot-legal{margin:0;padding:13px 0}
+.foot-legal a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+
+@media (max-width:820px){
+  .foot-ledger{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}
+}
+@media (max-width:460px){
+  .foot-ledger{grid-template-columns:1fr}
+}
+
+/* ─── reveal, gated so the page is never blank without javascript ──────────
+   Never put data-reveal on an element that owns a resting opacity: this rule
+   outranks .work-row{opacity:.62} and would pin it open, silently killing the
+   hover hierarchy. Reveal the container instead.                           */
+html.js [data-reveal]{opacity:0;transform:translateY(14px)}
+html.js [data-reveal].shown{opacity:1;transform:none;
+  transition:opacity .65s ease,transform .65s var(--ease)}
+
+/* ─── stagger ─────────────────────────────────────────────────────────────
+   A block of nine specimen rows arriving as one rectangle is a fade, not
+   choreography. These arrive in sequence instead, --i set per child in site.js.
+
+   Two modes, and the split is the same warning as above applied one level
+   down. .work-row rests at .62 and .face-row at .58, and that resting opacity
+   IS their hover hierarchy — animating opacity on them would land the row at 1
+   and silently flatten it. So the default mode moves and never touches opacity.
+   Only groups whose children have no resting opacity get "fade".
+
+   .steps is deliberately not staggered: .step is position:sticky, and any
+   transform on it would make it the containing block for its own sticky
+   positioning, which kills the stack. */
+html.js [data-stagger] > *{transform:translateY(20px);
+  transition:transform .72s var(--ease);
+  transition-delay:calc(var(--i,0) * 55ms)}
+html.js [data-stagger="fade"] > *{opacity:0;
+  transition:opacity .72s ease,transform .72s var(--ease);
+  transition-delay:calc(var(--i,0) * 55ms)}
+html.js [data-stagger].shown > *{transform:none}
+html.js [data-stagger="fade"].shown > *{opacity:1}
+
+@media (max-width:900px){
+  .head{grid-template-columns:1fr;gap:14px}
+  .head .label{order:-1}
+}
+@media (prefers-reduced-motion:reduce){
+  /* delay as well as duration. Zeroing duration alone leaves the stagger's
+     transition-delay intact, so a reader who asked for no motion would still
+     watch nine rows pop in one at a time over half a second — the sequence
+     preserved and only the movement removed, which is the opposite of the ask. */
+  *,*::before,*::after{transition-duration:.01ms !important;
+    animation-duration:.01ms !important;
+    transition-delay:0ms !important;animation-delay:0ms !important}
+  /* the grain stays as static texture rather than becoming a 0.01ms strobe */
+  .grain{animation:none !important;transform:none !important}
+}

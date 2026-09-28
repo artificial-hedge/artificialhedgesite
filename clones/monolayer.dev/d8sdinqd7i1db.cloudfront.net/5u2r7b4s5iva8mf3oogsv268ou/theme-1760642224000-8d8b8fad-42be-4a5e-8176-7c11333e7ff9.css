@@ -1,0 +1,625 @@
+body:not(#\9){
+	--color-white-p1zlvy:#ffffff;
+	--color-background-button-normal-active-5imwxd:#d3e7f9ff;
+	--color-background-button-normal-default-7f99mv:#ffffffff;
+	--color-background-button-normal-hover-53op9s:#f2f8fdff;
+	--color-background-button-primary-active-5cqoqt:#033160ff;
+	--color-background-button-primary-default-vdt0fu:#0972d3ff;
+	--color-background-button-primary-disabled-sgo4zo:#ffffffff;
+	--color-background-button-primary-hover-mo85i6:#033160ff;
+	--color-background-container-content-6u8rvp:#ffffffff;
+	--color-background-container-header-gs3mbe:#ffffffff;
+	--color-background-control-checked-ka7kc2:#0972d3ff;
+	--color-background-control-default-4jb21l:#ffffffff;
+	--color-background-dropdown-item-default-qmc033:#ffffffff;
+	--color-background-dropdown-item-filter-match-49b5vt:#414d5cff;
+	--color-background-dropdown-item-hover-yunepc:#f4f4f4ff;
+	--color-background-input-default-ifz5bb:#ffffffff;
+	--color-background-layout-main-5ilwcb:#ffffffff;
+	--color-background-status-error-mu3lcw:#fff7f7ff;
+	--color-background-status-success-h6b8bh:#f2fcf3ff;
+	--color-background-status-warning-cv83up:#fffce9ff;
+	--color-border-button-normal-active-ru7yhb:#033160ff;
+	--color-border-button-normal-default-glqfp1:#0972d3ff;
+	--color-border-button-normal-hover-6a2tdq:#033160ff;
+	--color-border-control-default-sh3548:#7d8998ff;
+	--color-border-divider-default-nr68jt:#ebebf0ff;
+	--color-border-dropdown-item-hover-aqfuxq:#7d8998ff;
+	--color-border-input-default-317xk5:#7d8998ff;
+	--color-border-input-focused-4z0pgn:#0972d3ff;
+	--color-border-item-focused-uk47pl:#0972d3ff;
+	--color-border-dropdown-item-focused-zacqlp:#0972d3ff;
+	--color-border-status-error-j8acpp:#d91515ff;
+	--color-border-status-success-8z5f8u:#037f0cff;
+	--color-border-status-warning-j40pg7:#8d6605ff;
+	--color-foreground-control-default-eto4wy:#ffffffff;
+	--color-text-body-default-vvtq8u:#414d5cff;
+	--color-text-body-secondary-yna5sb:#414d5cff;
+	--color-text-button-normal-active-vihsxh:#033160ff;
+	--color-text-button-normal-default-nzalii:#0972d3ff;
+	--color-text-button-normal-hover-gusgyv:#033160ff;
+	--color-text-button-primary-active-refmba:#ffffffff;
+	--color-text-button-primary-default-mwl31m:#ffffffff;
+	--color-text-button-primary-hover-pw12ep:#ffffffff;
+	--color-text-dropdown-item-filter-match-ebhvct:#0972d3ff;
+	--color-text-dropdown-item-highlighted-yr1px8:#000716ff;
+	--color-text-form-default-47mtz6:#000716ff;
+	--color-text-form-secondary-1nm780:#5f6b7aff;
+	--color-text-heading-default-izpp46:#000716ff;
+	--color-text-heading-secondary-iwtvf6:#414d5cff;
+	--color-text-input-placeholder-dclg8u:#5f6b7aff;
+	--color-text-link-default-hude44:#0972d3ff;
+	--color-text-link-hover-2hfec2:#033160ff;
+	--color-text-notification-yellow-vjtdxk:var(--color-neutral-950-lxybh8);
+	--color-text-status-error-ksqavh:#d91515ff;
+	--color-text-status-inactive-gy7337:#AAAAAAAA;
+	--color-text-status-success-ybmii8:#037f0cff;
+	--color-text-status-warning-6meo06:#8d6605ff;
+	--font-family-base-gmnpzl:var(--font-family-base-gmnpzl, 'Open Sans', 'Helvetica Neue', Roboto, Arial, sans-serif);
+	--border-radius-alert-syagf6:12px;
+	--border-radius-button-7bgkcs:8px;
+	--border-radius-container-nsfwmm:8px;
+	--border-radius-dropdown-fgc2a1:8px;
+	--border-radius-flashbar-pp1ptu:12px;
+	--border-radius-item-iwaia5:8px;
+	--border-radius-input-7q0str:8px;
+}
+@media not print {.awsui-dark-mode.awsui-dark-mode:not(#\9){
+	--color-background-button-normal-active-5imwxd:#354150ff;
+	--color-background-button-normal-default-7f99mv:#0f1b2aff;
+	--color-background-button-normal-hover-53op9s:#192534ff;
+	--color-background-button-primary-active-5cqoqt:#539fe5ff;
+	--color-background-button-primary-default-vdt0fu:#539fe5ff;
+	--color-background-button-primary-hover-mo85i6:#89bdeeff;
+	--color-background-container-content-6u8rvp:#0f1b2aff;
+	--color-background-container-header-gs3mbe:#0f1b2aff;
+	--color-background-control-checked-ka7kc2:#539fe5ff;
+	--color-background-control-default-4jb21l:#0f1b2aff;
+	--color-background-dropdown-item-default-qmc033:#192534ff;
+	--color-background-dropdown-item-filter-match-49b5vt:#d1d5dbff;
+	--color-background-dropdown-item-hover-yunepc:#081120ff;
+	--color-background-input-default-ifz5bb:#0f1b2aff;
+	--color-background-layout-main-5ilwcb:#0f1b2aff;
+	--color-background-status-error-mu3lcw:#1a0000ff;
+	--color-background-status-success-h6b8bh:#001a02ff;
+	--color-background-status-warning-cv83up:#1d1906ff;
+	--color-border-button-normal-active-ru7yhb:#89bdeeff;
+	--color-border-button-normal-default-glqfp1:#539fe5ff;
+	--color-border-button-normal-hover-6a2tdq:#89bdeeff;
+	--color-border-divider-default-nr68jt:#232b37ff;
+	--color-border-dropdown-item-hover-aqfuxq:#5f6b7aff;
+	--color-border-input-default-317xk5:#5f6b7aff;
+	--color-border-input-focused-4z0pgn:#539fe5ff;
+	--color-border-item-focused-uk47pl:#539fe5ff;
+	--color-border-dropdown-item-focused-zacqlp:#539fe5ff;
+	--color-border-status-error-j8acpp:#eb6f6fff;
+	--color-border-status-success-8z5f8u:#29ad32ff;
+	--color-border-status-warning-j40pg7:#e0ca57ff;
+	--color-foreground-control-default-eto4wy:#000716ff;
+	--color-text-body-default-vvtq8u:#b6bec9ff;
+	--color-text-body-secondary-yna5sb:#b6bec9ff;
+	--color-text-button-normal-active-vihsxh:#89bdeeff;
+	--color-text-button-normal-default-nzalii:#539fe5ff;
+	--color-text-button-normal-hover-gusgyv:#89bdeeff;
+	--color-text-button-primary-active-refmba:#000716ff;
+	--color-text-button-primary-default-mwl31m:#000716ff;
+	--color-text-button-primary-hover-pw12ep:#000716ff;
+	--color-text-dropdown-item-filter-match-ebhvct:#89bdeeff;
+	--color-text-dropdown-item-highlighted-yr1px8:#e9ebedff;
+	--color-text-form-default-47mtz6:#d1d5dbff;
+	--color-text-form-secondary-1nm780:#8d99a8ff;
+	--color-text-heading-default-izpp46:#d1d5dbff;
+	--color-text-heading-secondary-iwtvf6:#b6bec9ff;
+	--color-text-input-placeholder-dclg8u:#8d99a8ff;
+	--color-text-link-default-hude44:#539fe5ff;
+	--color-text-link-hover-2hfec2:#89bdeeff;
+	--color-text-status-error-ksqavh:#eb6f6fff;
+	--color-text-status-success-ybmii8:#29ad32ff;
+	--color-text-status-warning-6meo06:#e0ca57ff;
+}}
+.awsui-context-top-navigation.awsui-context-top-navigation:not(#\9){
+	--color-background-button-normal-active-5imwxd:var(--color-neutral-700-qw8ats);
+	--color-background-button-normal-default-7f99mv:var(--color-neutral-850-3f0gro);
+	--color-background-button-normal-hover-53op9s:var(--color-neutral-800-t7j5ap);
+	--color-background-button-primary-active-5cqoqt:var(--color-primary-400-n8h4bx);
+	--color-background-button-primary-default-vdt0fu:var(--color-border-button-normal-default-glqfp1);
+	--color-background-button-primary-disabled-sgo4zo:var(--color-neutral-750-pi9qqd);
+	--color-background-button-primary-hover-mo85i6:var(--color-border-button-normal-hover-6a2tdq);
+	--color-background-container-content-6u8rvp:var(--color-neutral-850-3f0gro);
+	--color-background-container-header-gs3mbe:var(--color-neutral-850-3f0gro);
+	--color-background-control-checked-ka7kc2:var(--color-primary-400-n8h4bx);
+	--color-background-control-default-4jb21l:var(--color-neutral-850-3f0gro);
+	--color-background-dropdown-item-default-qmc033:var(--color-neutral-850-3f0gro);
+	--color-background-dropdown-item-filter-match-49b5vt:var(--color-neutral-700-qw8ats);
+	--color-background-dropdown-item-hover-yunepc:var(--color-neutral-900-v0mtoc);
+	--color-background-input-default-ifz5bb:var(--color-neutral-850-3f0gro);
+	--color-background-layout-main-5ilwcb:var(--color-neutral-850-3f0gro);
+	--color-background-status-error-mu3lcw:var(--color-error-1000-ecmudm);
+	--color-background-status-success-h6b8bh:var(--color-success-1000-xy1gvq);
+	--color-background-status-warning-cv83up:var(--color-warning-1000-65l070);
+	--color-border-button-normal-active-ru7yhb:var(--color-primary-300-5q65ox);
+	--color-border-button-normal-default-glqfp1:var(--color-primary-400-n8h4bx);
+	--color-border-button-normal-hover-6a2tdq:var(--color-primary-300-5q65ox);
+	--color-border-control-default-sh3548:var(--color-neutral-500-8van0b);
+	--color-border-divider-default-nr68jt:var(--color-neutral-650-miik4f);
+	--color-border-dropdown-item-hover-aqfuxq:var(--color-neutral-600-fln1ww);
+	--color-border-input-default-317xk5:var(--color-neutral-600-fln1ww);
+	--color-border-input-focused-4z0pgn:var(--color-primary-400-n8h4bx);
+	--color-border-item-focused-uk47pl:var(--color-primary-400-n8h4bx);
+	--color-border-dropdown-item-focused-zacqlp:var(--color-neutral-300-08wi6k);
+	--color-border-status-error-j8acpp:var(--color-error-400-c0knb8);
+	--color-border-status-success-8z5f8u:var(--color-success-500-hhxb4g);
+	--color-border-status-warning-j40pg7:var(--color-warning-500-zidhub);
+	--color-foreground-control-default-eto4wy:var(--color-neutral-950-lxybh8);
+	--color-text-body-default-vvtq8u:var(--color-neutral-350-dq6kfr);
+	--color-text-body-secondary-yna5sb:var(--color-neutral-350-dq6kfr);
+	--color-text-button-normal-active-vihsxh:var(--color-primary-300-5q65ox);
+	--color-text-button-normal-default-nzalii:var(--color-primary-400-n8h4bx);
+	--color-text-button-normal-hover-gusgyv:var(--color-primary-300-5q65ox);
+	--color-text-button-primary-active-refmba:var(--color-neutral-950-lxybh8);
+	--color-text-button-primary-default-mwl31m:var(--color-neutral-950-lxybh8);
+	--color-text-button-primary-hover-pw12ep:var(--color-neutral-950-lxybh8);
+	--color-text-dropdown-item-filter-match-ebhvct:var(--color-primary-300-5q65ox);
+	--color-text-dropdown-item-highlighted-yr1px8:var(--color-neutral-250-vs1is4);
+	--color-text-form-default-47mtz6:var(--color-neutral-300-08wi6k);
+	--color-text-form-secondary-1nm780:var(--color-neutral-450-kn0235);
+	--color-text-heading-default-izpp46:var(--color-neutral-250-vs1is4);
+	--color-text-heading-secondary-iwtvf6:var(--color-neutral-450-kn0235);
+	--color-text-input-placeholder-dclg8u:var(--color-neutral-450-kn0235);
+	--color-text-link-default-hude44:var(--color-primary-400-n8h4bx);
+	--color-text-link-hover-2hfec2:var(--color-primary-300-5q65ox);
+	--color-text-status-error-ksqavh:var(--color-error-400-c0knb8);
+	--color-text-status-inactive-gy7337:var(--color-neutral-450-kn0235);
+	--color-text-status-success-ybmii8:var(--color-success-500-hhxb4g);
+	--color-text-status-warning-6meo06:var(--color-warning-500-zidhub);
+}
+.awsui-context-content-header.awsui-context-content-header:not(#\9){
+	--color-background-button-normal-active-5imwxd:var(--color-neutral-700-qw8ats);
+	--color-background-button-normal-default-7f99mv:var(--color-neutral-950-lxybh8);
+	--color-background-button-normal-hover-53op9s:var(--color-neutral-800-t7j5ap);
+	--color-background-button-primary-active-5cqoqt:var(--color-primary-400-n8h4bx);
+	--color-background-button-primary-default-vdt0fu:var(--color-border-button-normal-default-glqfp1);
+	--color-background-button-primary-disabled-sgo4zo:var(--color-neutral-750-pi9qqd);
+	--color-background-button-primary-hover-mo85i6:var(--color-border-button-normal-hover-6a2tdq);
+	--color-background-container-content-6u8rvp:var(--color-neutral-850-3f0gro);
+	--color-background-container-header-gs3mbe:var(--color-neutral-850-3f0gro);
+	--color-background-control-checked-ka7kc2:var(--color-primary-400-n8h4bx);
+	--color-background-control-default-4jb21l:var(--color-neutral-950-lxybh8);
+	--color-background-dropdown-item-default-qmc033:var(--color-neutral-800-t7j5ap);
+	--color-background-dropdown-item-filter-match-49b5vt:var(--color-neutral-700-qw8ats);
+	--color-background-dropdown-item-hover-yunepc:var(--color-neutral-900-v0mtoc);
+	--color-background-input-default-ifz5bb:var(--color-neutral-950-lxybh8);
+	--color-background-layout-main-5ilwcb:var(--color-neutral-950-lxybh8);
+	--color-background-status-error-mu3lcw:var(--color-error-1000-ecmudm);
+	--color-background-status-success-h6b8bh:var(--color-success-1000-xy1gvq);
+	--color-background-status-warning-cv83up:var(--color-warning-1000-65l070);
+	--color-border-button-normal-active-ru7yhb:var(--color-primary-300-5q65ox);
+	--color-border-button-normal-default-glqfp1:var(--color-primary-400-n8h4bx);
+	--color-border-button-normal-hover-6a2tdq:var(--color-primary-300-5q65ox);
+	--color-border-control-default-sh3548:var(--color-neutral-500-8van0b);
+	--color-border-divider-default-nr68jt:var(--color-neutral-650-miik4f);
+	--color-border-dropdown-item-hover-aqfuxq:var(--color-neutral-600-fln1ww);
+	--color-border-input-default-317xk5:var(--color-neutral-600-fln1ww);
+	--color-border-input-focused-4z0pgn:var(--color-primary-400-n8h4bx);
+	--color-border-item-focused-uk47pl:var(--color-primary-400-n8h4bx);
+	--color-border-dropdown-item-focused-zacqlp:var(--color-neutral-300-08wi6k);
+	--color-border-status-error-j8acpp:var(--color-error-400-c0knb8);
+	--color-border-status-success-8z5f8u:var(--color-success-500-hhxb4g);
+	--color-border-status-warning-j40pg7:var(--color-warning-500-zidhub);
+	--color-foreground-control-default-eto4wy:var(--color-neutral-950-lxybh8);
+	--color-text-body-default-vvtq8u:var(--color-neutral-350-dq6kfr);
+	--color-text-body-secondary-yna5sb:var(--color-neutral-350-dq6kfr);
+	--color-text-button-normal-active-vihsxh:var(--color-primary-300-5q65ox);
+	--color-text-button-normal-default-nzalii:var(--color-primary-400-n8h4bx);
+	--color-text-button-normal-hover-gusgyv:var(--color-primary-300-5q65ox);
+	--color-text-button-primary-active-refmba:var(--color-neutral-950-lxybh8);
+	--color-text-button-primary-default-mwl31m:var(--color-neutral-950-lxybh8);
+	--color-text-button-primary-hover-pw12ep:var(--color-neutral-950-lxybh8);
+	--color-text-dropdown-item-filter-match-ebhvct:var(--color-primary-300-5q65ox);
+	--color-text-dropdown-item-highlighted-yr1px8:var(--color-neutral-250-vs1is4);
+	--color-text-form-default-47mtz6:var(--color-neutral-300-08wi6k);
+	--color-text-form-secondary-1nm780:var(--color-neutral-450-kn0235);
+	--color-text-heading-default-izpp46:var(--color-neutral-250-vs1is4);
+	--color-text-heading-secondary-iwtvf6:var(--color-neutral-450-kn0235);
+	--color-text-input-placeholder-dclg8u:var(--color-neutral-450-kn0235);
+	--color-text-link-default-hude44:var(--color-primary-400-n8h4bx);
+	--color-text-link-hover-2hfec2:var(--color-primary-300-5q65ox);
+	--color-text-status-error-ksqavh:var(--color-error-400-c0knb8);
+	--color-text-status-inactive-gy7337:var(--color-neutral-450-kn0235);
+	--color-text-status-success-ybmii8:var(--color-success-500-hhxb4g);
+	--color-text-status-warning-6meo06:var(--color-warning-500-zidhub);
+}
+.awsui-context-flashbar.awsui-context-flashbar:not(#\9){
+	--color-background-button-normal-active-5imwxd:rgba(0, 7, 22, 0.2);
+	--color-background-button-normal-default-7f99mv:transparent;
+	--color-background-button-normal-hover-53op9s:rgba(0, 7, 22, 0.15);
+	--color-background-button-primary-active-5cqoqt:var(--color-primary-900-a5kqrr);
+	--color-background-button-primary-default-vdt0fu:var(--color-border-button-normal-default-glqfp1);
+	--color-background-button-primary-disabled-sgo4zo:var(--color-neutral-250-vs1is4);
+	--color-background-button-primary-hover-mo85i6:var(--color-border-button-normal-hover-6a2tdq);
+	--color-background-container-content-6u8rvp:var(--color-white-p1zlvy);
+	--color-background-container-header-gs3mbe:var(--color-white-p1zlvy);
+	--color-background-control-checked-ka7kc2:var(--color-primary-600-1lcy1k);
+	--color-background-control-default-4jb21l:var(--color-white-p1zlvy);
+	--color-background-dropdown-item-default-qmc033:var(--color-white-p1zlvy);
+	--color-background-dropdown-item-filter-match-49b5vt:var(--color-primary-50-1y05xv);
+	--color-background-dropdown-item-hover-yunepc:var(--color-neutral-200-fqt4tz);
+	--color-background-input-default-ifz5bb:var(--color-white-p1zlvy);
+	--color-background-layout-main-5ilwcb:var(--color-white-p1zlvy);
+	--color-background-status-error-mu3lcw:var(--color-error-50-1upkvz);
+	--color-background-status-success-h6b8bh:var(--color-success-50-yow9uc);
+	--color-background-status-warning-cv83up:var(--color-warning-50-uxheb8);
+	--color-border-button-normal-active-ru7yhb:var(--color-white-p1zlvy);
+	--color-border-button-normal-default-glqfp1:var(--color-neutral-100-gk3lvf);
+	--color-border-button-normal-hover-6a2tdq:var(--color-white-p1zlvy);
+	--color-border-control-default-sh3548:var(--color-neutral-500-8van0b);
+	--color-border-divider-default-nr68jt:var(--color-neutral-100-gk3lvf);
+	--color-border-dropdown-item-hover-aqfuxq:var(--color-neutral-500-8van0b);
+	--color-border-input-default-317xk5:var(--color-neutral-500-8van0b);
+	--color-border-input-focused-4z0pgn:var(--color-primary-600-1lcy1k);
+	--color-border-item-focused-uk47pl:var(--color-neutral-100-gk3lvf);
+	--color-border-dropdown-item-focused-zacqlp:var(--color-neutral-650-miik4f);
+	--color-border-status-error-j8acpp:var(--color-error-600-mdn3ng);
+	--color-border-status-success-8z5f8u:var(--color-success-600-g7hz2i);
+	--color-border-status-warning-j40pg7:var(--color-warning-900-kpxt8c);
+	--color-foreground-control-default-eto4wy:var(--color-white-p1zlvy);
+	--color-text-body-default-vvtq8u:var(--color-neutral-100-gk3lvf);
+	--color-text-body-secondary-yna5sb:var(--color-neutral-100-gk3lvf);
+	--color-text-button-normal-active-vihsxh:var(--color-white-p1zlvy);
+	--color-text-button-normal-default-nzalii:var(--color-neutral-100-gk3lvf);
+	--color-text-button-normal-hover-gusgyv:var(--color-white-p1zlvy);
+	--color-text-button-primary-active-refmba:var(--color-white-p1zlvy);
+	--color-text-button-primary-default-mwl31m:var(--color-white-p1zlvy);
+	--color-text-button-primary-hover-pw12ep:var(--color-white-p1zlvy);
+	--color-text-dropdown-item-filter-match-ebhvct:var(--color-primary-600-1lcy1k);
+	--color-text-dropdown-item-highlighted-yr1px8:var(--color-neutral-950-lxybh8);
+	--color-text-form-default-47mtz6:var(--color-neutral-950-lxybh8);
+	--color-text-form-secondary-1nm780:var(--color-neutral-600-fln1ww);
+	--color-text-heading-default-izpp46:var(--color-neutral-950-lxybh8);
+	--color-text-heading-secondary-iwtvf6:var(--color-neutral-100-gk3lvf);
+	--color-text-input-placeholder-dclg8u:var(--color-neutral-600-fln1ww);
+	--color-text-link-default-hude44:var(--color-neutral-100-gk3lvf);
+	--color-text-link-hover-2hfec2:var(--color-white-p1zlvy);
+	--color-text-status-error-ksqavh:var(--color-error-600-mdn3ng);
+	--color-text-status-inactive-gy7337:var(--color-neutral-600-fln1ww);
+	--color-text-status-success-ybmii8:var(--color-success-600-g7hz2i);
+	--color-text-status-warning-6meo06:var(--color-warning-900-kpxt8c);
+}
+.awsui-context-flashbar-warning.awsui-context-flashbar-warning:not(#\9){
+	--color-background-button-normal-active-5imwxd:rgba(0, 7, 22, 0.1);
+	--color-background-button-normal-default-7f99mv:transparent;
+	--color-background-button-normal-hover-53op9s:rgba(0, 7, 22, 0.05);
+	--color-background-button-primary-active-5cqoqt:var(--color-primary-900-a5kqrr);
+	--color-background-button-primary-default-vdt0fu:var(--color-border-button-normal-default-glqfp1);
+	--color-background-button-primary-disabled-sgo4zo:var(--color-neutral-250-vs1is4);
+	--color-background-button-primary-hover-mo85i6:var(--color-border-button-normal-hover-6a2tdq);
+	--color-background-container-content-6u8rvp:var(--color-white-p1zlvy);
+	--color-background-container-header-gs3mbe:var(--color-white-p1zlvy);
+	--color-background-control-checked-ka7kc2:var(--color-primary-600-1lcy1k);
+	--color-background-control-default-4jb21l:var(--color-white-p1zlvy);
+	--color-background-dropdown-item-default-qmc033:var(--color-white-p1zlvy);
+	--color-background-dropdown-item-filter-match-49b5vt:var(--color-primary-50-1y05xv);
+	--color-background-dropdown-item-hover-yunepc:var(--color-neutral-200-fqt4tz);
+	--color-background-input-default-ifz5bb:var(--color-white-p1zlvy);
+	--color-background-layout-main-5ilwcb:var(--color-white-p1zlvy);
+	--color-background-status-error-mu3lcw:var(--color-error-50-1upkvz);
+	--color-background-status-success-h6b8bh:var(--color-success-50-yow9uc);
+	--color-background-status-warning-cv83up:var(--color-warning-50-uxheb8);
+	--color-border-button-normal-active-ru7yhb:var(--color-text-button-normal-hover-gusgyv);
+	--color-border-button-normal-default-glqfp1:var(--color-text-button-normal-default-nzalii);
+	--color-border-button-normal-hover-6a2tdq:var(--color-text-button-normal-hover-gusgyv);
+	--color-border-control-default-sh3548:var(--color-neutral-500-8van0b);
+	--color-border-divider-default-nr68jt:var(--color-text-notification-yellow-vjtdxk);
+	--color-border-dropdown-item-hover-aqfuxq:var(--color-neutral-500-8van0b);
+	--color-border-input-default-317xk5:var(--color-neutral-500-8van0b);
+	--color-border-input-focused-4z0pgn:var(--color-primary-600-1lcy1k);
+	--color-border-item-focused-uk47pl:var(--color-text-notification-yellow-vjtdxk);
+	--color-border-dropdown-item-focused-zacqlp:var(--color-neutral-650-miik4f);
+	--color-border-status-error-j8acpp:var(--color-error-600-mdn3ng);
+	--color-border-status-success-8z5f8u:var(--color-success-600-g7hz2i);
+	--color-border-status-warning-j40pg7:var(--color-warning-900-kpxt8c);
+	--color-foreground-control-default-eto4wy:var(--color-white-p1zlvy);
+	--color-text-body-default-vvtq8u:var(--color-text-notification-yellow-vjtdxk);
+	--color-text-body-secondary-yna5sb:var(--color-text-notification-yellow-vjtdxk);
+	--color-text-button-normal-active-vihsxh:var(--color-text-button-normal-hover-gusgyv);
+	--color-text-button-normal-default-nzalii:var(--color-neutral-650-miik4f);
+	--color-text-button-normal-hover-gusgyv:var(--color-neutral-950-lxybh8);
+	--color-text-button-primary-active-refmba:var(--color-white-p1zlvy);
+	--color-text-button-primary-default-mwl31m:var(--color-white-p1zlvy);
+	--color-text-button-primary-hover-pw12ep:var(--color-white-p1zlvy);
+	--color-text-dropdown-item-filter-match-ebhvct:var(--color-primary-600-1lcy1k);
+	--color-text-dropdown-item-highlighted-yr1px8:var(--color-neutral-950-lxybh8);
+	--color-text-form-default-47mtz6:var(--color-neutral-950-lxybh8);
+	--color-text-form-secondary-1nm780:var(--color-neutral-600-fln1ww);
+	--color-text-heading-default-izpp46:var(--color-neutral-950-lxybh8);
+	--color-text-heading-secondary-iwtvf6:var(--color-text-notification-yellow-vjtdxk);
+	--color-text-input-placeholder-dclg8u:var(--color-neutral-600-fln1ww);
+	--color-text-link-default-hude44:var(--color-text-notification-yellow-vjtdxk);
+	--color-text-link-hover-2hfec2:var(--color-text-notification-yellow-vjtdxk);
+	--color-text-status-error-ksqavh:var(--color-error-600-mdn3ng);
+	--color-text-status-inactive-gy7337:var(--color-neutral-600-fln1ww);
+	--color-text-status-success-ybmii8:var(--color-success-600-g7hz2i);
+	--color-text-status-warning-6meo06:var(--color-warning-900-kpxt8c);
+}
+.awsui-context-alert.awsui-context-alert:not(#\9){
+	--color-background-button-normal-active-5imwxd:rgba(0, 7, 22, 0.1);
+	--color-background-button-normal-default-7f99mv:transparent;
+	--color-background-button-normal-hover-53op9s:rgba(0, 7, 22, 0.05);
+	--color-background-button-primary-active-5cqoqt:var(--color-primary-900-a5kqrr);
+	--color-background-button-primary-default-vdt0fu:var(--color-border-button-normal-default-glqfp1);
+	--color-background-button-primary-disabled-sgo4zo:var(--color-neutral-250-vs1is4);
+	--color-background-button-primary-hover-mo85i6:var(--color-border-button-normal-hover-6a2tdq);
+	--color-background-container-content-6u8rvp:var(--color-white-p1zlvy);
+	--color-background-container-header-gs3mbe:var(--color-white-p1zlvy);
+	--color-background-control-checked-ka7kc2:var(--color-primary-600-1lcy1k);
+	--color-background-control-default-4jb21l:var(--color-white-p1zlvy);
+	--color-background-dropdown-item-default-qmc033:var(--color-white-p1zlvy);
+	--color-background-dropdown-item-filter-match-49b5vt:var(--color-primary-50-1y05xv);
+	--color-background-dropdown-item-hover-yunepc:var(--color-neutral-200-fqt4tz);
+	--color-background-input-default-ifz5bb:var(--color-white-p1zlvy);
+	--color-background-layout-main-5ilwcb:var(--color-white-p1zlvy);
+	--color-background-status-warning-cv83up:var(--color-warning-50-uxheb8);
+	--color-border-button-normal-active-ru7yhb:var(--color-text-button-normal-hover-gusgyv);
+	--color-border-button-normal-default-glqfp1:var(--color-text-button-normal-default-nzalii);
+	--color-border-button-normal-hover-6a2tdq:var(--color-text-button-normal-hover-gusgyv);
+	--color-border-control-default-sh3548:var(--color-neutral-500-8van0b);
+	--color-border-divider-default-nr68jt:var(--color-text-button-normal-default-nzalii);
+	--color-border-dropdown-item-hover-aqfuxq:var(--color-neutral-500-8van0b);
+	--color-border-input-default-317xk5:var(--color-neutral-500-8van0b);
+	--color-border-input-focused-4z0pgn:var(--color-primary-600-1lcy1k);
+	--color-border-item-focused-uk47pl:var(--color-primary-600-1lcy1k);
+	--color-border-dropdown-item-focused-zacqlp:var(--color-neutral-650-miik4f);
+	--color-border-status-warning-j40pg7:var(--color-warning-900-kpxt8c);
+	--color-foreground-control-default-eto4wy:var(--color-white-p1zlvy);
+	--color-text-body-default-vvtq8u:var(--color-neutral-950-lxybh8);
+	--color-text-body-secondary-yna5sb:var(--color-neutral-650-miik4f);
+	--color-text-button-normal-active-vihsxh:var(--color-text-button-normal-hover-gusgyv);
+	--color-text-button-normal-default-nzalii:var(--color-neutral-650-miik4f);
+	--color-text-button-normal-hover-gusgyv:var(--color-neutral-950-lxybh8);
+	--color-text-button-primary-active-refmba:var(--color-white-p1zlvy);
+	--color-text-button-primary-default-mwl31m:var(--color-white-p1zlvy);
+	--color-text-button-primary-hover-pw12ep:var(--color-white-p1zlvy);
+	--color-text-dropdown-item-filter-match-ebhvct:var(--color-primary-600-1lcy1k);
+	--color-text-dropdown-item-highlighted-yr1px8:var(--color-neutral-950-lxybh8);
+	--color-text-form-default-47mtz6:var(--color-neutral-950-lxybh8);
+	--color-text-form-secondary-1nm780:var(--color-neutral-600-fln1ww);
+	--color-text-heading-default-izpp46:var(--color-neutral-950-lxybh8);
+	--color-text-heading-secondary-iwtvf6:var(--color-neutral-650-miik4f);
+	--color-text-input-placeholder-dclg8u:var(--color-neutral-600-fln1ww);
+	--color-text-link-default-hude44:var(--color-primary-600-1lcy1k);
+	--color-text-link-hover-2hfec2:var(--color-primary-900-a5kqrr);
+	--color-text-status-warning-6meo06:var(--color-warning-900-kpxt8c);
+}
+.awsui-context-content-header.awsui-context-content-header .awsui-context-alert:not(#\9){
+	--color-background-button-normal-active-5imwxd:rgba(255, 255, 255, 0.15);
+	--color-background-button-normal-default-7f99mv:transparent;
+	--color-background-button-normal-hover-53op9s:rgba(255, 255, 255, 0.1);
+	--color-background-button-primary-active-5cqoqt:var(--color-primary-400-n8h4bx);
+	--color-background-button-primary-default-vdt0fu:var(--color-border-button-normal-default-glqfp1);
+	--color-background-button-primary-disabled-sgo4zo:var(--color-neutral-750-pi9qqd);
+	--color-background-button-primary-hover-mo85i6:var(--color-border-button-normal-hover-6a2tdq);
+	--color-background-container-content-6u8rvp:var(--color-neutral-850-3f0gro);
+	--color-background-container-header-gs3mbe:var(--color-neutral-850-3f0gro);
+	--color-background-control-checked-ka7kc2:var(--color-primary-400-n8h4bx);
+	--color-background-control-default-4jb21l:var(--color-neutral-850-3f0gro);
+	--color-background-dropdown-item-default-qmc033:var(--color-neutral-800-t7j5ap);
+	--color-background-dropdown-item-filter-match-49b5vt:var(--color-neutral-700-qw8ats);
+	--color-background-dropdown-item-hover-yunepc:var(--color-neutral-900-v0mtoc);
+	--color-background-input-default-ifz5bb:var(--color-neutral-850-3f0gro);
+	--color-background-layout-main-5ilwcb:var(--color-neutral-850-3f0gro);
+	--color-background-status-error-mu3lcw:var(--color-error-1000-ecmudm);
+	--color-background-status-success-h6b8bh:var(--color-success-1000-xy1gvq);
+	--color-background-status-warning-cv83up:var(--color-warning-1000-65l070);
+	--color-border-button-normal-active-ru7yhb:var(--color-text-button-normal-hover-gusgyv);
+	--color-border-button-normal-default-glqfp1:var(--color-text-button-normal-default-nzalii);
+	--color-border-button-normal-hover-6a2tdq:var(--color-text-button-normal-hover-gusgyv);
+	--color-border-control-default-sh3548:var(--color-neutral-500-8van0b);
+	--color-border-divider-default-nr68jt:var(--color-text-button-normal-default-nzalii);
+	--color-border-dropdown-item-hover-aqfuxq:var(--color-neutral-600-fln1ww);
+	--color-border-input-default-317xk5:var(--color-neutral-600-fln1ww);
+	--color-border-input-focused-4z0pgn:var(--color-primary-400-n8h4bx);
+	--color-border-item-focused-uk47pl:var(--color-neutral-100-gk3lvf);
+	--color-border-dropdown-item-focused-zacqlp:var(--color-neutral-300-08wi6k);
+	--color-border-status-error-j8acpp:var(--color-error-400-c0knb8);
+	--color-border-status-success-8z5f8u:var(--color-success-500-hhxb4g);
+	--color-border-status-warning-j40pg7:var(--color-warning-500-zidhub);
+	--color-foreground-control-default-eto4wy:var(--color-neutral-950-lxybh8);
+	--color-text-body-default-vvtq8u:var(--color-neutral-350-dq6kfr);
+	--color-text-body-secondary-yna5sb:var(--color-neutral-350-dq6kfr);
+	--color-text-button-normal-active-vihsxh:var(--color-text-button-normal-hover-gusgyv);
+	--color-text-button-normal-default-nzalii:var(--color-neutral-300-08wi6k);
+	--color-text-button-normal-hover-gusgyv:var(--color-white-p1zlvy);
+	--color-text-button-primary-active-refmba:var(--color-neutral-950-lxybh8);
+	--color-text-button-primary-default-mwl31m:var(--color-neutral-950-lxybh8);
+	--color-text-button-primary-hover-pw12ep:var(--color-neutral-950-lxybh8);
+	--color-text-dropdown-item-filter-match-ebhvct:var(--color-primary-300-5q65ox);
+	--color-text-dropdown-item-highlighted-yr1px8:var(--color-neutral-250-vs1is4);
+	--color-text-form-default-47mtz6:var(--color-neutral-300-08wi6k);
+	--color-text-form-secondary-1nm780:var(--color-neutral-450-kn0235);
+	--color-text-heading-default-izpp46:var(--color-neutral-250-vs1is4);
+	--color-text-heading-secondary-iwtvf6:var(--color-neutral-450-kn0235);
+	--color-text-input-placeholder-dclg8u:var(--color-neutral-450-kn0235);
+	--color-text-link-default-hude44:var(--color-primary-400-n8h4bx);
+	--color-text-link-hover-2hfec2:var(--color-primary-300-5q65ox);
+	--color-text-status-error-ksqavh:var(--color-error-400-c0knb8);
+	--color-text-status-inactive-gy7337:var(--color-neutral-450-kn0235);
+	--color-text-status-success-ybmii8:var(--color-success-500-hhxb4g);
+	--color-text-status-warning-6meo06:var(--color-warning-500-zidhub);
+}
+.awsui-context-app-layout-toolbar.awsui-context-app-layout-toolbar:not(#\9){
+	--color-background-layout-main-5ilwcb:var(--color-neutral-50-pvu04n);
+}
+@media not print {.awsui-dark-mode.awsui-dark-mode .awsui-context-flashbar:not(#\9),.awsui-context-flashbar.awsui-context-flashbar.awsui-dark-mode:not(#\9),.awsui-dark-mode.awsui-dark-mode .awsui-context-flashbar-warning:not(#\9),.awsui-context-flashbar-warning.awsui-context-flashbar-warning.awsui-dark-mode:not(#\9){
+	--color-background-button-primary-active-5cqoqt:var(--color-primary-400-n8h4bx);
+	--color-background-button-primary-disabled-sgo4zo:var(--color-neutral-750-pi9qqd);
+	--color-background-container-content-6u8rvp:var(--color-neutral-850-3f0gro);
+	--color-background-container-header-gs3mbe:var(--color-neutral-850-3f0gro);
+	--color-background-control-checked-ka7kc2:var(--color-primary-400-n8h4bx);
+	--color-background-control-default-4jb21l:var(--color-neutral-850-3f0gro);
+	--color-background-dropdown-item-default-qmc033:var(--color-neutral-800-t7j5ap);
+	--color-background-dropdown-item-filter-match-49b5vt:var(--color-neutral-700-qw8ats);
+	--color-background-dropdown-item-hover-yunepc:var(--color-neutral-900-v0mtoc);
+	--color-background-input-default-ifz5bb:var(--color-neutral-850-3f0gro);
+	--color-background-layout-main-5ilwcb:var(--color-neutral-850-3f0gro);
+	--color-background-status-error-mu3lcw:var(--color-error-1000-ecmudm);
+	--color-background-status-success-h6b8bh:var(--color-success-1000-xy1gvq);
+	--color-background-status-warning-cv83up:var(--color-warning-1000-65l070);
+	--color-border-dropdown-item-hover-aqfuxq:var(--color-neutral-600-fln1ww);
+	--color-border-input-default-317xk5:var(--color-neutral-600-fln1ww);
+	--color-border-input-focused-4z0pgn:var(--color-primary-400-n8h4bx);
+	--color-border-dropdown-item-focused-zacqlp:var(--color-neutral-300-08wi6k);
+	--color-border-status-error-j8acpp:var(--color-error-400-c0knb8);
+	--color-border-status-success-8z5f8u:var(--color-success-500-hhxb4g);
+	--color-border-status-warning-j40pg7:var(--color-warning-500-zidhub);
+	--color-foreground-control-default-eto4wy:var(--color-neutral-950-lxybh8);
+	--color-text-button-primary-active-refmba:var(--color-neutral-950-lxybh8);
+	--color-text-button-primary-default-mwl31m:var(--color-neutral-950-lxybh8);
+	--color-text-button-primary-hover-pw12ep:var(--color-neutral-950-lxybh8);
+	--color-text-dropdown-item-filter-match-ebhvct:var(--color-primary-300-5q65ox);
+	--color-text-dropdown-item-highlighted-yr1px8:var(--color-neutral-250-vs1is4);
+	--color-text-form-default-47mtz6:var(--color-neutral-300-08wi6k);
+	--color-text-form-secondary-1nm780:var(--color-neutral-450-kn0235);
+	--color-text-heading-default-izpp46:var(--color-neutral-250-vs1is4);
+	--color-text-input-placeholder-dclg8u:var(--color-neutral-450-kn0235);
+	--color-text-status-error-ksqavh:var(--color-error-400-c0knb8);
+	--color-text-status-inactive-gy7337:var(--color-neutral-450-kn0235);
+	--color-text-status-success-ybmii8:var(--color-success-500-hhxb4g);
+	--color-text-status-warning-6meo06:var(--color-warning-500-zidhub);
+}}
+@media not print {.awsui-dark-mode.awsui-dark-mode .awsui-context-alert:not(#\9),.awsui-context-alert.awsui-context-alert.awsui-dark-mode:not(#\9){
+	--color-background-button-normal-active-5imwxd:rgba(255, 255, 255, 0.15);
+	--color-background-button-normal-hover-53op9s:rgba(255, 255, 255, 0.1);
+	--color-background-button-primary-active-5cqoqt:var(--color-primary-400-n8h4bx);
+	--color-background-button-primary-disabled-sgo4zo:var(--color-neutral-750-pi9qqd);
+	--color-background-container-content-6u8rvp:var(--color-neutral-850-3f0gro);
+	--color-background-container-header-gs3mbe:var(--color-neutral-850-3f0gro);
+	--color-background-control-checked-ka7kc2:var(--color-primary-400-n8h4bx);
+	--color-background-control-default-4jb21l:var(--color-neutral-850-3f0gro);
+	--color-background-dropdown-item-default-qmc033:var(--color-neutral-800-t7j5ap);
+	--color-background-dropdown-item-filter-match-49b5vt:var(--color-neutral-700-qw8ats);
+	--color-background-dropdown-item-hover-yunepc:var(--color-neutral-900-v0mtoc);
+	--color-background-input-default-ifz5bb:var(--color-neutral-850-3f0gro);
+	--color-background-layout-main-5ilwcb:var(--color-neutral-850-3f0gro);
+	--color-background-status-warning-cv83up:var(--color-warning-1000-65l070);
+	--color-border-dropdown-item-hover-aqfuxq:var(--color-neutral-600-fln1ww);
+	--color-border-input-default-317xk5:var(--color-neutral-600-fln1ww);
+	--color-border-input-focused-4z0pgn:var(--color-primary-400-n8h4bx);
+	--color-border-item-focused-uk47pl:var(--color-neutral-100-gk3lvf);
+	--color-border-dropdown-item-focused-zacqlp:var(--color-neutral-300-08wi6k);
+	--color-border-status-warning-j40pg7:var(--color-warning-500-zidhub);
+	--color-foreground-control-default-eto4wy:var(--color-neutral-950-lxybh8);
+	--color-text-body-default-vvtq8u:var(--color-neutral-350-dq6kfr);
+	--color-text-body-secondary-yna5sb:var(--color-neutral-350-dq6kfr);
+	--color-text-button-normal-default-nzalii:var(--color-neutral-300-08wi6k);
+	--color-text-button-normal-hover-gusgyv:var(--color-white-p1zlvy);
+	--color-text-button-primary-active-refmba:var(--color-neutral-950-lxybh8);
+	--color-text-button-primary-default-mwl31m:var(--color-neutral-950-lxybh8);
+	--color-text-button-primary-hover-pw12ep:var(--color-neutral-950-lxybh8);
+	--color-text-dropdown-item-filter-match-ebhvct:var(--color-primary-300-5q65ox);
+	--color-text-dropdown-item-highlighted-yr1px8:var(--color-neutral-250-vs1is4);
+	--color-text-form-default-47mtz6:var(--color-neutral-300-08wi6k);
+	--color-text-form-secondary-1nm780:var(--color-neutral-450-kn0235);
+	--color-text-heading-default-izpp46:var(--color-neutral-250-vs1is4);
+	--color-text-heading-secondary-iwtvf6:var(--color-neutral-450-kn0235);
+	--color-text-input-placeholder-dclg8u:var(--color-neutral-450-kn0235);
+	--color-text-link-default-hude44:var(--color-primary-400-n8h4bx);
+	--color-text-link-hover-2hfec2:var(--color-primary-300-5q65ox);
+	--color-text-status-warning-6meo06:var(--color-warning-500-zidhub);
+}}
+@media not print {.awsui-dark-mode.awsui-dark-mode .awsui-context-app-layout-toolbar:not(#\9),.awsui-context-app-layout-toolbar.awsui-context-app-layout-toolbar.awsui-dark-mode:not(#\9){
+	--color-background-layout-main-5ilwcb:var(--color-neutral-900-v0mtoc);
+}}
+
+:root:root:not(#\9){
+  --cognito-page-background-image: url(../../d1dkulh9pqc6xi.cloudfront.net/default-assets/image/cognito-image-background-page-light.svg);
+}
+
+@media not print {
+  .awsui-dark-mode.awsui-dark-mode :root:not(#\9){
+    --cognito-page-background-image: url(../../d1dkulh9pqc6xi.cloudfront.net/default-assets/image/cognito-image-background-page-dark.svg);
+  }
+}
+
+@media not print {
+  :root:root.awsui-dark-mode:not(#\9){
+    --cognito-page-background-image: url(../../d1dkulh9pqc6xi.cloudfront.net/default-assets/image/cognito-image-background-page-dark.svg);
+  }
+}
+
+.cognito-form-area.cognito-form-area:not(#\9){
+  --cognito-form-background-image: none;
+  --cognito-form-border-color: #c6c6cdff;
+}
+
+@media not print {
+  .awsui-dark-mode.awsui-dark-mode .cognito-form-area:not(#\9){
+    --cognito-form-background-image: none;
+    --cognito-form-border-color: #424650ff;
+  }
+}
+
+@media not print {
+  .cognito-form-area.cognito-form-area.awsui-dark-mode:not(#\9){
+    --cognito-form-background-image: none;
+    --cognito-form-border-color: #424650ff;
+  }
+}
+
+.idp-button.idp-button:not(#\9){
+  --color-background-button-normal-default-7f99mv: #ffffffff;
+  --color-border-button-normal-default-glqfp1: #424650ff;
+  --color-text-button-normal-default-nzalii: #424650ff;
+  --color-background-button-normal-hover-53op9s: #f2f8fdff;
+  --color-border-button-normal-hover-6a2tdq: #033160ff;
+  --color-text-button-normal-hover-gusgyv: #033160ff;
+  --color-background-button-normal-active-5imwxd: #d3e7f9ff;
+  --color-border-button-normal-active-ru7yhb: #033160ff;
+  --color-text-button-normal-active-vihsxh: #033160ff;
+}
+
+@media not print {
+  .awsui-dark-mode.awsui-dark-mode .idp-button:not(#\9){
+    --color-background-button-normal-default-7f99mv: #0f1b2aff;
+    --color-border-button-normal-default-glqfp1: #c6c6cdff;
+    --color-text-button-normal-default-nzalii: #c6c6cdff;
+    --color-background-button-normal-hover-53op9s: #192534ff;
+    --color-border-button-normal-hover-6a2tdq: #89bdeeff;
+    --color-text-button-normal-hover-gusgyv: #89bdeeff;
+    --color-background-button-normal-active-5imwxd: #354150ff;
+    --color-border-button-normal-active-ru7yhb: #89bdeeff;
+    --color-text-button-normal-active-vihsxh: #89bdeeff;
+  }
+}
+
+@media not print {
+  .idp-button.idp-button.awsui-dark-mode:not(#\9){
+    --color-background-button-normal-default-7f99mv: #0f1b2aff;
+    --color-border-button-normal-default-glqfp1: #c6c6cdff;
+    --color-text-button-normal-default-nzalii: #c6c6cdff;
+    --color-background-button-normal-hover-53op9s: #192534ff;
+    --color-border-button-normal-hover-6a2tdq: #89bdeeff;
+    --color-text-button-normal-hover-gusgyv: #89bdeeff;
+    --color-background-button-normal-active-5imwxd: #354150ff;
+    --color-border-button-normal-active-ru7yhb: #89bdeeff;
+    --color-text-button-normal-active-vihsxh: #89bdeeff;
+  }
+}
+
+.link-button.link-button:not(#\9){
+  --color-text-button-normal-default-nzalii: #0972d3ff;
+  --color-text-button-normal-hover-gusgyv: #033160ff;
+}
+
+@media not print {
+  .awsui-dark-mode.awsui-dark-mode .link-button:not(#\9){
+    --color-text-button-normal-default-nzalii: #539fe5ff;
+    --color-text-button-normal-hover-gusgyv: #89bdeeff;
+  }
+}
+
+@media not print {
+  .link-button.link-button.awsui-dark-mode:not(#\9){
+    --color-text-button-normal-default-nzalii: #539fe5ff;
+    --color-text-button-normal-hover-gusgyv: #89bdeeff;
+  }
+}

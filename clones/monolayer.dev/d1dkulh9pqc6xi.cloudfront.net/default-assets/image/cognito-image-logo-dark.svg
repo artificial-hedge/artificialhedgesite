@@ -1,0 +1,11 @@
+<svg width="240" height="60" viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="240" height="60" fill="#003C75"/>
+<path d="M10 2L2 2L2 10" stroke="#9BA7B6" stroke-linecap="round"/>
+<path d="M2 50V58H10" stroke="#9BA7B6" stroke-linecap="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M133.95 18.5C134.806 18.5 135.5 19.194 135.5 20.05V39.95C135.5 40.806 134.806 41.5 133.95 41.5H106.05C105.194 41.5 104.5 40.806 104.5 39.95V20.05C104.5 19.194 105.194 18.5 106.05 18.5H133.95Z" stroke="#AAB7B8" stroke-width="2" stroke-linejoin="round"/>
+<path d="M106.066 36.8329L113.563 29.3359L123.127 38.8999" stroke="#AAB7B8" stroke-width="2" stroke-linejoin="round"/>
+<path d="M118.078 33.6022L125.438 26.2422L132.934 33.7392" stroke="#AAB7B8" stroke-width="2" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M120.5 25C120.5 26.381 119.381 27.5 118 27.5C116.619 27.5 115.5 26.381 115.5 25C115.5 23.619 116.619 22.5 118 22.5C119.381 22.5 120.5 23.619 120.5 25Z" stroke="#AAB7B8" stroke-width="2" stroke-linejoin="round"/>
+<path d="M238 10L238 2L230 2" stroke="#9BA7B6" stroke-linecap="round"/>
+<path d="M230 58L238 58L238 50" stroke="#9BA7B6" stroke-linecap="round"/>
+</svg>

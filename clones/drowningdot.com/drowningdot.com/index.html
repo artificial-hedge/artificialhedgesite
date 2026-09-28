@@ -1,0 +1,1731 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- set html.js before first paint: the loader and the reveal styles both key
+     off it, and setting it at body-end would flash unstyled content first -->
+<script>document.documentElement.classList.add('js')</script>
+<title>drowningdot</title>
+<meta name="description" content="A one-person web design studio in Tokyo. Bilingual sites for schools, ventures and advisory practices. Nine shipped." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="canonical" href="index.html" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://drowningdot.com/#studio",
+      "name": "drowningdot",
+      "alternateName": "drowning dot",
+      "url": "index.html",
+      "logo": "https://drowningdot.com/og.png",
+      "image": "https://drowningdot.com/og.png",
+      "description": "A one-person web design studio in Tokyo. Bilingual sites for schools, ventures and advisory practices, designed and built by the same person.",
+      "email": "hello@drowningdot.com",
+      "founder": { "@type": "Person", "name": "Jesy Lu" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Tokyo", "addressCountry": "JP" },
+      "areaServed": "Worldwide",
+      "knowsLanguage": ["en", "ja"],
+      "knowsAbout": ["web design", "web development", "typography", "bilingual websites"],
+      "sameAs": ["https://www.awwwards.com/sites/drowningdot"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://drowningdot.com/#website",
+      "url": "index.html",
+      "name": "drowningdot",
+      "publisher": { "@id": "https://drowningdot.com/#studio" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="drowningdot" />
+<meta property="og:title" content="drowningdot · a typeface is a tone of voice" />
+<meta property="og:description" content="A one-person web design studio in Tokyo. Bilingual sites for schools, ventures and advisory practices. Nine shipped." />
+<meta property="og:url" content="index.html" />
+<meta property="og:image" content="https://drowningdot.com/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="drowningdot · a typeface is a tone of voice" />
+<meta name="twitter:description" content="A one-person web design studio in Tokyo. Bilingual sites for schools, ventures and advisory practices. Nine shipped." />
+<meta name="twitter:image" content="https://drowningdot.com/og.png" />
+<!-- the twelve faces are self-hosted and declared in styles.css. Only the two
+     the first screen actually sets are preloaded: the statement and the mark
+     are both Instrument Sans, at 400 and 500. The other ten are discovered
+     when the stylesheet parses, which is early enough for type that is a
+     screen or more down. -->
+<link rel="preload" href="fonts/instrument-sans-400.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="fonts/instrument-sans-500.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="styles.css" />
+<!-- the twenty-three preview images hold their URL in a --bg custom property,
+     which is not fetched until something uses it, and site.js applies it as each
+     one nears the viewport. Without JavaScript nothing would ever apply it, so
+     this restores them immediately rather than leaving nine empty plates. The
+     six benched frames are display:none in the stylesheet, not by script, so a
+     reader without JS gets a still sheet of nine rather than all fifteen. -->
+<noscript><style>[data-bg]{background-image:var(--bg)}</style></noscript>
+<style>
+/* ── landing: the pleat ──────────────────────────────────────────────────────
+   Derived from Issey Miyake: a flat plane holding a folding logic that only
+   releases into dimension once something moves through it. Canvas in pleat.js;
+   the real h1 is here for semantics and sits visually hidden. */
+.pleat{position:relative;height:100vh;overflow:hidden;background:var(--proof)}
+.pleat canvas{display:block;width:100%;height:100%;touch-action:pan-y}
+/* 3vw put the statement at 43px in a 1440x900 field — a 275x92 box, under 2% of
+   the frame, so the curtain won a page whose whole argument is that the type
+   carries the voice. Monolog and the PP Neue Montreal specimen both open near
+   14vw. That number is not available here: the name is drawn on the canvas from
+   x=0.985W leftward, and type that wide would sit straight on top of it. 7.4vw
+   is what the composition will take with the wordmark left intact — 2.5x the
+   old size, still clear of the mark at full spread. Leading and tracking tighten
+   because 1.06/-.02em were set for 43px and read loose at 107px. */
+.pleat .say{position:absolute;left:var(--gap);top:46%;transform:translateY(-50%);
+  max-width:15ch;font-size:clamp(34px,11vw,186px);line-height:.96;
+  letter-spacing:-.04em;pointer-events:none;z-index:2}
+/* The curtain is not a flat field, and the two contrast rules at the top of
+   styles.css both assume one. Sampled across the statement's band, the folds
+   run from rgb(86,27,17) in the shadow to rgb(235,75,46) on the lit face. On
+   that lit face graphite measured 1.05:1 — the second line was not dim, it was
+   gone — and even sheet only reached 3.07:1, which clears large-text AA by
+   four hundredths and then loses it again under the grain layer. No colour
+   fixes it, because the backdrop moves.
+
+   Three scrim shapes were measured against the rendered pixels before this one.
+   A gradient fading THROUGH the line left its right half at 2.74:1. Flat alpha
+   across a box sized to the text fixed the contrast and drew a visible
+   rectangle — hard top, bottom and right edges. A radial ellipse killed the
+   edges but read as a smudge, because an amorphous blob crossing vertical folds
+   looks like a dirty lens, not like light.
+
+   A curtain lit from one side darkens along its whole drop. So the scrim spans
+   the section, varies only on x, and therefore has no boundary anywhere except
+   the screen edges. It multiplies every fold by the same factor, so the pleat
+   structure survives and the shading reads as the material, not as a layer.
+   It clears the canvas wordmark, which lives past 82% where the alpha is 0.
+   Then rule 1 from styles.css applies as written — the second line inherits the
+   colour and carries hierarchy on one opacity step instead of a hue. */
+.pleat::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:linear-gradient(90deg,
+    rgba(13,13,12,.58) 0%,rgba(13,13,12,.52) 46%,
+    rgba(13,13,12,.30) 72%,rgba(13,13,12,0) 92%)}
+.pleat .say em{font-style:normal;color:inherit;opacity:.72;display:block}
+.pleat .cue{position:absolute;z-index:2;inset:auto var(--gap) 22px;display:flex;
+  justify-content:space-between;gap:20px;font-size:var(--chrome);
+  color:var(--graphite);pointer-events:none}
+/* the statement and the name shared a vertical centre at phone width and
+   overlapped. They stack now, and pleat.js draws the name low to match. */
+@media (max-width:820px){
+  /* the 52px cap was set when desktop opened at 7.4vw. Against 11vw it left a
+     52px-to-90px jump across the 820px boundary, so a tablet got phone type in
+     a tablet-width field. Capping at 84px meets the desktop curve where they
+     touch. 15ch matches desktop too, so "the whole time." stays one line at
+     every width rather than breaking the phrase on tablets. */
+  .pleat .say{top:14vh;transform:none;max-width:15ch;font-size:clamp(30px,10.4vw,84px)}
+}
+
+/* ── voice: the nine faces, section 02 ───────────────────────────────────────
+   The specimen re-typesets on row hover. Jesy looked at it live alongside the
+   pleat landing and kept it performing, so the page carries two typographic
+   sparks by choice, not by oversight. */
+:root{
+  --display:'Instrument Serif',serif;
+  --tracking:-.022em;
+  --leading:.96;
+  --mul:1;   /* per-face optical size. one point size renders at very different
+                widths across nine faces: DM Mono at 1.0 wrapped to four lines
+                where Anton took two. normalising apparent width, not px. */
+}
+.voice{padding:var(--band) 0}
+.voice .inner{max-width:var(--max);margin:0 auto;padding:0 var(--gap);
+  display:grid;grid-template-columns:1fr 1fr;column-gap:44px;align-items:center}
+
+.specimen{font-family:var(--display);font-size:calc(clamp(40px,5.6vw,96px) * var(--mul));
+  line-height:var(--leading);letter-spacing:var(--tracking);
+  min-height:clamp(92px,11.6vw,168px);   /* reserved so a face swap cannot lurch */
+  transition:font-size .22s var(--ease)}
+/* block, not inline: the line is re-typeset in nine faces of very different
+   widths, so any px max-width rewraps per face and strands widows */
+.specimen .dim{color:var(--graphite);display:block}
+.voice .caption{font-size:var(--chrome);color:var(--graphite);margin-top:22px;max-width:34ch}
+
+.faces{border-top:1px solid var(--rule)}
+.face-row{display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+  width:100%;text-align:left;background:none;border:0;cursor:pointer;
+  padding:19px 0;border-bottom:1px solid var(--rule);
+  color:var(--sheet);opacity:.58;transition:opacity .26s var(--ease)}
+/* .58 not .32. at .32 the idle label measured 1.44:1 against a 4.5 requirement.
+   the idle/active jump is carried by the label turning red as well as opacity */
+.face-row:hover,.face-row:focus-visible,.face-row.is-on{opacity:1}
+.face-row .sample{font-size:clamp(19px,1.9vw,27px);line-height:1.1}
+/* inherit, not graphite: graphite plus the row's .58 opacity stacked to 2.56:1 */
+.face-row .kind{font-size:var(--chrome);color:inherit;white-space:nowrap}
+.face-row.is-on .kind{color:var(--redline-text)}
+
+/* ── contact sheet ───────────────────────────────────────────────────────── */
+.sheet-grid{display:grid;grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.cell{position:relative;aspect-ratio:4/3;border-right:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);border-top:0;border-left:0;
+  overflow:hidden;background:#171714;cursor:pointer;display:block;
+  width:100%;padding:0;text-align:left}
+/* the resting state has to be a legible grey proof, not a blur. at .42 opacity
+   and 5px blur the nine cells read as one inert slab with no focal point. */
+.cell .plate{position:absolute;inset:0;background-size:cover;background-position:center;
+  opacity:.62;filter:blur(1.5px) grayscale(1) brightness(1.18);transform:scale(1.04);
+  transition:opacity .45s var(--ease),filter .45s var(--ease),transform .65s var(--ease)}
+/* STEAL, Monolog: a scrim under the caption, because a 12px label over a pale
+   photograph fails AA on a text-shadow alone */
+/* stacking: plate (0) < dots (1) < scrim (2) < caption (3), so the dot screen
+   sits over the photograph but under the scrim that keeps the caption legible */
+.cell::before{content:"";position:absolute;inset:auto 0 0;height:46%;
+  background:linear-gradient(to top,rgba(8,8,7,.9),rgba(8,8,7,0));
+  opacity:0;transition:opacity .35s ease;pointer-events:none;z-index:2}
+.cell .meta{position:absolute;left:10px;right:10px;bottom:8px;z-index:3;
+  font-size:12px;line-height:1.25;display:flex;justify-content:space-between;gap:8px;
+  opacity:0;filter:blur(8px);transition:opacity .3s ease,filter .3s ease}
+.cell .meta i{font-style:normal;color:#CFCCC3}
+.cell.is-on .plate{opacity:1;filter:blur(0) grayscale(0) brightness(1);transform:scale(1)}
+.cell.is-on::before,.cell.is-on .meta{opacity:1}
+.cell.is-on .meta{filter:blur(0)}
+.cell[data-kind="reject"] .meta i{color:var(--redline-text)}
+.cell[data-kind="reject"]::after{content:"";position:absolute;left:10px;right:10px;top:50%;
+  height:1.5px;background:var(--redline);transform:scaleX(0);transform-origin:left;
+  z-index:4;transition:transform .38s var(--ease)}
+.cell[data-kind="reject"].is-on::after{transform:scaleX(1)}
+
+/* ── the sheet, rotating ─────────────────────────────────────────────────────
+   Fifteen frames, nine slots. The sheet is capped at nine because three-by-three
+   is the shape the section is built around — a fourth row turns a contact sheet
+   into a gallery, and the part row at the end stops reading as an ending. The
+   other six sit on the bench in the same markup, display:none, which is what
+   keeps them out of the initial fetch: a tile with no box never intersects, so
+   site.js never applies its --bg. They cost nothing until they are called.
+
+   Two moves, both on the same timer. A swap dissolves one frame out and a
+   benched one in without moving anything else, which is the sheet *alternating*.
+   A transpose picks two frames and exchanges their slots, which is the sheet
+   *moving around*. Doing only the first reads as a slideshow in nine windows;
+   doing only the second reads as a fidget. Alternating between them is the
+   thing that looks like a sheet being re-laid by hand.
+
+   is-swapping is the dissolve. It does not animate display — it cannot — so the
+   controller waits out the fade before benching the node. */
+.cell{transition:opacity .5s var(--ease),filter .5s var(--ease)}
+.cell.is-bench{display:none}
+.cell.is-swapping{opacity:0;filter:blur(7px)}
+/* The transpose is FLIP: the slot changes instantly, then the tile is placed
+   back where it came from with a transform and released. Only transform is
+   animated, so nine tiles moving is still one composited layer each. */
+.cell.is-sliding{transition:transform .62s var(--ease);z-index:5}
+@media (prefers-reduced-motion:reduce){
+  /* No timer runs in this mode, so nothing here should suggest motion. The
+     variety comes from the shuffle the controller does once, at load. */
+  .cell,.cell.is-sliding{transition:none}
+  .cell.is-swapping{opacity:1;filter:none}
+}
+
+/* ── the sheet, opened ─────────────────────────────────────────────────────
+   The tile is a 472px proof under a dot screen and a blur. This is the frame
+   at full size with neither, because the whole claim of the section is that
+   these are real pages — a claim you cannot check at thumbnail size. */
+.lb{border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;
+  width:100%;height:100%;overflow:hidden;color:var(--sheet)}
+.lb::backdrop{background:rgba(8,8,7,.94)}
+.lb-shell{width:100%;height:100%;display:grid;grid-template-rows:1fr auto;
+  gap:18px;padding:var(--gap);box-sizing:border-box}
+/* min-height:0 or the row refuses to shrink below the image's intrinsic height
+   and pushes the caption off the bottom of a short window. The frame is sized
+   to the picture rather than stretched to the row, so the space left around it
+   belongs to the shell and can be clicked to close — stretch it and the whole
+   viewport becomes the image and there is no backdrop left to press. */
+.lb-img{min-height:0;max-width:100%;max-height:100%;width:auto;height:auto;
+  place-self:center;object-fit:contain;border:1px solid var(--rule);background:#171714}
+.lb-bar{display:flex;align-items:baseline;justify-content:space-between;gap:20px;
+  flex-wrap:wrap}
+.lb-id{display:flex;align-items:baseline;gap:12px;margin:0}
+.lb-name{font-family:'Instrument Serif',serif;font-size:clamp(21px,2.4vw,32px);
+  line-height:1}
+.lb-status{font-style:normal;font-size:var(--chrome);color:var(--graphite)}
+/* the rejects are the point of the section, so the frame says so in the same
+   red the strike through the tile uses */
+.lb-status[data-kind="rejected"]{color:var(--redline-text)}
+.lb-acts{display:flex;align-items:center;gap:8px;margin:0;font-size:var(--chrome)}
+.lb-case{color:var(--sheet);text-decoration:none;margin-right:8px;
+  border-bottom:1px solid var(--rule);padding-bottom:2px;transition:border-color .2s ease}
+.lb-case:hover,.lb-case:focus-visible{border-bottom-color:var(--sheet)}
+.lb-case[hidden]{display:none}
+.lb-count{color:var(--graphite);font-variant-numeric:tabular-nums;margin-right:4px}
+/* 13px labels in a 40px box: the target is the box, the type stays chrome-sized */
+.lb-step,.lb-x{font:inherit;color:var(--sheet);background:transparent;
+  border:1px solid var(--rule);border-radius:0;min-width:40px;height:40px;
+  padding:0 12px;cursor:pointer;transition:border-color .2s ease,background .2s ease}
+.lb-step:hover,.lb-x:hover,.lb-step:focus-visible,.lb-x:focus-visible{
+  border-color:var(--sheet);background:rgba(234,232,225,.06)}
+@media (max-width:760px){
+  /* the bar stops trying to be one line and the frame takes the room back */
+  .lb-shell{gap:12px}
+  .lb-bar{flex-direction:column;align-items:flex-start;gap:10px}
+  .lb-acts{width:100%}
+  .lb-case{margin-right:auto}
+  /* 40px was under the 44px this page holds everywhere else, and here the four
+     controls ARE the interaction — there is nothing else to touch */
+  .lb-step,.lb-x{height:44px;min-width:44px}
+}
+@media (max-width:520px){
+  /* A sentence and four controls do not fit one 375px line. Left alone, "Read
+     the case study" wrapped and dropped its own arrow onto a second line while
+     the counter broke between the digit and the slash. The link takes a row to
+     itself, the frame controls keep theirs, and neither is allowed to wrap. */
+  .lb-acts{flex-wrap:wrap;row-gap:12px}
+  .lb-case{flex:1 0 100%;margin-right:0;white-space:nowrap}
+  .lb-count{margin-right:auto;white-space:nowrap}
+}
+
+/* ── work, the single theme inversion ────────────────────────────────────── */
+.work{background:var(--sheet);color:var(--proof);position:relative;isolation:isolate}
+/* the paper is not flat. Two very soft tints whose centres are driven by scroll
+   progress through the band, so the white has a living undertone without any
+   perpetual decorative motion. Alphas stay under .08 and the shift was measured
+   against AA, because the style-based contrast sweep cannot see this layer. */
+.work::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(58% 46% at var(--wx,26%) var(--wy,18%),
+      rgba(195,63,39,.075), rgba(195,63,39,0) 68%),
+    radial-gradient(54% 44% at calc(104% - var(--wx,26%)) calc(98% - var(--wy,18%)),
+      rgba(120,99,70,.07), rgba(120,99,70,0) 70%)}
+.work > *{position:relative;z-index:1}
+.work .label,.work .head p{color:var(--graphite-ink)}
+.work-index{border-top:1px solid var(--rule-ink)}
+/* the "Recent" cut: chrome-sized like the row meta, in the band's muted ink —
+   a divider, not a headline. The full index lives on its own page at /work/;
+   the .idx-all row is the door to it, so its arrow meta is centred on the
+   serif line rather than hanging at the baseline like a footnote. */
+.idx-cut{font-size:var(--chrome);color:var(--graphite-ink);
+  text-transform:uppercase;letter-spacing:.14em;padding:18px 0 12px}
+.idx-all{align-items:center}
+.work-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;
+  align-items:baseline;padding:22px 0;border-bottom:1px solid var(--rule-ink);
+  text-decoration:none;color:var(--proof);opacity:.62;
+  transition:opacity .26s var(--ease)}
+.work-row:hover,.work-row:focus-visible{opacity:1}
+.work-row .who{font-family:'Instrument Serif',serif;
+  font-size:clamp(28px,3.4vw,50px);line-height:1.04;letter-spacing:-.02em;
+  display:flex;align-items:center;gap:.34em;flex-wrap:wrap}
+/* STEAL, Locomotive: the preview is a zero-width inline element that expands
+   inside the text line, so the headline reflows around it. media as a glyph. */
+.work-row .wedge{width:0;height:.62em;flex:0 0 auto;background:var(--proof);
+  overflow:hidden;transition:width .4s var(--ease)}
+.work-row:hover .wedge,.work-row:focus-visible .wedge{width:1.5em}
+.work-row .wedge span{display:block;width:100%;height:100%;
+  background-size:cover;background-position:center}
+/* inherit, not graphite-ink: a muted tone inside a row already at .62 opacity
+   composited to 2.45:1. hierarchy against .who is carried by size, 13 vs 49. */
+.work-row .meta{font-size:var(--chrome);color:inherit;text-align:right;
+  display:flex;flex-direction:column;gap:2px}
+/* No colour on the provenance label. A rust tint inside a row already at .62
+   opacity measured 2.72:1, and no rust dark enough to pass survives compositing
+   over paper: even near-black rust at .85 opacity only reaches 4.27. The words
+   "Own venture" and "Self-initiated" already carry the distinction. */
+
+/* ── studio ──────────────────────────────────────────────────────────────── */
+.who-grid{display:grid;grid-template-columns:var(--label-col) minmax(0,1fr);gap:30px}
+.who-grid > .label{font-size:var(--chrome);color:var(--graphite)}
+.who-body{max-width:58ch}
+.who-body p{font-size:clamp(17px,1.5vw,22px);line-height:1.5;margin-bottom:18px}
+.who-body p:last-child{margin-bottom:0}
+.who-body .quiet{color:var(--graphite);font-size:var(--chrome);line-height:1.55}
+
+.contact{border-top:1px solid var(--rule);padding-top:var(--band)}
+/* the closing statement. The whole point of the section is this line, so it gets
+   the largest type on the page and the action sits directly under it. */
+.cta-say{font-family:'Instrument Serif',serif;font-weight:400;
+  font-size:clamp(38px,7.4vw,118px);line-height:.96;letter-spacing:-.026em;
+  margin-bottom:clamp(30px,5vh,64px);max-width:20ch}
+.cta-say em{font-style:normal;color:var(--graphite)}
+
+/* ── the pool: red water closing the page ────────────────────────────────── */
+.pool-wrap{border-top:1px solid var(--rule)}
+/* the cue lives inside the pool now. Sitting in a strip above it, it read as an
+   orphaned caption stranded between the footer and the red. */
+.pool-cue{font-size:var(--chrome);color:var(--graphite);margin-bottom:16px}
+.pool{position:relative;height:clamp(380px,54vh,580px);overflow:hidden;
+  background:var(--proof)}
+/* pan-y so a vertical swipe still scrolls the page on touch */
+.pool canvas{display:block;width:100%;height:100%;touch-action:pan-y}
+/* the cue rides on the red. The scrim is not decoration: graphite on the brand
+   red fails 4.5 for a 13px label, and the wave underneath changes constantly.
+   The scrim makes its contrast independent of it. pointer-events:none so the
+   water still receives the cursor through it. */
+.pool-over{position:absolute;inset:auto 0 0;pointer-events:none;
+  padding:74px var(--gap) 24px;
+  background:linear-gradient(to top,
+    rgba(9,9,8,.94) 0%, rgba(9,9,8,.82) 42%, rgba(9,9,8,0) 100%)}
+@media (max-width:560px){
+  .pool-over{padding-top:56px}
+}
+
+/* ── contact: typography only. The invert primitive lives in styles.css so the
+   nav link and this row share it. */
+.cta{display:block;text-decoration:none;color:var(--sheet);
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.cta-face{display:flex;align-items:baseline;justify-content:space-between;gap:24px;
+  padding:clamp(30px,5.2vh,60px) clamp(12px,1.8vw,26px);
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(30px,5.2vw,78px);line-height:1.02;letter-spacing:-.024em}
+/* letter-spacing must be reset, not inherited: the display face's -.024em at
+   13px crushed the "i" and the label rendered as "Emal" */
+.cta-arrow{font-family:'Instrument Sans',sans-serif;font-size:var(--chrome);
+  letter-spacing:normal;white-space:nowrap;align-self:center}
+@media (hover:none){ .cta:active{color:var(--redline-text)} }
+
+/* ── contact: the form the CTA opens ─────────────────────────────────────────
+   The band is a closing statement, so the form is not allowed to be the first
+   thing you see in it. It stays collapsed until the CTA is pressed, and the
+   composition of the section is unchanged for anyone who does not press it.
+
+   The collapse is grid-template-rows 0fr → 1fr rather than max-height, because
+   max-height animation needs a magic number larger than the content and then
+   eases against a height nothing actually has — the last 200ms of a max-height
+   reveal is empty time. 0fr → 1fr animates the real measured height.
+
+   visibility, not just overflow: a collapsed form that is merely clipped is
+   still in the accessibility tree, so a screen reader finds three fields that
+   sighted readers cannot see and Tab lands inside a closed box.
+
+   minmax(0,Nfr) rather than a bare Nfr: an fr track takes an automatic minimum
+   of min-content, so a bare 0fr floors at the tallest thing inside it that
+   cannot be clipped. The closing rule used to live on the form, and a border is
+   exactly that — it survives the form's own overflow:hidden, held the collapsed
+   track at 1px, and stacked under the CTA's own rule as a 2px line. The rule
+   belongs to the open state, so it is on the wrapper. */
+.cf-wrap{display:grid;grid-template-rows:minmax(0,0fr);
+  transition:grid-template-rows .55s var(--ease)}
+.cf-wrap.is-open{grid-template-rows:minmax(0,1fr);
+  border-bottom:1px solid var(--rule)}
+.cf-wrap > *{min-height:0;overflow:hidden;visibility:hidden;
+  transition:visibility 0s linear .55s}
+.cf-wrap.is-open > *{visibility:visible;transition-delay:0s}
+/* the same ruled ledger the work index uses, so the form reads as part of the
+   page's furniture rather than a widget dropped into it */
+.cf-row{display:grid;grid-template-columns:minmax(0,190px) 1fr;
+  gap:clamp(10px,1.6vw,24px);align-items:baseline;
+  padding:clamp(15px,2vh,20px) clamp(12px,1.8vw,26px);
+  border-bottom:1px solid var(--rule);position:relative}
+.cf-row label{font-size:var(--chrome);color:var(--graphite);letter-spacing:normal;
+  transition:color .25s ease}
+/* appearance:none, or Chrome paints its own field box inside the borderless
+   row and the textarea reads as a sunken input on a page that has none. */
+.cform input,.cform textarea{width:100%;background:transparent;border:0;padding:0;
+  appearance:none;-webkit-appearance:none;
+  color:var(--sheet);font-family:'Instrument Sans',sans-serif;
+  font-size:clamp(16px,1.4vw,19px);line-height:1.5;letter-spacing:normal;resize:none}
+.cform ::placeholder{color:#55534D;opacity:1}
+/* The focus ring is NOT overridden here. :focus-visible in styles.css is the
+   site's one focus primitive, measured against 2.4.11, and a form is the last
+   place to start exempting things from it. The row treatment below is extra —
+   it marks the active row for a pointer user, who gets no ring at all. */
+.cf-row:focus-within{background:rgba(234,232,225,.035)}
+.cf-row:focus-within label{color:var(--sheet)}
+.cf-row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;
+  background:var(--redline);transform:scaleY(0);transform-origin:top;
+  transition:transform .28s var(--ease)}
+.cf-row:focus-within::before{transform:scaleY(1)}
+/* a field the server rejected keeps the edge without needing focus */
+.cf-row.is-bad::before{transform:scaleY(1)}
+.cf-row.is-bad label{color:var(--redline-text)}
+
+.cf-pot{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+/* the call qualifier. Chrome type in graphite, the same register the pool cue
+   and the work-index meta use, because it is a footnote to the CTA and not a
+   second one — the moment it competes with "Start a project" the band has two
+   actions and no statement. */
+.cta-note{font-size:var(--chrome);color:var(--graphite);
+  padding:15px clamp(12px,1.8vw,26px) 0;max-width:52ch}
+
+.cf-foot{display:flex;align-items:center;justify-content:space-between;
+  gap:20px;flex-wrap:wrap;padding:clamp(14px,2vh,18px) clamp(12px,1.8vw,26px)}
+.cf-status{font-size:var(--chrome);color:var(--graphite);margin:0;min-height:1.2em}
+.cf-status[data-state="bad"]{color:var(--redline-text)}
+.cf-status[data-state="ok"]{color:var(--sheet)}
+.cf-send{font-family:'Instrument Serif',serif;font-size:clamp(21px,2.2vw,30px);
+  letter-spacing:-.018em;color:var(--sheet);background:transparent;
+  border:1px solid var(--rule);padding:9px 20px;cursor:pointer;
+  transition:background .3s ease,color .3s ease,border-color .3s ease}
+.cf-send:hover,.cf-send:focus-visible{background:var(--sheet);color:var(--proof);
+  border-color:var(--sheet)}
+.cf-send[disabled]{opacity:.5;cursor:default;background:transparent;color:var(--sheet)}
+@media (max-width:640px){
+  /* 190px of label column against a 130px field is a form nobody can type in */
+  .cf-row{grid-template-columns:1fr;gap:7px}
+}
+@media (prefers-reduced-motion:reduce){
+  .cf-wrap{transition:none}
+  .cf-row::before{transition:none}
+}
+
+/* ── what's included: horizontal expanding panels on a redline tonal ramp ──
+   Collapsed strips share a fixed container height; opening one takes the slack.
+
+   Contrast set the ramp's ceiling. The brand redline #C33F27 sits in a dead
+   zone: sheet on it is 4.23 and proof 3.75, so neither can carry text under
+   24px. Rather than recolour on open, which made the active panel darker than
+   its neighbours and so made it recede, the ramp stops at #A6361C. Every one of
+   the six then measures between 5.4:1 and 13.3:1 against sheet, so a panel can
+   keep its own colour when it opens, exactly as the reference does. */
+/* the 450px floor is not arbitrary: five collapsed strips are 5x66 and the open
+   one needs ~120 for head plus description, so a shorter container would clip
+   the description on a short desktop window. overflow guards the remainder. */
+/* the floor accounts for five collapsed strips at ~96px each plus ~150px for the
+   open one, or a short desktop window clips the description */
+.panels{display:flex;flex-direction:column;height:clamp(640px,76vh,860px);
+  overflow:hidden;border-top:1px solid var(--rule)}
+.panel{position:relative;display:flex;flex-direction:column;align-items:flex-start;
+  flex:0 0 auto;min-height:0;overflow:hidden;cursor:pointer;text-align:left;
+  border:0;border-bottom:1px solid rgba(13,13,12,.4);
+  background:var(--tone);color:var(--sheet);padding:24px 28px;width:100%;
+  transition:flex-grow .55s var(--ease),background-color .45s ease}
+.panel.is-open{flex-grow:1}
+.panel:focus-visible{outline:2px solid var(--sheet);outline-offset:-3px}
+
+.phead{display:flex;align-items:baseline;gap:20px}
+/* 700 at 22px clears WCAG's large-text threshold, so 3.0 applies, not 4.5 */
+.pn{font-weight:700;font-size:clamp(22px,2vw,30px);line-height:1;
+  font-variant-numeric:tabular-nums;opacity:.8}
+.pt{font-family:'Instrument Serif',serif;font-weight:400;
+  font-size:clamp(28px,3vw,46px);line-height:1.04;letter-spacing:-.018em}
+/* max-height, not just opacity. At opacity:0 the description still occupies
+   layout, so all six panels sat at full height, the container overflowed, and
+   flex-grow had no free space to take: nothing expanded at all. */
+.pdesc{font-size:var(--chrome);max-width:58ch;
+  max-height:0;overflow:hidden;margin-top:0;
+  opacity:0;transform:translateY(7px);
+  transition:opacity .35s ease .12s,transform .42s var(--ease) .12s,
+    max-height .5s var(--ease),margin-top .5s var(--ease)}
+.panel.is-open .pdesc{max-height:16em;margin-top:14px;opacity:1;transform:none}
+
+/* ── process: sticky stacking panels, the third spark ───────────────────────
+   Borrowed mechanic: each step pins and the next slides over it, so the section
+   assembles a stack. Deliberately not a 1:1 of the reference: hairlines instead
+   of dashed rules, an oversized serif numeral in the margin instead of a small
+   mono index, no media panel on the right, and the panel currently on top of
+   the stack takes a redline top edge.
+
+   No opacity dimming any more, because occlusion does that job. Which also
+   means graphite is safe again here: it only failed before when it sat inside
+   an element already dimmed to .58. */
+.process{padding:var(--band) 0 0}
+.steps{position:relative;padding-bottom:var(--band)}
+.step{position:sticky;top:60px;background:var(--proof);
+  border-top:1px solid var(--rule);
+  /* the numeral column widens with the numeral. at --label-col it was a 150px
+     box holding 76px of type, so the figure read as a margin note beside the
+     heading rather than as the thing you are counting through. */
+  display:grid;grid-template-columns:clamp(104px,15vw,250px) minmax(0,1fr);
+  gap:clamp(22px,3.4vw,56px);
+  align-content:start;
+  padding:clamp(32px,4.6vh,58px) 0 clamp(44px,7vh,86px);
+  /* the height is the scroll distance each panel gets to stay pinned, but at
+     46vh the content filled barely half of it and every panel read empty.
+     Splitting heading and note into two columns halved the content height
+     again, so this comes down rather than up — the pin still has room to read
+     as a pin, without a third of every panel being floor. */
+  min-height:clamp(238px,31vh,330px)}
+/* later panels have to paint over earlier ones as they pin */
+.step:nth-child(1){z-index:1} .step:nth-child(2){z-index:2}
+.step:nth-child(3){z-index:3} .step:nth-child(4){z-index:4}
+.step:nth-child(5){z-index:5}
+/* 2px, not 1px: this rule is the only thing that reports which step you are on,
+   and a hairline drawing itself across 1440px was easy to miss entirely */
+.step::before{content:"";position:absolute;left:0;right:0;top:-1px;height:2px;
+  background:var(--redline);transform:scaleX(0);transform-origin:left;
+  transition:transform .55s var(--ease)}
+.step.is-on::before{transform:scaleX(1)}
+.step .n{font-family:'Instrument Serif',serif;
+  font-size:clamp(58px,10.5vw,164px);line-height:.78;letter-spacing:-.045em;
+  color:var(--graphite);font-variant-numeric:tabular-nums;
+  transition:color .45s ease}
+.step.is-on .n{color:var(--redline-text)}
+
+/* ── the pinned step leads, the rest step back ──────────────────────────────
+   Opacity sits on the content wrapper, never on .step itself: the panels are
+   opaque plates that paint over each other as they pin, and a translucent one
+   would show the step beneath showing through it.
+
+   The note swaps to sheet while dimmed. This is the whole reason I left this
+   effect out the first time — graphite at .55 composites to 2.17:1 against
+   proof, which is precisely the trap rule 1 at the top of styles.css exists to
+   describe. Sheet at the same opacity measures 5.2:1, so the note stays
+   readable and still reads as clearly behind the live step. Measured, not
+   guessed: 5.24:1 dimmed, against 5.4:1 for graphite at rest. */
+.step > div{transition:opacity .5s var(--ease)}
+.step:not(.is-on) > div{opacity:.55}
+.step:not(.is-on) p{color:var(--sheet)}
+
+/* ── red halftone on the live step ─────────────────────────────────────────
+   The screen drifts by exactly one tile and loops, so it reads as a moving
+   dot field with no seam. transform, not background-size — that was the whole
+   lesson from the version of this that made scrolling heavy: translating a
+   layer is composited on the GPU, resizing a gradient repaints the tile.
+   Inset past the edges so the travel can never expose a corner, and z-index -1
+   so it sits over the panel's own proof ground but under its type. */
+.step::after{content:"";position:absolute;inset:-8px;z-index:-1;pointer-events:none;
+  background-image:radial-gradient(var(--redline) 30%,transparent 32%);
+  background-size:5px 5px;opacity:0;transition:opacity .55s var(--ease)}
+.step.is-on::after{opacity:.14;animation:dot-drift-5 3.4s linear infinite}
+/* the dot field bleeds 8px above the panel's own top edge, straight into its
+   static border-top — border-box keeps the 1px reserved so nothing shifts,
+   only its colour drops out, and just while the halftone is the thing playing */
+.step.is-on{border-top-color:transparent}
+@keyframes dot-drift-5{to{transform:translate3d(5px,5px,0)}}
+/* heading and note sit side by side rather than stacked. Stacked, both were
+   bounded by their own measure and the right third of every panel stayed
+   empty — five times over, on a section that is already 2000px tall. Beside
+   each other they use the full width and the panel reads as a spec line. */
+.step > div{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);
+  gap:clamp(20px,3.2vw,58px);align-items:start}
+.step h3{font-family:'Instrument Serif',serif;font-weight:400;
+  font-size:clamp(27px,3.9vw,56px);line-height:1.02;letter-spacing:-.024em;max-width:20ch}
+/* 52ch, not 62: the heading grew, and a measure that outran it made the panel
+   read as a paragraph with a title rather than a step with a note under it.
+   Colour stays graphite at full opacity — dimming inactive steps was the
+   obvious move and is exactly what rule 1 at the top of styles.css forbids,
+   since graphite under any resting opacity drops through 4.5:1. */
+.step p{font-size:clamp(15px,1.24vw,18px);color:var(--graphite);
+  max-width:46ch;margin-top:.5em}
+
+/* ── faq ────────────────────────────────────────────────────────────────── */
+.faq{border-top:1px solid var(--rule)}
+.faq details{border-bottom:1px solid var(--rule)}
+/* the row fills with brand red on hover and while open, Monolog's highlight bar
+   in her colour. The 24px floor is load-bearing: sheet on #C33F27 measures
+   4.23:1, which clears the 3.0 large-text bar but NOT the 4.5 small-text one, so
+   the summary must never render below 24px. The answer stays on the dark ground,
+   because 13px on red would fail. */
+.faq summary{position:relative;isolation:isolate;
+  display:flex;align-items:baseline;justify-content:space-between;gap:20px;
+  padding:20px clamp(10px,1.4vw,20px);cursor:pointer;list-style:none;
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(24px,2.4vw,33px);line-height:1.08;letter-spacing:-.018em}
+/* the fill is its own layer, wiping in from the left. It cannot be a clip-path
+   on the summary itself, which would clip the question text away with it, and it
+   sits at z-index -1 inside an isolated stacking context so it paints under the
+   text but cannot escape behind the section's own background. */
+.faq summary::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:var(--redline);transform:scaleX(0);transform-origin:left;
+  transition:transform .42s var(--ease)}
+.faq summary:hover::before,.faq summary:focus-visible::before,
+.faq details[open] summary::before{transform:scaleX(1)}
+.faq summary::-webkit-details-marker{display:none}
+/* two bars with the vertical one collapsing, so plus becomes minus smoothly
+   instead of swapping a glyph instantly */
+.faq .mk{position:relative;width:15px;height:15px;flex:0 0 auto;
+  align-self:center;color:var(--graphite);transition:color .25s ease}
+.faq .mk::before,.faq .mk::after{content:"";position:absolute;background:currentColor}
+.faq .mk::before{left:0;right:0;top:7px;height:1.5px}
+.faq .mk::after{top:0;bottom:0;left:7px;width:1.5px;
+  transition:transform .34s var(--ease)}
+.faq details[open] .mk::after{transform:scaleY(0)}
+/* on the red fill the marker has to go to sheet, or graphite disappears into it.
+   It is a 1.5px graphic, so 3:1 applies and sheet on redline is 4.23:1. */
+.faq summary:hover .mk,.faq summary:focus-visible .mk,
+.faq details[open] .mk{color:var(--sheet)}
+/* the height of this wrapper is what animates */
+.faq .a-wrap{overflow:hidden}
+/* the horizontal padding has to match the summary's, or the answer hangs out
+   past the left edge of the question it belongs to */
+.faq .a{font-size:var(--chrome);color:var(--graphite);max-width:62ch;
+  padding:14px clamp(10px,1.4vw,20px) 24px}
+
+@media (max-width:1000px){
+  /* the accordion needs a fixed height to give slack to the open panel, which
+     a phone cannot spare. It restructures into the ruled list it degrades to,
+     rather than becoming six squashed strips. */
+  .panels{height:auto;display:block}
+  .panel{background:transparent;border-bottom:1px solid var(--rule);
+    padding:18px 0;display:block}
+  .panel.is-open{background:transparent}
+  .phead{gap:12px}
+  .pdesc{opacity:1;transform:none;color:var(--graphite);max-width:none;
+    max-height:none;overflow:visible;margin-top:12px}
+  /* a stack of pinned panels eats a phone viewport, so it releases into a
+     flowing list and the hairlines carry the structure instead */
+  .step{position:static;min-height:0;grid-template-columns:1fr;gap:10px;
+    padding:26px 0 30px}
+  /* the heading/note pair unstacks back to one column with the panel */
+  .step > div{grid-template-columns:1fr;gap:0}
+  .step p{margin-top:12px}
+  .step .n{font-size:clamp(30px,9vw,46px)}
+  .step::before{transform:scaleX(1)}
+  .step:not(.is-on)::before{background:var(--rule)}
+  .voice .inner{grid-template-columns:1fr;row-gap:26px;align-items:start}
+  .who-grid{grid-template-columns:1fr;gap:14px}
+  .who-grid > .label{order:-1}
+}
+@media (max-width:620px){
+  /* --chrome is interface size. On desktop these paragraphs sit as captions
+     beside a wide column and read as asides, which is what 13px is for. On a
+     phone the same elements ARE the prose — measured at 45 to 52 characters a
+     line, they are the main reading experience, not a margin note. So the
+     paragraphs step up and the labels do not: hierarchy is restored by moving
+     the two apart, rather than by shrinking the layout around them.
+     .step p and .who-body p already clamp to their own sizes and are left be. */
+  .head p,.voice .caption,.pdesc,.faq .a{font-size:15px;line-height:1.52}
+  /* The scrim ramp is tuned for a desktop, where a sheet frame is 472px in a
+     1480px column and the mark usually has proof behind it. At phone width the
+     frames span half the screen, so the mark sits over a full-brightness plate
+     most of the way down the section — and at the mark's baseline the desktop
+     ramp has already fallen to about .58, which puts cream on mid-grey at
+     2.4:1. Deeper and shorter: it clears at the same place, but it is actually
+     opaque where the type is. Both bands, or the light one inverts back. */
+  .nav::before{height:100px;background:linear-gradient(to bottom,
+    rgba(13,13,12,.97) 0%,rgba(13,13,12,.84) 54%,rgba(13,13,12,0) 100%)}
+  body.nav-ink .nav::before{background:linear-gradient(to bottom,
+    rgba(234,232,225,.97) 0%,rgba(234,232,225,.84) 54%,rgba(234,232,225,0) 100%)}
+  .sheet-grid{grid-template-columns:repeat(2,1fr)}
+  /* Nine frames over two columns leaves the ninth alone with a hole beside it,
+     which reads as a broken grid rather than the end of a sheet. It spans
+     instead, and takes a wider frame so spanning does not turn it into the
+     largest thing in the section. A real contact sheet ends on a part row.
+
+     is-tail, not :last-child: six of the fifteen are benched at any moment and
+     :last-child is structural, so it would keep matching a display:none tile
+     and hand the hole back. The controller moves is-tail with the rotation, and
+     the markup ships it on the last frame that is visible without JS. */
+  .sheet-grid .cell.is-tail{grid-column:1 / -1;aspect-ratio:16/9}
+  /* The dot screen and the resting blur are both sized for a 472px frame. At
+     half a phone's width they stop being a screen over a picture and become
+     the picture. The screen tightens, the blur goes, and the resting state
+     leans on grey and opacity alone — which is all the separation a frame
+     this small can carry and still be a photograph of something. */
+  .cell .plate{filter:grayscale(1) brightness(1.22);opacity:.72}
+  .cell .dots{--dot:2px}
+  /* the ruled ledger has to stay a ledger when it stacks, not become a plain
+     text column, so the meta keeps its own rule and stays a row */
+  .work-row{grid-template-columns:1fr;gap:8px}
+  .work-row .meta{text-align:left;flex-direction:row;gap:10px;
+    border-top:1px solid var(--rule-ink);padding-top:7px}
+  .work-row .wedge{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .cell .plate{filter:grayscale(1) brightness(1.4);opacity:.6}
+  .cell.is-on .plate{filter:none;opacity:1}
+  .work-row .wedge{width:1.5em}
+}
+</style>
+</head>
+<body>
+<div id="loader" aria-hidden="true"><canvas></canvas></div>
+<div class="grain" aria-hidden="true"></div>
+
+<a class="skip" href="index.html#landing">Skip to content</a>
+
+<header class="nav">
+  <a class="mark" href="index.html#landing" aria-label="drowningdot, home">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <defs><clipPath id="nm"><rect x="0" y="16" width="32" height="16"/></clipPath></defs>
+      <circle cx="16" cy="16" r="8.2" fill="currentColor"/>
+      <circle cx="16" cy="16" r="8.2" fill="#C33F27" clip-path="url(#nm)"/>
+    </svg>
+    drowningdot
+  </a>
+  <a class="nav-contact" data-invert href="index.html#contact">
+    <span class="nc-face">Contact</span>
+    <span class="nc-face inv-top" aria-hidden="true">Contact</span>
+  </a>
+</header>
+
+<main>
+  <!-- ── hero ─────────────────────────────────────────────────────────── -->
+  <section class="pleat" id="landing">
+    <h1 class="skip-target sr-only">drowningdot, a web design studio in Tokyo</h1>
+    <canvas aria-hidden="true"></canvas>
+    <p class="say">Under here<em>the whole time.</em></p>
+    <div class="cue"><span>Web design studio, Tokyo</span></div>
+  </section>
+
+  <!-- ── voice: nine faces, section 02. The specimen DOES re-typeset on row
+          hover — see the pointer handlers in site.js. An earlier comment here
+          claimed it had been quietened, which stopped being true and then sat
+          contradicting the note above .faces in the stylesheet. ───────────── -->
+  <section class="band voice" id="voice">
+    <div class="inner">
+      <div>
+        <h2 class="specimen">A typeface is <span class="dim">a tone of voice.</span></h2>
+        <p class="caption">Nine faces, the same three words set in each. Seven of the
+          nine sites hold two scripts on one baseline.</p>
+      </div>
+
+      <!-- buttons, because pointing at one re-typesets the specimen: they do
+           perform an action, and click gives touch and keyboard the same one -->
+      <div class="faces" id="faces" data-stagger>
+        <button class="face-row" data-face="'Instrument Serif',serif"   data-track="-.022em" data-lead=".96" data-mul="1"><span class="sample" style="font-family:'Instrument Serif',serif">Tone of voice</span><span class="kind">Editorial serif</span></button>
+        <button class="face-row" data-face="Anton,sans-serif"           data-track="-.05em"  data-lead=".90" data-mul="1.02"><span class="sample" style="font-family:Anton,sans-serif;text-transform:uppercase">Tone of voice</span><span class="kind">Condensed poster</span></button>
+        <button class="face-row" data-face="'Bodoni Moda',serif"        data-track="-.015em" data-lead=".99" data-mul=".98"><span class="sample" style="font-family:'Bodoni Moda',serif">Tone of voice</span><span class="kind">Fashion contrast</span></button>
+        <button class="face-row" data-face="Fraunces,serif"             data-track="-.02em"  data-lead=".99" data-mul=".96"><span class="sample" style="font-family:Fraunces,serif">Tone of voice</span><span class="kind">Soft serif</span></button>
+        <button class="face-row" data-face="Syne,sans-serif"            data-track="-.03em"  data-lead=".98" data-mul=".82"><span class="sample" style="font-family:Syne,sans-serif">Tone of voice</span><span class="kind">Experimental</span></button>
+        <button class="face-row" data-face="'Space Grotesk',sans-serif" data-track="-.03em"  data-lead="1.0" data-mul=".92"><span class="sample" style="font-family:'Space Grotesk',sans-serif">Tone of voice</span><span class="kind">Technical grotesque</span></button>
+        <button class="face-row" data-face="'Playfair Display',serif"   data-track="-.02em"  data-lead=".99" data-mul=".97"><span class="sample" style="font-family:'Playfair Display',serif">Tone of voice</span><span class="kind">Classical display</span></button>
+        <button class="face-row" data-face="'DM Mono',monospace"        data-track="-.04em"  data-lead="1.04" data-mul=".64"><span class="sample" style="font-family:'DM Mono',monospace">Tone of voice</span><span class="kind">Monospace</span></button>
+        <button class="face-row" data-face="Archivo,sans-serif"         data-track="-.03em"  data-lead=".98" data-mul=".93"><span class="sample" style="font-family:Archivo,sans-serif">Tone of voice</span><span class="kind">Neutral workhorse</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── contact sheet: the secondary spark ───────────────────────────── -->
+  <section class="band" id="takes">
+    <div class="wrap">
+      <div class="head" data-reveal>
+        <p class="label">Takes</p>
+        <div>
+          <h2>Most of what I build never ships.</h2>
+        </div>
+      </div>
+
+      <div class="sheet-grid" id="sheet" data-stagger="fade">
+        <button class="cell" data-kind="ship" data-full="img/tsutae.jpg" data-title="TsutaeAI" data-status="shipped" aria-label="TsutaeAI, shipped"><span class="plate" style="--bg:url('img/tsutae.jpg')" data-bg></span><span class="dots"></span><span class="meta"><span>TsutaeAI</span><i>shipped</i></span></button>
+        <button class="cell" data-kind="reject" data-full="img/tsutae-take1.jpg" data-title="TsutaeAI, take 1" data-status="rejected" aria-label="TsutaeAI take 1, rejected"><span class="plate" style="--bg:url('img/tsutae-take1.jpg')" data-bg></span><span class="dots"></span><span class="meta"><span>TsutaeAI, take 1</span><i>rejected</i></span></button>
+        <button class="cell is-bench" data-kind="reject" data-full="img/tsutae-take2.jpg" data-title="TsutaeAI, take 2" data-status="rejected" aria-label="TsutaeAI take 2, rejected"><span class="plate" style="--bg:url('img/tsutae-take2.jpg')" data-bg></span><span class="dots"></span><span class="meta"><span>TsutaeAI, take 2</span><i>rejected</i></span></button>
+        <button class="cell is-bench" data-kind="reject" data-full="img/tsutae-take3.jpg" data-title="TsutaeAI, take 3" data-status="rejected" aria-label="TsutaeAI take 3, rejected"><span class="plate" style="--bg:url('img/tsutae-take3.jpg')" data-bg></span><span class="dots"></span><span class="meta"><span>TsutaeAI, take 3</span><i>rejected</i></span></button>
+        <button class="cell" data-kind="ship" data-full="img/mimamori.jpg" data-title="MIMAMORI" data-status="shipped" aria-label="MIMAMORI, shipped"><span class="plate" style="--bg:url('img/mimamori.jpg')" data-bg></span><span class="dots"></span><span class="meta"><span>MIMAMORI</span><i>shipped</i></span></button>
+        <button class="cell" data-kind="ship" data-full="img/jukuna.jpg" data-title="Jukuna" data-status="shipped" data-case="work/jukuna.html" aria-label="Jukuna, shipped"><span class="plate" style="--bg:url('img/jukuna.jpg')" data-bg></span><span class="dots"></span><span class="meta"><span>Jukuna</span><i>shipped</i></span></button>
+        <button class="cell" data-kind="reject" data-full="img/jukuna-take2.jpg" data-title="Jukuna, take 2" data-status="rejected" data-case="work/jukuna.html" aria-label="Jukuna take 2, rejected"><span class="plate" style="--bg:url('img/jukuna-take2.jpg')" data-bg></span><span class="dots"></span><span class="meta"><span>Jukuna, take 2</span><i>rejected</i></span></button>
+        <button class="cell is-bench" data-kind="reject" data-full="img/tsutae-take4.jpg" data-title="TsutaeAI, take 4" data-status="rejected" aria-label="TsutaeAI take 4, rejected"><span class="plate" style="--bg:url('img/tsutae-take4.jpg')" data-bg></span><span class="dots"></span><span class="meta"><span>TsutaeAI, take 4</span><i>rejected</i></span></button>
+        <button class="cell" data-kind="ship" data-full="img/okimun.jpg" data-title="OKIMUN" data-status="shipped" aria-label="OKIMUN, shipped"><span class="plate" style="--bg:url('img/okimun.jpg')" data-bg></span><span class="dots"></span><span class="meta"><span>OKIMUN</span><i>shipped</i></span></button>
+        <button class="cell" data-kind="ship" data-full="img/grooz.jpg" data-title="GrooZ" data-status="shipped" data-case="work/grooz.html" aria-label="GrooZ, shipped"><span class="plate" style="--bg:url('img/grooz.jpg')" data-bg></span><span class="dots"></span><span class="meta"><span>GrooZ</span><i>shipped</i></span></button>
+        <button class="cell is-bench" data-kind="reject" data-full="img/grooz-take4.jpg" data-title="GrooZ, take 4" data-status="rejected" data-case="work/grooz.html" aria-label="GrooZ take 4, rejected"><span class="plate" style="--bg:url('img/grooz-take4.jpg')" data-bg></span><span class="dots"></span><span class="meta"><span>GrooZ, take 4</span><i>rejected</i></span></button>
+        <button class="cell is-bench" data-kind="reject" data-full="img/tsutae-take5.jpg" data-title="TsutaeAI, take 5" data-status="rejected" aria-label="TsutaeAI take 5, rejected"><span class="plate" style="--bg:url('img/tsutae-take5.jpg')" data-bg></span><span class="dots"></span><span class="meta"><span>TsutaeAI, take 5</span><i>rejected</i></span></button>
+        <button class="cell" data-kind="ship" data-full="img/ksf.jpg" data-title="Killarney STEM" data-status="shipped" data-case="work/killarney-stem.html" aria-label="Killarney STEM Fellowship, shipped"><span class="plate" style="--bg:url('img/ksf.jpg')" data-bg></span><span class="dots"></span><span class="meta"><span>Killarney STEM</span><i>shipped</i></span></button>
+        <button class="cell is-bench" data-kind="ship" data-full="img/solomon.jpg" data-title="Solomon" data-status="shipped" aria-label="Solomon, shipped"><span class="plate" style="--bg:url('img/solomon.jpg')" data-bg></span><span class="dots"></span><span class="meta"><span>Solomon</span><i>shipped</i></span></button>
+        <button class="cell is-tail" data-kind="ship" data-full="img/nexa.jpg" data-title="Nexa" data-status="shipped" aria-label="Nexa, shipped"><span class="plate" style="--bg:url('img/nexa.jpg')" data-bg></span><span class="dots"></span><span class="meta"><span>Nexa</span><i>shipped</i></span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── work: the one light band on the page ─────────────────────────── -->
+  <section class="band work" id="work" data-light-band>
+    <div class="wrap">
+      <div class="head head-solo" data-reveal>
+        <h2 class="label">Work</h2>
+      </div>
+
+      <div class="work-index" data-stagger>
+        <p class="idx-cut">Recent</p>
+        <a class="work-row" data-prov="client" href="https://tsutae-ai-site.vercel.app" target="_blank" rel="noopener">
+          <span class="who">TsutaeAI<span class="wedge"><span style="--bg:url('img/tsutae.jpg')" data-bg></span></span></span>
+          <span class="meta"><span class="prov">Client</span><span>Nonverbal analytics AI · Japan</span></span>
+        </a>
+        <a class="work-row" data-prov="venture" href="https://www.nexagroup.me" target="_blank" rel="noopener">
+          <span class="who">Nexa<span class="wedge"><span style="--bg:url('img/nexa.jpg')" data-bg></span></span></span>
+          <span class="meta"><span class="prov">Own venture</span><span>Classroom AI · Tokyo</span></span>
+        </a>
+        <a class="work-row" data-prov="client" href="https://ad6mski.vercel.app" target="_blank" rel="noopener">
+          <span class="who">ad6mski<span class="wedge"><span style="--bg:url('img/ad6mski.jpg')" data-bg></span></span></span>
+          <span class="meta"><span class="prov">Client</span><span>Archive fashion · one lot at a time</span></span>
+        </a>
+
+        <a class="work-row idx-all" href="work/index.html">
+          <span class="who">All work</span>
+          <span class="meta"><span>Nine sites &rarr;</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── what's included ──────────────────────────────────────────────── -->
+  <section class="band" id="included">
+    <div class="wrap">
+      <div class="head head-solo" data-reveal>
+        <h2 class="label">Included</h2>
+      </div>
+
+      <div class="panels" id="panels" data-reveal>
+        <button class="panel is-open" style="--tone:#3D1309" aria-expanded="true">
+          <span class="phead"><span class="pn">01</span><span class="pt">Designed and built by one person</span></span>
+          <span class="pdesc">No handoff between a designer and a developer, so nothing gets lost translating a picture into a page.</span>
+        </button>
+        <button class="panel" style="--tone:#521A0D" aria-expanded="false">
+          <span class="phead"><span class="pn">02</span><span class="pt">Four to nine heroes, and you pick</span></span>
+          <span class="pdesc">Real coded pages you can open and scroll, not flat mockups. Whatever you choose is already partly built.</span>
+        </button>
+        <button class="panel" style="--tone:#67210F" aria-expanded="false">
+          <span class="phead"><span class="pn">03</span><span class="pt">Two scripts if you need them</span></span>
+          <span class="pdesc">Japanese and Latin type held on one baseline. Seven of the nine sites do this, which is the part most studios cannot.</span>
+        </button>
+        <button class="panel" style="--tone:#7C2814" aria-expanded="false">
+          <span class="phead"><span class="pn">04</span><span class="pt">Written by hand</span></span>
+          <span class="pdesc">HTML and CSS, or Next.js where it earns its place. No page builder and no template underneath.</span>
+        </button>
+        <button class="panel" style="--tone:#912F18" aria-expanded="false">
+          <span class="phead"><span class="pn">05</span><span class="pt">Live, not handed over as files</span></span>
+          <span class="pdesc">Deployed, with a drawn favicon, a real link preview card, and meta on every page.</span>
+        </button>
+        <button class="panel" style="--tone:#A6361C" aria-expanded="false">
+          <span class="phead"><span class="pn">06</span><span class="pt">Readable, and it works on a phone</span></span>
+          <span class="pdesc">Small screens get restructured rather than squashed. Contrast is measured against the standard, not eyeballed.</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── process: scroll-driven, the third spark ───────────────────────── -->
+  <section class="band process" id="process">
+    <div class="wrap">
+      <div class="head" data-reveal>
+        <p class="label">Process</p>
+        <div>
+          <h2>Five steps, and you decide at the third.</h2>
+        </div>
+      </div>
+
+      <div class="steps" id="steps">
+        <div class="step is-on">
+          <span class="n">01</span>
+          <div>
+            <h3>You say what it is for.</h3>
+            <p>What the site has to do, who lands on it, and what you need them to
+               do once they are there. If the brief is thin I will make a call and
+               tell you what I decided.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="n">02</span>
+          <div>
+            <h3>The look comes out of your world, not a style menu.</h3>
+            <p>Every trade has its own materials, documents and habits. Those are
+               where the design comes from, which is why it cannot be pasted onto
+               a competitor without anyone noticing.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="n">03</span>
+          <div>
+            <h3>You choose from four to nine real heroes.</h3>
+            <p>Each one is a genuinely different idea rather than the same layout
+               in new colours, and each one already runs in a browser. This is the
+               only decision I will not make for you.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="n">04</span>
+          <div>
+            <h3>I attack the one you picked.</h3>
+            <p>At desktop and at phone width, against a written checklist, and I
+               remove one element. There is always one. A critique that changes
+               nothing was not honest.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="n">05</span>
+          <div>
+            <h3>It ships.</h3>
+            <p>The full page built out from the winning hero, deployed, then the
+               same critique run again section by section so the energy does not
+               die after the first screen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── faq ──────────────────────────────────────────────────────────── -->
+  <section class="band" id="faq">
+    <div class="wrap">
+      <div class="head" data-reveal>
+        <p class="label">Questions</p>
+        <h2>Before you email.</h2>
+      </div>
+
+      <div class="faq" data-reveal>
+        <details>
+          <summary>What do I actually get?<span class="mk"></span></summary>
+          <div class="a-wrap"><p class="a">A website. Designed and built by the same
+             person, deployed and live, on your own domain if you have one.</p></div>
+        </details>
+        <details>
+          <summary>Can you work in Japanese?<span class="mk"></span></summary>
+          <div class="a-wrap"><p class="a">Yes. Seven of the nine sites hold Japanese and
+             Latin type on one baseline, which is a different job from running English
+             copy through a translator and hoping the layout survives.</p></div>
+        </details>
+        <details>
+          <summary>Do I choose the design?<span class="mk"></span></summary>
+          <div class="a-wrap"><p class="a">Yes, and not from pictures. You will see four
+             to nine real coded heroes and pick one. If none of them are right, that is
+             useful information and we go again.</p></div>
+        </details>
+        <details>
+          <summary>What do you need from me?<span class="mk"></span></summary>
+          <div class="a-wrap"><p class="a">Words, photographs, and decisions. The words
+             matter most. No amount of design rescues copy that nobody wrote, and real
+             photography beats anything generated.</p></div>
+        </details>
+        <details>
+          <summary>Can I see the work that did not ship?<span class="mk"></span></summary>
+          <div class="a-wrap"><p class="a">All of it. The rejected takes are on this page,
+             and three of the projects have their full gallery of heroes with the losing
+             ones struck through.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── studio ───────────────────────────────────────────────────────── -->
+  <section class="band" id="studio">
+    <div class="wrap who-grid">
+      <p class="label">Studio</p>
+      <div class="who-body" data-reveal>
+        <p>drowningdot is a web design studio in name only. One person, seventeen, working out of Tokyo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── contact ──────────────────────────────────────────────────────── -->
+  <section class="band contact" id="contact">
+    <div class="wrap">
+      <p class="cta-say" data-reveal>Tell me what it is for.<br>
+        <em>I will build you nine.</em></p>
+
+      <div data-reveal>
+        <!-- ADDRESS PLACEHOLDER: this is the only occurrence.
+
+             The href is a real mailto and stays one. Script intercepts the
+             click and opens the form instead, so the address is never printed
+             on the page, but a reader whose JS failed still has somewhere to
+             go: without the script this is exactly the link it used to be.
+             A button that needs JS to do anything is a dead end for the one
+             reader who cannot afford one. -->
+        <a class="cta" data-invert id="cta-start" href="mailto:hello@drowningdot.com"
+           aria-controls="cform" aria-expanded="false">
+          <span class="cta-face">
+            <span>Start a project</span>
+            <span class="cta-arrow">Email &rarr;</span>
+          </span>
+          <span class="cta-face inv-top" aria-hidden="true">
+            <span>Start a project</span>
+            <span class="cta-arrow">Email &rarr;</span>
+          </span>
+        </a>
+
+        <!-- Collapsed by CSS, not by [hidden], because the row heights have to
+             animate. The wrapper is a 0fr grid until it is opened. -->
+        <div class="cf-wrap" id="cform-wrap">
+          <form class="cform" id="cform" method="post" action="https://drowningdot.com/api/contact" novalidate>
+            <div class="cf-row">
+              <label for="cf-name">Your name</label>
+              <!-- no placeholder: it would only repeat the label, and a
+                   placeholder that repeats its label is noise that disappears
+                   the moment you need it. The other two carry real information
+                   — a format, and how much to write. -->
+              <input id="cf-name" name="name" type="text" required
+                     autocomplete="name" maxlength="120">
+            </div>
+            <div class="cf-row">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" required
+                     autocomplete="email" maxlength="254" placeholder="you@company.com">
+            </div>
+            <div class="cf-row cf-row-msg">
+              <label for="cf-msg">What it is for</label>
+              <textarea id="cf-msg" name="message" required rows="4" maxlength="4000"
+                        placeholder="A sentence is enough."></textarea>
+            </div>
+
+            <!-- the honeypot. Off screen rather than display:none, because some
+                 bots skip anything the stylesheet hides outright. -->
+            <div class="cf-pot" aria-hidden="true">
+              <label for="cf-company">Company</label>
+              <input id="cf-company" name="company" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="cf-foot">
+              <p class="cf-status" id="cf-status" role="status" aria-live="polite"></p>
+              <button class="cf-send" type="submit">Send &rarr;</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Outside the wrapper, so it is readable before the form is opened.
+             Someone who wants twenty minutes on a call is not going to press a
+             button that says "Start a project" to find out whether that is on
+             offer — the qualifier has to be legible while the form is still
+             shut. It sits under the form once opened, where it reads as a
+             footnote to the message field rather than a second CTA. -->
+        <p class="cta-note">Or ask for a call. Say so in the message and I will send times.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ── moiré band ───────────────────────────────────────────────────────────
+     The 260px of dead air between the contact CTA and the footer rows was two
+     sections' padding meeting. It now holds the thing that happens when you
+     misregister a halftone screen on press: two dot grids at different pitch
+     and a degree and a half apart, one drifting, interfering. Decorative and
+     announced as such. -->
+<div class="moire" aria-hidden="true"><span class="lens"></span></div>
+
+<!-- ── footer ─────────────────────────────────────────────────────────────── -->
+<footer class="site-foot" id="foot">
+  <div class="wrap">
+    <div class="big-rows" data-stagger>
+      <a class="big-row" href="index.html#work">Work <span class="arrow">Nine sites &darr;</span></a>
+      <a class="big-row" href="index.html#takes">Takes <span class="arrow">Including the rejects &darr;</span></a>
+      <a class="big-row" href="index.html#process">Process <span class="arrow">Five steps &darr;</span></a>
+    </div>
+
+    <!-- The small print balances the row that used to hold only Back to top:
+         copyright and the two legal pages left, the way up right. -->
+    <div class="foot-tail">
+      <p class="foot-legal">&copy; 2026 drowningdot
+        &middot; <a href="work/index.html">Work</a>
+        &middot; <a href="process/index.html">Process</a>
+        &middot; <a href="contact/index.html">Contact</a>
+        &middot; <a href="privacy.html">Privacy</a>
+        &middot; <a href="terms.html">Terms</a></p>
+      <a href="index.html#landing" style="color:inherit;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:13px 0">Back to top &uarr;</a>
+    </div>
+  </div>
+</footer>
+
+<section class="pool-wrap" id="pool">
+  <div class="pool">
+    <canvas role="img" aria-label="The word drowningdot submerged in red, uncovered by moving through it."></canvas>
+    <div class="pool-over">
+      <!-- pointermove fires for touch too, so dragging genuinely works there; the
+           verb is the only thing that has to change -->
+      <p class="pool-cue"><span class="if-pointer">Move</span><span class="if-touch">Drag</span>
+        through it. Hold still and it opens further.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── the sheet, opened ──────────────────────────────────────────────────────
+     A contact sheet you cannot look closer at is a picture of a contact sheet.
+     Native <dialog> rather than a hand-rolled overlay: showModal() gives the
+     top layer, Escape, the inert background and focus returned to the tile that
+     opened it, none of which is worth reimplementing worse. What is left to do
+     by hand is the backdrop click, the arrow keys and the scrollbar.       -->
+<dialog class="lb" id="lb" aria-labelledby="lb-name">
+  <div class="lb-shell">
+    <!-- a 1x1 transparent GIF, not an empty src. An img with no src at all is
+         the one HTML error the validator finds on this page, and the frame has
+         to exist before it has a picture in it. This never touches the network
+         and is what the element is reset to on close, so the DOM stays valid at
+         rest and the decoded bitmap is still released. -->
+    <img class="lb-img" id="lb-img" alt=""
+         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+    <div class="lb-bar">
+      <p class="lb-id"><span class="lb-name" id="lb-name"></span><i class="lb-status"></i></p>
+      <p class="lb-acts">
+        <a class="lb-case" hidden>Read the case study <span aria-hidden="true">→</span></a>
+        <span class="lb-count" aria-hidden="true"></span>
+        <button class="lb-step lb-prev" type="button" aria-label="Previous frame">←</button>
+        <button class="lb-step lb-next" type="button" aria-label="Next frame">→</button>
+        <button class="lb-x" type="button" aria-label="Close">Close</button>
+      </p>
+    </div>
+  </div>
+</dialog>
+
+<script src="loader.js"></script>
+<script src="pleat.js"></script>
+<script src="site.js"></script>
+<script src="pool.js"></script>
+<script>
+/* ── voice: pointing at a row re-typesets the specimen ─────────────────────
+   Restored at Jesy's request after seeing it live beside the pleat landing.
+   Click as well as hover, so touch and keyboard get the same action.        */
+(function(){
+  var root = document.documentElement;
+  var DEFAULTS = {face:"'Instrument Serif',serif", track:'-.022em', lead:'.96', mul:'1'};
+  var rows = [].slice.call(document.querySelectorAll('.face-row'));
+  var stage = document.getElementById('faces');
+  if (!rows.length) return;
+
+  function apply(face, track, lead, mul){
+    root.style.setProperty('--display', face);
+    root.style.setProperty('--tracking', track);
+    root.style.setProperty('--leading', lead);
+    root.style.setProperty('--mul', mul);
+  }
+  function reset(){
+    apply(DEFAULTS.face, DEFAULTS.track, DEFAULTS.lead, DEFAULTS.mul);
+    rows.forEach(function(b){ b.classList.remove('is-on') });
+  }
+
+  rows.forEach(function(btn){
+    function on(){
+      rows.forEach(function(b){ b.classList.remove('is-on') });
+      btn.classList.add('is-on');
+      apply(btn.dataset.face, btn.dataset.track, btn.dataset.lead, btn.dataset.mul);
+    }
+    btn.addEventListener('mouseenter', on);
+    btn.addEventListener('focus', on);
+    btn.addEventListener('click', on);   /* tap equivalent, state persists */
+  });
+
+  /* scoped state: these are root tokens, so the section hands them back when it
+     leaves the viewport and cannot leak into the bands below */
+  if ('IntersectionObserver' in window && stage){
+    new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (!e.isIntersecting) reset(); });
+    }, {threshold:0}).observe(stage);
+  }
+})();
+
+/* ── included: the expanding panels ────────────────────────────────────────
+   Opens on hover and on click. Hover is debounced by a short intent delay,
+   because without it dragging the pointer down the stack fires all six in
+   sequence and the section thrashes. Buttons, so keyboard and touch both work
+   with no extra code path.                                                  */
+(function(){
+  var panels = [].slice.call(document.querySelectorAll('.panel'));
+  if (!panels.length) return;
+  var fine = window.matchMedia('(hover:hover)').matches;
+  var timer = null;
+
+  function open(p){
+    if (p.classList.contains('is-open')) return;     /* never leave none open */
+    panels.forEach(function(q){
+      q.classList.remove('is-open');
+      q.setAttribute('aria-expanded', 'false');
+    });
+    p.classList.add('is-open');
+    p.setAttribute('aria-expanded', 'true');
+  }
+
+  panels.forEach(function(p){
+    p.addEventListener('click', function(){ clearTimeout(timer); open(p); });
+    p.addEventListener('focus', function(){ open(p); });
+    if (fine) {
+      p.addEventListener('mouseenter', function(){
+        clearTimeout(timer);
+        timer = setTimeout(function(){ open(p); }, 90);
+      });
+      p.addEventListener('mouseleave', function(){ clearTimeout(timer); });
+    }
+  });
+})();
+
+
+/* ── faq: animate the height rather than snapping it open ──────────────────
+   <details> and <summary> are kept, so with JS off the native toggle still
+   works and find-in-page can still open a closed answer. The click is
+   intercepted only to ease the height on the way in and out.              */
+(function(){
+  var items = [].slice.call(document.querySelectorAll('.faq details'));
+  if (!items.length) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if (reduce || !Element.prototype.animate) return;   /* native snap is fine */
+
+  var EASE = 'cubic-bezier(.2,.7,.2,1)';
+
+  items.forEach(function(d){
+    var sum = d.querySelector('summary');
+    var wrap = d.querySelector('.a-wrap');
+    if (!sum || !wrap) return;
+    var anim = null;
+
+    sum.addEventListener('click', function(e){
+      e.preventDefault();
+      if (anim) { anim.cancel(); anim = null; }
+
+      if (d.open) {
+        var from = wrap.offsetHeight;
+        anim = wrap.animate({ height: [from + 'px', '0px'], opacity: [1, 0] },
+          { duration: 320, easing: EASE });
+        anim.onfinish = function(){
+          d.open = false; wrap.style.height = ''; anim = null;
+        };
+      } else {
+        d.open = true;                       /* must be open to measure it */
+        var to = wrap.offsetHeight;
+        anim = wrap.animate({ height: ['0px', to + 'px'], opacity: [0, 1] },
+          { duration: 400, easing: EASE });
+        anim.onfinish = function(){ wrap.style.height = ''; anim = null; };
+      }
+    });
+  });
+})();
+
+/* ── process: which stacked panel is on top ────────────────────────────────
+   Occlusion carries the hierarchy now, so this only marks the panel currently
+   pinned so it can take the redline edge and the red numeral. Register stays
+   positional, and being scroll-driven it needs no hover.                   */
+(function(){
+  var steps = [].slice.call(document.querySelectorAll('.step'));
+  if (!steps.length) return;
+  var PIN = 61;                        /* the sticky line, nav height + 1 */
+  var active = -1, queued = false;
+
+  function paint(){
+    queued = false;
+    var next = 0;
+    for (var i = 0; i < steps.length; i++){
+      if (steps[i].getBoundingClientRect().top <= PIN) next = i;
+    }
+    if (next !== active){
+      if (active >= 0) steps[active].classList.remove('is-on');
+      steps[next].classList.add('is-on');
+      active = next;
+    }
+  }
+  function onScroll(){
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(paint);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll, {passive:true});
+  paint();
+  /* rAF is frozen in a background tab, so guarantee a correct first state */
+  setTimeout(paint, 900);
+})();
+
+/* ── work: the paper's undertone drifts with scroll through the band ───────
+   Scroll-linked, not autonomous, so it does not breach the ban on perpetual
+   decorative movement. Frozen mid-range under reduced motion.             */
+(function(){
+  var band = document.querySelector('.work');
+  if (!band) return;
+  if (window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+    band.style.setProperty('--wx', '40%');
+    band.style.setProperty('--wy', '38%');
+    return;
+  }
+  var queued = false, lastX = -1;
+  function paint(){
+    queued = false;
+    var b = band.getBoundingClientRect();
+    var p = (window.innerHeight - b.top) / (window.innerHeight + b.height);
+    p = p < 0 ? 0 : p > 1 ? 1 : p;
+    var x = Math.round(18 + p * 46);
+    if (x === lastX) return;           /* only touch style on a real change */
+    lastX = x;
+    band.style.setProperty('--wx', x + '%');
+    band.style.setProperty('--wy', Math.round(12 + p * 54) + '%');
+  }
+  function onScroll(){
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(paint);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll, {passive:true});
+  paint();
+  setTimeout(paint, 900);
+})();
+
+/* ── the sheet, rotating ───────────────────────────────────────────────────
+   Fifteen frames, nine slots, and the nine on show keep changing. Two moves run
+   off one timer: a swap dissolves a frame out and a benched one in, a transpose
+   exchanges two frames' slots. Both are needed. Only swapping reads as nine
+   slideshows side by side; only transposing reads as a fidget.
+
+   Slots are the `order` property, never DOM position. Reordering nodes would
+   drop focus mid-press, invalidate the lightbox's index, and re-run the reveal
+   stagger; `order` moves the box and touches none of that.
+
+   A tile is only ever swapped in after its JPEG is decoded, because the bench
+   is display:none and site.js's observer cannot have fetched a box that has no
+   dimensions. Revealing first and fetching second would flash an empty frame.
+
+   It holds still when it is being read: pointer over the sheet, a tile focused,
+   the lightbox open, the tab hidden, or the section off screen. And under
+   prefers-reduced-motion no timer starts at all — the sheet is dealt once at
+   load and then left alone, which is still a different nine per visit.
+
+   No more than two frames from one project are on the sheet at a time. Without
+   the cap a random nine from a pool this shape can come up half TsutaeAI, and
+   a contact sheet that looks like one client is not a contact sheet. */
+var rotor = (function(){
+  var sheet = document.getElementById('sheet');
+  if (!sheet) return null;
+  var pool = [].slice.call(sheet.querySelectorAll('.cell'));
+  var SLOTS = 9, PER_PROJECT = 2, TICK = 4600, FADE = 520;
+  if (pool.length <= SLOTS) return null;
+
+  var calm = matchMedia('(prefers-reduced-motion:reduce)');
+
+  function benched(c){ return c.classList.contains('is-bench'); }
+  function shown(){ return pool.filter(function(c){ return !benched(c); }); }
+  function slot(c){ var n = parseInt(c.style.order, 10); return isNaN(n) ? 0 : n; }
+  function pick(a){ return a[Math.floor(Math.random() * a.length)]; }
+  /* "TsutaeAI, take 3" and "TsutaeAI" are the same project for the cap */
+  function proj(c){ return (c.dataset.title || '').split(',')[0]; }
+  function tally(list, name){
+    return list.filter(function(c){ return proj(c) === name; }).length;
+  }
+
+  /* the tail is whichever frame is last on screen, which the two-column
+     breakpoint spans across both columns so the sheet ends on a part row */
+  function retail(){
+    var vis = shown().sort(function(a, b){ return slot(a) - slot(b); });
+    pool.forEach(function(c){ c.classList.remove('is-tail'); });
+    if (vis.length) vis[vis.length - 1].classList.add('is-tail');
+  }
+
+  /* decode before reveal. onerror resolves too — a missing frame should cost a
+     blank tile, not a rotation that stops forever waiting on it. */
+  function warm(c, done){
+    var plate = c.querySelector('.plate');
+    if (!plate || !plate.hasAttribute('data-bg')) return done();
+    var im = new Image();
+    im.onload = im.onerror = function(){
+      plate.style.backgroundImage = 'var(--bg)';
+      plate.removeAttribute('data-bg');
+      done();
+    };
+    im.src = c.dataset.full;
+  }
+
+  function deal(){
+    var order = pool.map(function(_, i){ return i; });
+    for (var i = order.length - 1; i > 0; i--){
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = order[i]; order[i] = order[j]; order[j] = t;
+    }
+    var take = [];
+    order.forEach(function(i){
+      var c = pool[i];
+      if (take.length < SLOTS && tally(take, proj(c)) < PER_PROJECT) take.push(c);
+    });
+    pool.forEach(function(c){
+      c.classList.toggle('is-bench', take.indexOf(c) < 0);
+    });
+    take.forEach(function(c, i){ c.style.order = i; });
+    retail();
+  }
+
+  function swapOne(){
+    var vis = shown();
+    var out = pick(vis);
+    if (!out) return;
+    var rest = vis.filter(function(c){ return c !== out; });
+    var in_ = pick(pool.filter(function(c){
+      return benched(c) && tally(rest, proj(c)) < PER_PROJECT;
+    }));
+    if (!in_) return;
+
+    warm(in_, function(){
+      if (benched(out) || !benched(in_)) return;   /* state moved while decoding */
+      var seat = out.style.order;
+      out.classList.add('is-swapping');
+      setTimeout(function(){
+        out.classList.remove('is-swapping');
+        out.classList.add('is-bench');
+        in_.style.order = seat;
+        in_.classList.add('is-swapping');
+        in_.classList.remove('is-bench');
+        void in_.offsetWidth;                      /* land the hidden state first */
+        in_.classList.remove('is-swapping');
+        retail();
+      }, calm.matches ? 0 : FADE);
+    });
+  }
+
+  /* FLIP. The slot changes first, then the tile is pinned back where it was and
+     released, so the browser animates a transform rather than a grid reflow. The
+     tail is left out of it: it is a different size at the two-column breakpoint
+     and swapping a wide frame with a square one animates the box, not the move. */
+  function slide(c, from){
+    var to = c.getBoundingClientRect();
+    var dx = from.left - to.left, dy = from.top - to.top;
+    if (!dx && !dy) return;
+    c.classList.remove('is-sliding');
+    c.style.transform = 'translate(' + dx + 'px,' + dy + 'px)';
+    void c.offsetWidth;
+    c.classList.add('is-sliding');
+    c.style.transform = '';
+    setTimeout(function(){ c.classList.remove('is-sliding'); }, 700);
+  }
+
+  function transpose(){
+    var vis = shown().filter(function(c){ return !c.classList.contains('is-tail'); });
+    if (vis.length < 2) return;
+    var a = pick(vis), b = pick(vis.filter(function(c){ return c !== a; }));
+    var ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+    var oa = a.style.order;
+    a.style.order = b.style.order;
+    b.style.order = oa;
+    slide(a, ra); slide(b, rb);
+    retail();
+  }
+
+  /* arrowing through the lightbox can land on a frame that is currently
+     benched, and closing focuses it. Put it back on the sheet first, or focus
+     goes to a box with no dimensions and the sheet appears not to have moved. */
+  function reveal(c){
+    if (!c || !benched(c)) return;
+    var vis = shown();
+    var plate = c.querySelector('.plate');
+    if (plate && plate.hasAttribute('data-bg')){
+      plate.style.backgroundImage = 'var(--bg)';
+      plate.removeAttribute('data-bg');
+    }
+    if (vis.length >= SLOTS){
+      var out = pick(vis);
+      c.style.order = out.style.order;
+      out.classList.add('is-bench');
+    } else {
+      c.style.order = vis.length;
+    }
+    c.classList.remove('is-bench');
+    retail();
+  }
+
+  var hover = false;
+  sheet.addEventListener('pointerenter', function(){ hover = true; });
+  sheet.addEventListener('pointerleave', function(){ hover = false; });
+
+  function readable(){
+    var dlg = document.getElementById('lb');
+    if (hover || document.hidden) return false;
+    if (dlg && dlg.open) return false;
+    if (sheet.contains(document.activeElement)) return false;
+    var r = sheet.getBoundingClientRect();
+    return r.bottom > 0 && r.top < window.innerHeight;
+  }
+
+  deal();
+  if (!calm.matches){
+    setInterval(function(){
+      if (!readable()) return;
+      if (Math.random() < .62) swapOne(); else transpose();
+    }, TICK);
+  }
+
+  return { reveal: reveal };
+})();
+
+/* ── the sheet, opened ─────────────────────────────────────────────────────
+   The nine tiles were buttons that did nothing. A button that does nothing is
+   worse than a div: it announces "MIMAMORI, shipped, button" and then refuses
+   the press. They open the frame now, and five of the fifteen carry a link on to
+   the case study that documents them — including the two rejects, which is
+   where the rejected takes are actually written up.
+
+   Arrow keys move between frames because that is what a contact sheet is for,
+   and the tile behind stays in sync so closing leaves you where you looked.
+   They run the whole pool of fifteen, not the nine currently on the sheet: once
+   you are inside the frame you are in the archive, and a reader who arrowed to
+   a take should not have it withheld because the rotation has it benched. */
+(function(){
+  var dlg = document.getElementById('lb');
+  var sheet = document.getElementById('sheet');
+  if (!dlg || !sheet || !dlg.showModal) return;      /* no dialog, tiles stay inert */
+
+  var cells = [].slice.call(sheet.querySelectorAll('.cell[data-full]'));
+  if (!cells.length) return;
+
+  var img    = dlg.querySelector('.lb-img');
+  var name   = dlg.querySelector('.lb-name');
+  var status = dlg.querySelector('.lb-status');
+  var caseLk = dlg.querySelector('.lb-case');
+  var count  = dlg.querySelector('.lb-count');
+  var at = 0;
+
+  function show(i){
+    at = (i + cells.length) % cells.length;          /* wraps both ways */
+    var c = cells[at], d = c.dataset;
+    img.src = d.full;
+    img.alt = d.title + ', ' + d.status + ' — full frame';
+    name.textContent = d.title;
+    status.textContent = d.status;
+    status.setAttribute('data-kind', d.status);
+    count.textContent = (at + 1) + ' / ' + cells.length;
+    if (d.case){ caseLk.href = d.case; caseLk.hidden = false; }
+    else { caseLk.removeAttribute('href'); caseLk.hidden = true; }
+    /* the tile under the dialog follows, so the sheet is already on the right
+       frame when the dialog closes and focus lands back on it */
+    cells.forEach(function(o){ o.classList.remove('is-on'); });
+    c.classList.add('is-on');
+  }
+
+  function open(i){
+    show(i);
+    /* html, not body: overflow on body does not stop the scroll here. The
+       gutter is held so the page behind cannot jump sideways as it locks. */
+    var bar = window.innerWidth - document.documentElement.clientWidth;
+    document.documentElement.style.overflow = 'hidden';
+    if (bar > 0) document.documentElement.style.paddingRight = bar + 'px';
+    dlg.showModal();
+  }
+
+  cells.forEach(function(c, i){
+    c.addEventListener('click', function(){ open(i); });
+  });
+
+  /* Teardown does not hang off the close event. Chrome 149 was observed not to
+     dispatch one here — for a dialog built fresh in a blank document as well as
+     for this one — and a page that leaks a scroll lock because an event did not
+     arrive is a page you cannot scroll. So every close runs through shut(),
+     which is safe to call twice and does not care who closed the dialog first.
+     The close listener stays on as a backstop for the browsers that do fire. */
+  var BLANK = img.getAttribute('src');               /* the 1x1 it ships with */
+  function teardown(){
+    document.documentElement.style.overflow = '';
+    document.documentElement.style.paddingRight = '';
+    img.src = BLANK;                                 /* drops the decoded bitmap
+                                                        without leaving the img
+                                                        without a src at all */
+    /* the frame being left may have rotated off the sheet, or never been on it
+       — put it back before focus, so focus lands on something with a box */
+    if (cells[at]){
+      if (rotor) rotor.reveal(cells[at]);
+      cells[at].focus({preventScroll:true});
+    }
+  }
+  function shut(){
+    if (dlg.open) dlg.close();
+    teardown();
+  }
+  dlg.addEventListener('close', teardown);
+
+  dlg.querySelector('.lb-x').addEventListener('click', shut);
+  dlg.querySelector('.lb-prev').addEventListener('click', function(){ show(at - 1); });
+  dlg.querySelector('.lb-next').addEventListener('click', function(){ show(at + 1); });
+
+  /* clicking beside the frame closes. The shell fills the dialog, so testing
+     for "outside the shell" would never be true — the test that matters is
+     whether the press landed on the picture or the bar, and mousedown rather
+     than click so a drag that starts on the image cannot close it on release */
+  dlg.addEventListener('mousedown', function(e){
+    if (!e.target.closest('.lb-img,.lb-bar')) shut();
+  });
+
+  dlg.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowLeft'){ e.preventDefault(); show(at - 1); }
+    if (e.key === 'ArrowRight'){ e.preventDefault(); show(at + 1); }
+    /* no preventDefault: the browser is welcome to close it too, shut() copes */
+    if (e.key === 'Escape') shut();
+  });
+})();
+
+/* ── contact ───────────────────────────────────────────────────────────────
+   The CTA is a mailto in the markup and stays one until this runs. Everything
+   below is the enhancement: intercept the press, open the form, post it as
+   JSON to /api/contact. If the script never arrives the link still opens a
+   mail client, which is why the href is real rather than a "#".
+
+   The arrow relabels itself on init for the same reason. "Email →" is the
+   truth about a mailto and a lie about a form, so the markup ships the first
+   and this swaps in the second only once the form actually exists. */
+(function(){
+  var cta  = document.getElementById('cta-start');
+  var wrap = document.getElementById('cform-wrap');
+  var form = document.getElementById('cform');
+  if (!cta || !wrap || !form) return;
+
+  var status = document.getElementById('cf-status');
+  var send   = form.querySelector('.cf-send');
+  var open   = false, busy = false;
+
+  [].slice.call(cta.querySelectorAll('.cta-arrow')).forEach(function(a){
+    a.textContent = 'Write →';
+  });
+
+  function say(msg, state){
+    status.textContent = msg || '';
+    if (state) status.setAttribute('data-state', state);
+    else status.removeAttribute('data-state');
+  }
+
+  function mark(fields){
+    [].slice.call(form.querySelectorAll('.cf-row')).forEach(function(r){
+      r.classList.remove('is-bad');
+    });
+    (fields || []).forEach(function(n){
+      var el = form.elements[n];
+      if (el && el.closest('.cf-row')) el.closest('.cf-row').classList.add('is-bad');
+    });
+  }
+
+  function show(){
+    if (open) return;
+    open = true;
+    wrap.classList.add('is-open');
+    cta.setAttribute('aria-expanded', 'true');
+    /* after the rows have height, or focus scrolls to a box of zero height and
+       the page jumps to somewhere that is not the form */
+    setTimeout(function(){ form.elements.name.focus({preventScroll:true}); }, 240);
+  }
+
+  cta.addEventListener('click', function(e){
+    /* a modified click is someone deliberately asking their mail client for it,
+       and cmd-click on a mailto is a real thing people do. Let it through. */
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
+    show();
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (busy) return;
+
+    var data = {
+      name:    form.elements.name.value,
+      email:   form.elements.email.value,
+      message: form.elements.message.value,
+      company: form.elements.company.value    /* honeypot, sent as found */
+    };
+
+    /* the same three checks the endpoint runs, so the common mistake costs a
+       glance rather than a round trip. The server still runs them — this is
+       courtesy, not validation. */
+    var bad = [];
+    if (!data.name.trim()) bad.push('name');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email.trim())) bad.push('email');
+    if (!data.message.trim()) bad.push('message');
+    if (bad.length){
+      mark(bad);
+      say(bad.length > 1 ? 'A few fields need filling in.' : 'That one field needs another look.', 'bad');
+      var first = form.elements[bad[0]];
+      if (first) first.focus();
+      return;
+    }
+
+    mark([]);
+    busy = true;
+    send.disabled = true;
+    say('Sending…');
+
+    fetch(form.action, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function(r){
+      return r.json().catch(function(){ return {}; }).then(function(b){
+        return { ok: r.ok, body: b };
+      });
+    }).then(function(res){
+      if (res.ok){
+        /* the form is replaced rather than cleared. A blank form under a
+           "sent" line reads as an invitation to send it again. */
+        form.innerHTML = '<div class="cf-foot"><p class="cf-status" data-state="ok">' +
+          'Sent. I answer everything, usually within a day.</p></div>';
+        return;
+      }
+      mark(res.body.fields);
+      say(res.body.error || 'Could not send just now. Try again in a moment.', 'bad');
+      busy = false;
+      send.disabled = false;
+    }).catch(function(){
+      /* offline, DNS, a blocked request — nothing the reader can act on except
+         trying again, so do not dress it up as their mistake */
+      say('That did not reach me. Check your connection and try again.', 'bad');
+      busy = false;
+      send.disabled = false;
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

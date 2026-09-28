@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GrooZ · drowningdot</title>
+<meta name="description" content="A self-initiated Tokyo youth-culture platform, set entirely in Japanese. Four hero takes, one shipped." />
+<link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+<link rel="canonical" href="grooz.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="drowningdot" />
+<meta property="og:title" content="GrooZ · drowningdot" />
+<meta property="og:description" content="A self-initiated Tokyo youth-culture platform, set entirely in Japanese. Four hero takes, one shipped." />
+<meta property="og:url" content="grooz.html" />
+<meta property="og:image" content="https://drowningdot.com/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://drowningdot.com/og.png" />
+<!-- self-hosted, declared in styles.css. This page used to pull Archivo 400
+     and 500 from Google and never pulled Instrument Sans, which is what its
+     body copy is actually set in — so every paragraph here rendered in a
+     system fallback while two unused weights downloaded. Both halves of that
+     are gone now. Instrument Serif sets the title on the first screen. -->
+<link rel="preload" href="../fonts/instrument-serif-400.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../fonts/instrument-sans-400.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="../styles.css" />
+<link rel="stylesheet" href="../case.css" />
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<a class="skip" href="grooz.html#top">Skip to content</a>
+
+<header class="nav">
+  <a class="mark" href="../index.html" aria-label="drowningdot, home">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <defs><clipPath id="nm"><rect x="0" y="16" width="32" height="16"/></clipPath></defs>
+      <circle cx="16" cy="16" r="8.2" fill="currentColor"/>
+      <circle cx="16" cy="16" r="8.2" fill="#C33F27" clip-path="url(#nm)"/>
+    </svg>
+    drowningdot
+  </a>
+  <a class="back" href="index.html">All work &larr;</a>
+</header>
+
+<main id="top">
+  <section class="title">
+    <div class="wrap">
+      <h1>GrooZ</h1>
+      <p class="sub">A Tokyo youth-culture platform for music, fashion and
+         Shibuya nights, set entirely in Japanese.</p>
+
+      <dl class="ledger">
+        <div><dt>Origin</dt><dd>Self-initiated. No client, no brief, nobody asked for it</dd></div>
+        <div><dt>Scope</dt><dd>Eleven-section single page, Japanese only</dd></div>
+        <div><dt>Heroes built</dt><dd>Four explored, one shipped</dd></div>
+        <div><dt>Live</dt><dd><a href="https://grooz.vercel.app" target="_blank" rel="noopener">grooz.vercel.app</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="bleed">
+    <div class="wrap">
+      <figure data-reveal>
+        <img src="../img/grooz.jpg" width="960" height="720"
+             alt="The GrooZ home page as shipped, a yellow panel reading 今夜の入口 beside a blue music panel." />
+        <figcaption>
+          <span>What shipped</span>
+          <span>Japanese display type · eleven sections</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="takes" id="takes" data-light-band>
+    <div class="wrap">
+      <div class="head" data-reveal>
+        <p class="label">Takes</p>
+        <div>
+          <h2>Four ways into the same night.</h2>
+          <p>Three of these lead with photography and one leads with a colour
+             field. The colour field won. <span class="if-pointer">Point at any of
+             them to see it in full.</span><span class="if-touch">Each one resolves
+             as it reaches the middle of the screen.</span></p>
+        </div>
+      </div>
+
+      <div class="grid" data-reveal>
+        <button class="take" aria-label="Take A, crowd. Rejected.">
+          <img src="../img/grooz/variant-a.jpg" width="720" height="540" alt="Hero take over a dark crowd photograph, reading in Japanese: bring the fever to Tokyo." />
+          <span class="tag"><span>A · Crowd</span><i>rejected</i></span>
+        </button>
+        <button class="take shipped" aria-label="Take B, entrance. The direction that shipped.">
+          <img src="../img/grooz/variant-b.jpg" width="720" height="540" alt="Hero take on a chartreuse field reading in Japanese: tonight's entrance, beside a blue music panel." />
+          <span class="tag"><span>B · Entrance</span><i>shipped from</i></span>
+        </button>
+        <button class="take" aria-label="Take C, all night. Rejected.">
+          <img src="../img/grooz/variant-c.jpg" width="720" height="540" alt="Dark hero take reading in Japanese: the night keeps going, over a grid of photographs." />
+          <span class="tag"><span>C · All night</span><i>rejected</i></span>
+        </button>
+        <button class="take" aria-label="Take D, don't just watch. Rejected.">
+          <img src="../img/grooz/variant-d.jpg" width="720" height="540" alt="Hero take reading in Japanese: don't end up just an audience, beside street photography." />
+          <span class="tag"><span>D · Don't just watch</span><i>rejected</i></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="facts">
+    <div class="wrap">
+      <div class="head" data-reveal>
+        <p class="label">Build</p>
+        <h2>What is actually in it.</h2>
+      </div>
+
+      <dl class="rows" data-reveal>
+        <div><dt>Type</dt><dd>Japanese display typography on a CSS custom-property token set, 30 fluid <code>clamp()</code> steps</dd></div>
+        <div><dt>Structure</dt><dd>Eleven sections in a single file, 28 grid declarations, no framework</dd></div>
+        <div><dt>Concept</dt><dd>An entry stamp and guest list, carried through all four takes and into the shipped page</dd></div>
+        <div><dt>Media</dt><dd>Real photography rather than illustration, served from a CDN</dd></div>
+        <div><dt>Meta</dt><dd>Ships a drawn <code>favicon.svg</code> and an OG card</dd></div>
+        <div><dt>Language</dt><dd>Japanese only. No English fallback, by choice</dd></div>
+      </dl>
+    </div>
+  </section>
+
+
+</main>
+
+<footer class="next">
+    <div class="wrap">
+      <nav class="big-rows" data-reveal aria-label="More work">
+        <a class="big-row" href="https://grooz.vercel.app" target="_blank" rel="noopener">
+          Visit the live site <span class="arrow">Open &rarr;</span>
+        </a>
+        <a class="big-row" href="killarney-stem.html">
+          Next, Killarney STEM <span class="arrow">Case study &rarr;</span>
+        </a>
+      </nav>
+      <div class="foot">
+        <span>drowningdot · Tokyo</span>
+        <span>Self-initiated</span>
+      </div>
+    </div>
+</footer>
+
+<script src="../site.js"></script>
+</body>
+</html>
