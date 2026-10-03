@@ -1,0 +1,21 @@
+User-agent: *
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /account/
+Disallow: /auth/
+Disallow: /login/
+Disallow: /signup/
+Disallow: /preview/
+Disallow: /search/
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://hydradb.com/sitemap.xml

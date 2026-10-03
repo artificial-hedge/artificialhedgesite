@@ -1,0 +1,1 @@
+{"version":3,"sources":["isMotionValue.ts"],"sourcesContent":["import { MotionValue } from \"framer\"\n\nexport const isMotionValue = (v: any): v is MotionValue =>\n    v instanceof MotionValue\n"],"names":[],"mappings":"SAAS,WAAW,SAAQ,MAAQ;OAE7B,KAAK,CAAC,aAAa,IAAI,CAAM,GAChC,CAAC,YAAY,WAAW"}

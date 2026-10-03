@@ -1,0 +1,62 @@
+[
+  {
+    "template": "about",
+    "url": "https://hydradb.com/about",
+    "screenshot_target": "evidence/hydra/source-about-desktop.jpg",
+    "viewport_override": false
+  },
+  {
+    "template": "contact",
+    "url": "https://hydradb.com/contact",
+    "screenshot_target": "evidence/hydra/source-contact-desktop.jpg",
+    "viewport_override": false
+  },
+  {
+    "template": "blog",
+    "url": "https://hydradb.com/blog",
+    "screenshot_target": "evidence/hydra/source-blog-desktop.jpg",
+    "viewport_override": false
+  },
+  {
+    "template": "blog-detail",
+    "url": "https://hydradb.com/blog/hydradb-vs-zep",
+    "screenshot_target": "evidence/hydra/source-blog-detail-desktop.jpg",
+    "viewport_override": false
+  },
+  {
+    "template": "use-cases",
+    "url": "https://hydradb.com/use-cases",
+    "screenshot_target": "evidence/hydra/source-use-cases-desktop.jpg",
+    "viewport_override": false
+  },
+  {
+    "template": "use-case-detail",
+    "url": "https://hydradb.com/use-cases/ai-agent-memory-for-customer-support",
+    "screenshot_target": "evidence/hydra/source-use-case-detail-desktop.jpg",
+    "viewport_override": false
+  },
+  {
+    "template": "alternatives",
+    "url": "https://hydradb.com/alternatives",
+    "screenshot_target": "evidence/hydra/source-alternatives-desktop.jpg",
+    "viewport_override": false
+  },
+  {
+    "template": "alternative-detail",
+    "url": "https://hydradb.com/alternatives/mem0-alternative",
+    "screenshot_target": "evidence/hydra/source-alternative-detail-desktop.jpg",
+    "viewport_override": false
+  },
+  {
+    "template": "privacy-policy",
+    "url": "https://hydradb.com/privacy-policy",
+    "screenshot_target": "evidence/hydra/source-privacy-policy-desktop.jpg",
+    "viewport_override": false
+  },
+  {
+    "template": "terms-of-service",
+    "url": "https://hydradb.com/terms-of-service",
+    "screenshot_target": "evidence/hydra/source-terms-of-service-desktop.jpg",
+    "viewport_override": false
+  }
+]

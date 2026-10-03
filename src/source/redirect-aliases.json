@@ -1,0 +1,42 @@
+[
+  {
+    "source_url": "https://hydradb.com/blog/best-mem0-alternatives-for-enterprise-ai-applications",
+    "final_url": "https://hydradb.com/blog/mem0-zep-alternatives-2026",
+    "capture_path": "src/source/routes/blog/best-mem0-alternatives-for-enterprise-ai-applications/index.html"
+  },
+  {
+    "source_url": "https://hydradb.com/blog/best-mem0-and-zep-alternatives-for-ai-agent-memory-(2026-guide)",
+    "final_url": "https://hydradb.com/blog/mem0-zep-alternatives-2026",
+    "capture_path": "src/source/routes/blog/best-mem0-and-zep-alternatives-for-ai-agent-memory-(2026-guide)/index.html"
+  },
+  {
+    "source_url": "https://hydradb.com/blog/git-for-context-versioned-temporal-graphs-for-ai-agent-memory",
+    "final_url": "https://hydradb.com/blog/git-for-context-versioned-temporal-graphs-ai-agent-memory",
+    "capture_path": "src/source/routes/blog/git-for-context-versioned-temporal-graphs-for-ai-agent-memory/index.html"
+  },
+  {
+    "source_url": "https://hydradb.com/blog/how-memory-works-in-large-language-model",
+    "final_url": "https://hydradb.com/blog/how-memory-works-in-large-language-models",
+    "capture_path": "src/source/routes/blog/how-memory-works-in-large-language-model/index.html"
+  },
+  {
+    "source_url": "https://hydradb.com/blog/how-to-refresh-or-update-stored-llm-memory-2026-guide",
+    "final_url": "https://hydradb.com/blog/how-to-refresh-or-update-stored-llm-memory",
+    "capture_path": "src/source/routes/blog/how-to-refresh-or-update-stored-llm-memory-2026-guide/index.html"
+  },
+  {
+    "source_url": "https://hydradb.com/blog/vector-database-vs-memory-layer",
+    "final_url": "https://hydradb.com/blog/agent-memory-layer-vs-vector-db",
+    "capture_path": "src/source/routes/blog/vector-database-vs-memory-layer/index.html"
+  },
+  {
+    "source_url": "https://hydradb.com/blog/what-is-ai-agent-memory",
+    "final_url": "https://hydradb.com/blog/ai-agent-memory-context-database-problem",
+    "capture_path": "src/source/routes/blog/what-is-ai-agent-memory/index.html"
+  },
+  {
+    "source_url": "https://hydradb.com/blog/what-is-llm-memory-technical-breakdown-2026",
+    "final_url": "https://hydradb.com/blog/how-to-design-llm-memory-systems-that-scale",
+    "capture_path": "src/source/routes/blog/what-is-llm-memory-technical-breakdown-2026/index.html"
+  }
+]

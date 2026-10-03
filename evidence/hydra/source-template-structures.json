@@ -1,0 +1,2438 @@
+[
+  {
+    "template": "about",
+    "url": "https://hydradb.com/about",
+    "capture_path": "src/source/routes/about/index.html",
+    "screenshot_target": "evidence/hydra/source-about-desktop.jpg",
+    "screenshot_status": "pending root browser capture; subagent has no enabled browser surface",
+    "dom_source": "preserved HTTP SSR; no rendered browser DOM available in this subagent",
+    "headings": [],
+    "controls": [],
+    "forms": [],
+    "media_element_counts": {
+      "images": 0,
+      "videos": 0,
+      "iframes": 0
+    },
+    "interaction_evidence": "static captured SSR inspection; behaviour not yet verified in browser",
+    "interaction_notes": [
+      "captured HTML has no visible body text or headings; client runtime rendering must be checked in the root browser."
+    ],
+    "has_visible_ssr_heading": false,
+    "actual_browser_viewport": null
+  },
+  {
+    "template": "contact",
+    "url": "https://hydradb.com/contact",
+    "capture_path": "src/source/routes/contact/index.html",
+    "screenshot_target": "evidence/hydra/source-contact-desktop.jpg",
+    "screenshot_status": "pending root browser capture; subagent has no enabled browser surface",
+    "dom_source": "preserved HTTP SSR; no rendered browser DOM available in this subagent",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "GET IN TOUCH"
+      },
+      {
+        "tag": "h2",
+        "text": "SEND A MESSAGE"
+      },
+      {
+        "tag": "h2",
+        "text": "Build AI with compounding intelligence"
+      },
+      {
+        "tag": "h3",
+        "text": "Use Cases"
+      },
+      {
+        "tag": "h3",
+        "text": "Benchmark"
+      },
+      {
+        "tag": "h3",
+        "text": "Compare"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "a",
+        "text": "Architecture",
+        "href": "https://hydradb.com/#Architecture"
+      },
+      {
+        "tag": "a",
+        "text": "Benchmarks",
+        "href": "https://research.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Pricing",
+        "href": "./#pricing"
+      },
+      {
+        "tag": "a",
+        "text": "Use Cases",
+        "href": "./use-cases"
+      },
+      {
+        "tag": "a",
+        "text": "Documentation",
+        "href": "https://docs.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Log In",
+        "href": "https://app.hydradb.com/sign-in"
+      },
+      {
+        "tag": "a",
+        "text": "Sign Up",
+        "href": "https://app.hydradb.com/sign-up"
+      },
+      {
+        "tag": "label",
+        "text": "Name *"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "Ada Lovelace"
+      },
+      {
+        "tag": "label",
+        "text": "Work email *"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "placeholder": "you@company.com"
+      },
+      {
+        "tag": "label",
+        "text": "Company"
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "placeholder": "Acme AI"
+      },
+      {
+        "tag": "label",
+        "text": "Team scale"
+      },
+      {
+        "tag": "select"
+      },
+      {
+        "tag": "label",
+        "text": "What's this about? *"
+      },
+      {
+        "tag": "label",
+        "text": "Message *"
+      },
+      {
+        "tag": "textarea",
+        "placeholder": "We're looking to build a self improving context graph\u2026"
+      },
+      {
+        "tag": "button",
+        "text": "Send \u2192",
+        "type": "button"
+      },
+      {
+        "tag": "a",
+        "text": "Home",
+        "href": "./#hero"
+      },
+      {
+        "tag": "a",
+        "text": "Why HydraDB",
+        "href": "./#why-hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "Features",
+        "href": "./#features"
+      },
+      {
+        "tag": "a",
+        "text": "Architecture",
+        "href": "./#Architecture"
+      },
+      {
+        "tag": "a",
+        "text": "FAQs",
+        "href": "./#faq"
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "href": "./contact"
+      },
+      {
+        "tag": "a",
+        "text": "Use Cases",
+        "href": "https://hydradb.com/use-cases"
+      },
+      {
+        "tag": "a",
+        "text": "Customer Support",
+        "href": "./use-cases/ai-agent-memory-for-customer-support"
+      },
+      {
+        "tag": "a",
+        "text": "Research Intelligence",
+        "href": "./use-cases/ai-agent-memory-for-research-intelligence"
+      },
+      {
+        "tag": "a",
+        "text": "AI Coding Assistants",
+        "href": "./use-cases/ai-coding-assistant-memory-layer"
+      },
+      {
+        "tag": "a",
+        "text": "Benchmark",
+        "href": "https://benchmarks.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Main Paper",
+        "href": "https://research.hydradb.com/hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "BEAM 1M",
+        "href": "https://research.hydradb.com/beam-1m"
+      },
+      {
+        "tag": "a",
+        "text": "FinanceBench",
+        "href": "https://research.hydradb.com/financebench"
+      },
+      {
+        "tag": "a",
+        "text": "Compare",
+        "href": "./alternatives"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs FalkorDB",
+        "href": "./alternatives/falkordb-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Neo4j",
+        "href": "./alternatives/neo4j-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Mem0",
+        "href": "./alternatives/mem0-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Zep",
+        "href": "./alternatives/zep-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Memgraph",
+        "href": "./alternatives/memgraph-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "Trust Centre",
+        "href": "https://trust.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Privacy Policy",
+        "href": "./privacy-policy"
+      },
+      {
+        "tag": "a",
+        "text": "Terms of Service",
+        "href": "./terms-of-service"
+      },
+      {
+        "tag": "a",
+        "text": "X / Twitter",
+        "href": "https://x.com/Hydra_DB"
+      },
+      {
+        "tag": "a",
+        "text": "LinkedIn",
+        "href": "https://www.linkedin.com/company/hydradb/posts/?feedView=all"
+      },
+      {
+        "tag": "a",
+        "text": "Discord",
+        "href": "https://discord.gg/9mdpt4Xaf"
+      }
+    ],
+    "forms": [],
+    "media_element_counts": {
+      "images": 4,
+      "videos": 1,
+      "iframes": 0
+    },
+    "interaction_evidence": "static captured SSR inspection; behaviour not yet verified in browser",
+    "interaction_notes": [
+      "custom contact UI uses a button[type=button] rather than a native form element.",
+      "required-field labels and inline error text appear for name, work email, topic, and message; no submission was attempted.",
+      "team scale select offers Solo / side project, 2\u201310 engineers, 11\u201350 engineers, 51\u2013200 engineers, 200+ engineers.",
+      "topic controls offer Sales / pricing, Technical support, Security, Partnerships, Press."
+    ],
+    "has_visible_ssr_heading": true,
+    "actual_browser_viewport": null
+  },
+  {
+    "template": "blog",
+    "url": "https://hydradb.com/blog",
+    "capture_path": "src/source/routes/blog/index.html",
+    "screenshot_target": "evidence/hydra/source-blog-desktop.jpg",
+    "screenshot_status": "pending root browser capture; subagent has no enabled browser surface",
+    "dom_source": "preserved HTTP SSR; no rendered browser DOM available in this subagent",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Blogs"
+      },
+      {
+        "tag": "h2",
+        "text": "What is the best database for stateful AI agents in 2026?"
+      },
+      {
+        "tag": "h2",
+        "text": "Subscribe to newsletter"
+      },
+      {
+        "tag": "h2",
+        "text": "Build AI with compounding intelligence"
+      },
+      {
+        "tag": "h3",
+        "text": "Use Cases"
+      },
+      {
+        "tag": "h3",
+        "text": "Benchmark"
+      },
+      {
+        "tag": "h3",
+        "text": "Compare"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "button",
+        "aria-label": "Search Icon",
+        "text": ""
+      },
+      {
+        "tag": "a",
+        "text": "Architecture",
+        "href": "https://hydradb.com/#Architecture"
+      },
+      {
+        "tag": "a",
+        "text": "Benchmarks",
+        "href": "https://research.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Pricing",
+        "href": "./#pricing"
+      },
+      {
+        "tag": "a",
+        "text": "Use Cases",
+        "href": "./use-cases"
+      },
+      {
+        "tag": "a",
+        "text": "Documentation",
+        "href": "https://docs.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Log In",
+        "href": "https://app.hydradb.com/sign-in"
+      },
+      {
+        "tag": "a",
+        "text": "Sign Up",
+        "href": "https://app.hydradb.com/sign-up"
+      },
+      {
+        "tag": "a",
+        "text": "Soham RatnaparkhiWhat is the best database for stateful AI agents in 2026?Date : 11/6/252 min readMulti TenantEngineering",
+        "href": "./blog/best-database-ai-agents"
+      },
+      {
+        "tag": "a",
+        "text": "FeaturedSoham RatnaparkhiWhat is the best database for stateful AI agents in 2026?Date : 11/6/252 min readMulti TenantEngineering",
+        "href": "./blog/best-database-ai-agents"
+      },
+      {
+        "tag": "a",
+        "text": "FeaturedWhat is the best database for stateful AI agents in 2026?Date : 11/6/252 min readMulti TenantEngineering",
+        "href": "./blog/best-database-ai-agents"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026Best Cypher-Compatible Graph Databases in 2026Nishkarsh Srivastava \u00b7 5 mins",
+        "href": "/blog/cypher-compatible-graph-databases"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026Best Embedded Graph Databases in 2026Soham Ratnaparkhi \u00b7 5 mins",
+        "href": "/blog/embedded-graph-databases"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026NebulaGraph ReviewsSoham Ratnaparkhi \u00b7 5 mins",
+        "href": "/blog/nebulagraph-reviews"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026TigerGraph ReviewsNishkarsh Srivastava \u00b7 5 mins",
+        "href": "/blog/tigergraph-reviews"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026Memgraph ReviewsSoham Ratnaparkhi \u00b7 5 mins",
+        "href": "/blog/memgraph-reviews"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026ApertureDB ReviewsSoham Ratnaparkhi \u00b7 5 mins",
+        "href": "/blog/aperturedb-reviews"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026Neo4j ReviewsSoham Ratnaparkhi \u00b7 5 mins",
+        "href": "/blog/neo4j-reviews"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 202615 RAG vs Long-Term Memory Statistics for AI ApplicationsSoham Ratnaparkhi \u00b7 5 mins",
+        "href": "/blog/rag-vs-long-term-memory-statistics"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026Best Graph Databases for CrewAI Agents in 2026Nishkarsh Srivastava \u00b7 5 mins",
+        "href": "/blog/graph-databases-crewai-agents"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026Best Graph Databases for Recommendation Engines in 2026Soham Ratnaparkhi \u00b7 5 mins",
+        "href": "/blog/graph-databases-recommendation-engines"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026Best Graph Databases for Fraud Detection in 2026Nishkarsh Srivastava \u00b7 5 mins",
+        "href": "/blog/graph-databases-fraud-detection"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026Neo4j Agent Memory AlternativesNishkarsh Srivastava \u00b7 5 mins",
+        "href": "/blog/neo4j-agent-memory-alternatives"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026Kumiho AI AlternativesNishkarsh Srivastava \u00b7 5 mins",
+        "href": "/blog/kumiho-ai-alternatives"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026EverMind Alternatives Nishkarsh Srivastava \u00b7 5 mins",
+        "href": "/blog/evermind-alternatives"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026Hyperspell AlternativesSoham Ratnaparkhi \u00b7 5 mins",
+        "href": "/blog/hyperspell-alternatives"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026Cognee AlternativesSoham Ratnaparkhi \u00b7 5 mins",
+        "href": "/blog/cognee-alternatives"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 20266 Best Hindsight Alternatives for AI Agent Memory and Context Infrastructure: 2026Nishkarsh Srivastava \u00b7 5 mins",
+        "href": "/blog/hindsight-alternatives"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026Mem0 AlternativesSoham Ratnaparkhi \u00b7 5 mins",
+        "href": "/blog/mem0-alternatives"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026Zep AlternativesNishkarsh Srivastava \u00b7 5 mins",
+        "href": "/blog/zep-alternatives"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026Kumo AI AlternativesSoham Ratnaparkhi \u00b7 5 mins",
+        "href": "/blog/kumo-ai-alternatives"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 23, 2026Neo4j vs AWS Neptune vs HydraDBSoham Ratnaparkhi \u00b7 5 mins",
+        "href": "/blog/neo4j-vs-aws-neptune-vs-hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 22, 2026Best In-Memory Graph Databases in 2026Nishkarsh Srivastava \u00b7 5 mins",
+        "href": "/blog/memory-graph-databases"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 22, 2026Best Distributed Graph Databases for Scale in 2026Soham Ratnaparkhi \u00b7 5 mins",
+        "href": "/blog/distributed-graph-databases-scale"
+      },
+      {
+        "tag": "a",
+        "text": "ProductSep 21, 2026Best shared memory layers for ChatGPT, Claude, and AI agents in 2026Manveer Chawla \u00b7 9 min",
+        "href": "/blog/shared-memory-layers-ai-agents"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 21, 2026Kumo AI ReviewsNishkarsh Srivastava \u00b7 5 mins",
+        "href": "/blog/kumo-ai-reviews"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 20, 2026JanusGraph ReviewsNishkarsh Srivastava \u00b7 5 mins",
+        "href": "/blog/janusgraph-reviews"
+      },
+      {
+        "tag": "a",
+        "text": "Deep DiveSep 20, 2026ArangoDB ReviewsSoham Ratnaparkhi \u00b7 5 mins",
+        "href": "/blog/arangodb-reviews"
+      },
+      {
+        "tag": "button",
+        "text": "Load More",
+        "type": "button"
+      },
+      {
+        "tag": "input",
+        "type": "email",
+        "required": null,
+        "name": "Email",
+        "placeholder": "Enter your email"
+      },
+      {
+        "tag": "button",
+        "text": "Sign Up",
+        "type": "submit"
+      },
+      {
+        "tag": "a",
+        "text": "Home",
+        "href": "./#hero"
+      },
+      {
+        "tag": "a",
+        "text": "Why HydraDB",
+        "href": "./#why-hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "Features",
+        "href": "./#features"
+      },
+      {
+        "tag": "a",
+        "text": "Architecture",
+        "href": "./#Architecture"
+      },
+      {
+        "tag": "a",
+        "text": "FAQs",
+        "href": "./#faq"
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "href": "./contact"
+      },
+      {
+        "tag": "a",
+        "text": "Use Cases",
+        "href": "https://hydradb.com/use-cases"
+      },
+      {
+        "tag": "a",
+        "text": "Customer Support",
+        "href": "./use-cases/ai-agent-memory-for-customer-support"
+      },
+      {
+        "tag": "a",
+        "text": "Research Intelligence",
+        "href": "./use-cases/ai-agent-memory-for-research-intelligence"
+      },
+      {
+        "tag": "a",
+        "text": "AI Coding Assistants",
+        "href": "./use-cases/ai-coding-assistant-memory-layer"
+      },
+      {
+        "tag": "a",
+        "text": "Benchmark",
+        "href": "https://benchmarks.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Main Paper",
+        "href": "https://research.hydradb.com/hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "BEAM 1M",
+        "href": "https://research.hydradb.com/beam-1m"
+      },
+      {
+        "tag": "a",
+        "text": "FinanceBench",
+        "href": "https://research.hydradb.com/financebench"
+      },
+      {
+        "tag": "a",
+        "text": "Compare",
+        "href": "./alternatives"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs FalkorDB",
+        "href": "./alternatives/falkordb-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Neo4j",
+        "href": "./alternatives/neo4j-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Mem0",
+        "href": "./alternatives/mem0-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Zep",
+        "href": "./alternatives/zep-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Memgraph",
+        "href": "./alternatives/memgraph-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "Trust Centre",
+        "href": "https://trust.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Privacy Policy",
+        "href": "./privacy-policy"
+      },
+      {
+        "tag": "a",
+        "text": "Terms of Service",
+        "href": "./terms-of-service"
+      },
+      {
+        "tag": "a",
+        "text": "X / Twitter",
+        "href": "https://x.com/Hydra_DB"
+      },
+      {
+        "tag": "a",
+        "text": "LinkedIn",
+        "href": "https://www.linkedin.com/company/hydradb/posts/?feedView=all"
+      },
+      {
+        "tag": "a",
+        "text": "Discord",
+        "href": "https://discord.gg/9mdpt4Xaf"
+      }
+    ],
+    "forms": [
+      {
+        "data-framer-name": "Edit Form redirect"
+      }
+    ],
+    "media_element_counts": {
+      "images": 22,
+      "videos": 5,
+      "iframes": 0
+    },
+    "interaction_evidence": "static captured SSR inspection; behaviour not yet verified in browser",
+    "interaction_notes": [
+      "source includes an icon-only button labelled Search Icon, category labels and newest-first list text; search/filter behaviour requires runtime inspection.",
+      "Load More button is present.",
+      "newsletter contains an email input and Sign Up submit button; no submission was attempted."
+    ],
+    "has_visible_ssr_heading": true,
+    "actual_browser_viewport": null
+  },
+  {
+    "template": "blog-detail",
+    "url": "https://hydradb.com/blog/hydradb-vs-zep",
+    "capture_path": "src/source/routes/blog/hydradb-vs-zep/index.html",
+    "screenshot_target": "evidence/hydra/source-blog-detail-desktop.jpg",
+    "screenshot_status": "pending root browser capture; subagent has no enabled browser surface",
+    "dom_source": "preserved HTTP SSR; no rendered browser DOM available in this subagent",
+    "headings": [
+      {
+        "tag": "h3",
+        "text": "Contents"
+      },
+      {
+        "tag": "h1",
+        "text": "HydraDB vs Zep: Managed Context Platform vs Programmable Graph Database"
+      },
+      {
+        "tag": "h2",
+        "text": "TL;DR"
+      },
+      {
+        "tag": "h2",
+        "text": "Managed context platform or programmable graph database?"
+      },
+      {
+        "tag": "h2",
+        "text": "What each product provides"
+      },
+      {
+        "tag": "h2",
+        "text": "What Zep handles for your application"
+      },
+      {
+        "tag": "h2",
+        "text": "What HydraDB leaves under your control"
+      },
+      {
+        "tag": "h2",
+        "text": "What your team still owns on HydraDB"
+      },
+      {
+        "tag": "h2",
+        "text": "Where object storage changes the architecture"
+      },
+      {
+        "tag": "h2",
+        "text": "Beyond agent memory: ontologies, company brains, and agent actions"
+      },
+      {
+        "tag": "h3",
+        "text": "Ontologies"
+      },
+      {
+        "tag": "h3",
+        "text": "Company brains"
+      },
+      {
+        "tag": "h3",
+        "text": "Agent actions and shared context"
+      },
+      {
+        "tag": "h2",
+        "text": "How both systems handle changing facts"
+      },
+      {
+        "tag": "h2",
+        "text": "Can you build agent memory on HydraDB?"
+      },
+      {
+        "tag": "h2",
+        "text": "When to choose Zep vs HydraDB"
+      },
+      {
+        "tag": "h2",
+        "text": "FAQ"
+      },
+      {
+        "tag": "h3",
+        "text": "What's the main difference between HydraDB and Zep?"
+      },
+      {
+        "tag": "h3",
+        "text": "Are Zep and HydraDB both graph-native?"
+      },
+      {
+        "tag": "h3",
+        "text": "Can HydraDB replace Zep directly?"
+      },
+      {
+        "tag": "h3",
+        "text": "Does Zep support custom ontologies and shared graphs?"
+      },
+      {
+        "tag": "h3",
+        "text": "Is HydraDB only a low-level graph store?"
+      },
+      {
+        "tag": "h3",
+        "text": "What does your team build when using HydraDB for agent memory?"
+      },
+      {
+        "tag": "h3",
+        "text": "Which option fits a chatbot that needs cross-session memory?"
+      },
+      {
+        "tag": "h3",
+        "text": "How do HydraDB and Zep handle temporal context?"
+      },
+      {
+        "tag": "h3",
+        "text": "Can several agents share context in Zep and HydraDB?"
+      },
+      {
+        "tag": "h3",
+        "text": "Why does HydraDB use object storage?"
+      },
+      {
+        "tag": "h2",
+        "text": "Related posts"
+      },
+      {
+        "tag": "h4",
+        "text": "Hyperspell Reviews in 2026"
+      },
+      {
+        "tag": "h4",
+        "text": "Graphlit Reviews in 2026"
+      },
+      {
+        "tag": "h4",
+        "text": "Best Graph Databases for Coding Agents in 2026"
+      },
+      {
+        "tag": "h4",
+        "text": "Best Graph Databases for Voice AI Agents in 2026"
+      },
+      {
+        "tag": "h2",
+        "text": "Build AI with compounding intelligence"
+      },
+      {
+        "tag": "h3",
+        "text": "Use Cases"
+      },
+      {
+        "tag": "h3",
+        "text": "Benchmark"
+      },
+      {
+        "tag": "h3",
+        "text": "Compare"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "a",
+        "text": "Architecture",
+        "href": "https://hydradb.com/#Architecture"
+      },
+      {
+        "tag": "a",
+        "text": "Benchmarks",
+        "href": "https://research.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Pricing",
+        "href": "../#pricing"
+      },
+      {
+        "tag": "a",
+        "text": "Use Cases",
+        "href": "../use-cases"
+      },
+      {
+        "tag": "a",
+        "text": "Documentation",
+        "href": "https://docs.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Log In",
+        "href": "https://app.hydradb.com/sign-in"
+      },
+      {
+        "tag": "a",
+        "text": "Sign Up",
+        "href": "https://app.hydradb.com/sign-up"
+      },
+      {
+        "tag": "a",
+        "text": "the database layer matters more than the memory API",
+        "href": "https://hydradb.com/blog/ai-agent-memory-context-database-problem"
+      },
+      {
+        "tag": "a",
+        "text": "Zep",
+        "href": "https://help.getzep.com/concepts"
+      },
+      {
+        "tag": "a",
+        "text": "Graphiti",
+        "href": "https://help.getzep.com/zep-vs-graphiti"
+      },
+      {
+        "tag": "a",
+        "text": "custom entity and edge types",
+        "href": "https://help.getzep.com/customizing-graph-structure"
+      },
+      {
+        "tag": "a",
+        "text": "combines semantic search, BM25, metadata filters, and graph traversal",
+        "href": "https://hydradb.com/blog/btree-vector-graph-hybrid-search-storage-layer"
+      },
+      {
+        "tag": "a",
+        "text": "how to assemble context for the agent",
+        "href": "https://hydradb.com/blog/replace-prompt-stuffing-markdown-files"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB stores and queries the supplied graph in the same shape as an extracted graph",
+        "href": "https://docs.hydradb.com/essentials/v2/bring-your-own-graph"
+      },
+      {
+        "tag": "a",
+        "text": "database boundaries",
+        "href": "https://hydradb.com/blog/multi-tenant-ai-agent-database"
+      },
+      {
+        "tag": "a",
+        "text": "separates durable graph state from compute",
+        "href": "https://hydradb.com/blog/ai-context-graph-ontology-infrastructure"
+      },
+      {
+        "tag": "a",
+        "text": "best graph databases for an AI company brain",
+        "href": "./best-graph-databases-for-company-brain"
+      },
+      {
+        "tag": "a",
+        "text": "Bring Your Own Graph",
+        "href": "https://docs.hydradb.com/essentials/v2/bring-your-own-graph"
+      },
+      {
+        "tag": "a",
+        "text": "company brain",
+        "href": "https://hydradb.com/blog/build-company-brain-ai-agents"
+      },
+      {
+        "tag": "a",
+        "text": "agent decision trace",
+        "href": "https://hydradb.com/blog/ai-agent-decision-traceability-auditability"
+      },
+      {
+        "tag": "a",
+        "text": "Zep stores",
+        "href": "https://help.getzep.com/facts"
+      },
+      {
+        "tag": "a",
+        "text": "published architecture",
+        "href": "https://research.hydradb.com/hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "Git-style temporal graph",
+        "href": "https://hydradb.com/blog/git-for-context-versioned-temporal-graphs-ai-agent-memory"
+      },
+      {
+        "tag": "a",
+        "text": "LongMemEval-s evaluation",
+        "href": "https://research.hydradb.com/hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "Date : 10/3/26Hyperspell Reviews in 2026View",
+        "href": "./hyperspell-reviews"
+      },
+      {
+        "tag": "a",
+        "text": "Date : 10/3/26Graphlit Reviews in 2026View",
+        "href": "./graphlit-reviews"
+      },
+      {
+        "tag": "a",
+        "text": "Date : 10/2/26Best Graph Databases for Coding Agents in 2026View",
+        "href": "./databases-coding-agents"
+      },
+      {
+        "tag": "a",
+        "text": "Date : 10/2/26Best Graph Databases for Voice AI Agents in 2026View",
+        "href": "./graph-databases-voice-ai-agents"
+      },
+      {
+        "tag": "a",
+        "text": "Home",
+        "href": "../#hero"
+      },
+      {
+        "tag": "a",
+        "text": "Why HydraDB",
+        "href": "../#why-hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "Features",
+        "href": "../#features"
+      },
+      {
+        "tag": "a",
+        "text": "Architecture",
+        "href": "../#Architecture"
+      },
+      {
+        "tag": "a",
+        "text": "FAQs",
+        "href": "../#faq"
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "href": "../contact"
+      },
+      {
+        "tag": "a",
+        "text": "Use Cases",
+        "href": "https://hydradb.com/use-cases"
+      },
+      {
+        "tag": "a",
+        "text": "Customer Support",
+        "href": "../use-cases/ai-agent-memory-for-customer-support"
+      },
+      {
+        "tag": "a",
+        "text": "Research Intelligence",
+        "href": "../use-cases/ai-agent-memory-for-research-intelligence"
+      },
+      {
+        "tag": "a",
+        "text": "AI Coding Assistants",
+        "href": "../use-cases/ai-coding-assistant-memory-layer"
+      },
+      {
+        "tag": "a",
+        "text": "Benchmark",
+        "href": "https://benchmarks.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Main Paper",
+        "href": "https://research.hydradb.com/hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "BEAM 1M",
+        "href": "https://research.hydradb.com/beam-1m"
+      },
+      {
+        "tag": "a",
+        "text": "FinanceBench",
+        "href": "https://research.hydradb.com/financebench"
+      },
+      {
+        "tag": "a",
+        "text": "Compare",
+        "href": "../alternatives"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs FalkorDB",
+        "href": "../alternatives/falkordb-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Neo4j",
+        "href": "../alternatives/neo4j-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Mem0",
+        "href": "../alternatives/mem0-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Zep",
+        "href": "../alternatives/zep-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Memgraph",
+        "href": "../alternatives/memgraph-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "Trust Centre",
+        "href": "https://trust.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Privacy Policy",
+        "href": "../privacy-policy"
+      },
+      {
+        "tag": "a",
+        "text": "Terms of Service",
+        "href": "../terms-of-service"
+      },
+      {
+        "tag": "a",
+        "text": "X / Twitter",
+        "href": "https://x.com/Hydra_DB"
+      },
+      {
+        "tag": "a",
+        "text": "LinkedIn",
+        "href": "https://www.linkedin.com/company/hydradb/posts/?feedView=all"
+      },
+      {
+        "tag": "a",
+        "text": "Discord",
+        "href": "https://discord.gg/9mdpt4Xaf"
+      }
+    ],
+    "forms": [],
+    "media_element_counts": {
+      "images": 19,
+      "videos": 5,
+      "iframes": 0
+    },
+    "interaction_evidence": "static captured SSR inspection; behaviour not yet verified in browser",
+    "interaction_notes": [
+      "article Contents links target in-page headings; the page has structured long-form text and related navigation."
+    ],
+    "has_visible_ssr_heading": true,
+    "actual_browser_viewport": null
+  },
+  {
+    "template": "use-cases",
+    "url": "https://hydradb.com/use-cases",
+    "capture_path": "src/source/routes/use-cases/index.html",
+    "screenshot_target": "evidence/hydra/source-use-cases-desktop.jpg",
+    "screenshot_status": "pending root browser capture; subagent has no enabled browser surface",
+    "dom_source": "preserved HTTP SSR; no rendered browser DOM available in this subagent",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Memory infrastructurefor every kind of agent"
+      },
+      {
+        "tag": "h2",
+        "text": "Don't see your use case?"
+      },
+      {
+        "tag": "h2",
+        "text": "Build AI with compounding intelligence"
+      },
+      {
+        "tag": "h3",
+        "text": "Use Cases"
+      },
+      {
+        "tag": "h3",
+        "text": "Benchmark"
+      },
+      {
+        "tag": "h3",
+        "text": "Compare"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "a",
+        "text": "Architecture",
+        "href": "https://hydradb.com/#Architecture"
+      },
+      {
+        "tag": "a",
+        "text": "Benchmarks",
+        "href": "https://research.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Pricing",
+        "href": "./#pricing"
+      },
+      {
+        "tag": "a",
+        "text": "Use Cases",
+        "href": "./use-cases"
+      },
+      {
+        "tag": "a",
+        "text": "Documentation",
+        "href": "https://docs.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Log In",
+        "href": "https://app.hydradb.com/sign-in"
+      },
+      {
+        "tag": "a",
+        "text": "Sign Up",
+        "href": "https://app.hydradb.com/sign-up"
+      },
+      {
+        "tag": "a",
+        "text": "LiveCustomer Support AIBuilding support agents that actually remember customer history is harder than it should be. Standard vector search treats every ticket as isolated, forcing engineers to build custom metadata pipelines just to track what happened yesterday. HydraDB provides the memory infrastructure your agents need to resolve ambiguous transcripts, recall human-solved edge cases, and maintain context across multi-year customer relationships.",
+        "href": "./use-cases/ai-agent-memory-for-customer-support"
+      },
+      {
+        "tag": "a",
+        "text": "LiveResearch Intelligence AIBuilding investigative agents that track evolving competitors and traverse entity networks across millions of documents? Standard RAG flattens time, relational databases time out on multi-hop queries, and custom GraphRAG pipelines become engineering nightmares. HydraDB gives your financial and market intelligence agents a persistent, graph-native memory layer that tracks state changes, resolves entities, and reasons over temporal shifts without the maintenance overhead.",
+        "href": "./use-cases/ai-agent-memory-for-research-intelligence"
+      },
+      {
+        "tag": "a",
+        "text": "LiveAI Coding Assistant MemoryBuilding autonomous software engineers means managing massive amounts of context. But relying on static CLAUDE.md files or standard vector databases leads to bloated prompts, context drift, and agents that hallucinate deprecated code. HydraDB provides a persistent, graph-native memory layer that tracks evolving architectural decisions, file change histories, and debugging sessions across your entire development stack. Stop manually curating text files and give your AI agents deterministic, just-in-time retrieval of the exact project constraints they need.",
+        "href": "./use-cases/ai-coding-assistant-memory-layer"
+      },
+      {
+        "tag": "a",
+        "text": "LiveAI Agent Memory for SalesEnterprise sales cycles take months or years, but most AI agents forget what happened yesterday. HydraDB gives your sales copilots and CRM agents a persistent, structured memory across transcripts, emails, and CRM records. Stop stuffing entire transcripts into context windows and start giving your agents the ability to track evolving requirements, map complex stakeholder relationships, and automatically extract commitments.",
+        "href": "./use-cases/ai-agent-memory-for-sales"
+      },
+      {
+        "tag": "a",
+        "text": "LiveIT Operations AIModern IT infrastructure spans thousands of microservices, but most AI agents forget what happened across incidents the moment a session ends. HydraDB gives your SRE copilots and DevOps agents persistent, structured memory across system logs, metrics, deployment histories, and incident tickets. They can perform root cause analysis without hallucinating from outdated runbooks or missing cross-system relationships.",
+        "href": "./use-cases/ai-agent-memory-for-it-operations"
+      },
+      {
+        "tag": "a",
+        "text": "LiveHealthcare AIClinical copilots fail when they treat every interaction as a blank slate or rely on naive vector search that conflates \"has COPD\" with \"COPD ruled out.\" HydraDB gives healthcare AI engineering teams a persistent, temporal memory layer that structures EMR data and tracks evolving patient conditions with audit-grade lineage.",
+        "href": "./use-cases/ai-agent-memory-for-healthcare"
+      },
+      {
+        "tag": "a",
+        "text": "LiveInsurance AIInsurance relationships span decades, but standard AI agents forget policy changes the moment a session ends. HydraDB gives your claims copilots and underwriting agents persistent, audit-grade memory across policy documents, historical claims, and customer communications. Stop building brittle custom ETL pipelines to feed vector databases, and give your agents the infrastructure to track evolving coverage, map complex fraud relationships, and retrieve deterministic decision traces required by regulators.",
+        "href": "./use-cases/ai-agent-memory-for-insurance"
+      },
+      {
+        "tag": "a",
+        "text": "LiveFinancial Services AIEngineering teams building AI agents for banking, insurance, and capital markets face a fundamental challenge: financial decisions require traceable memory that spans transactions, evolving regulations, and complex entity relationships. Standard vector databases fail because they treat every query as isolated, cannot track how compliance rules change over time, and lack the audit trails regulators demand. HydraDB provides the persistent memory infrastructure that financial AI agents need to maintain context across sessions, track temporal state changes, and deliver deterministic outputs.",
+        "href": "./use-cases/ai-agent-memory-for-financial-services"
+      },
+      {
+        "tag": "a",
+        "text": "Read the docs"
+      },
+      {
+        "tag": "a",
+        "text": "Talk to us",
+        "href": "https://cal.com/nish-sri/book-a-demo"
+      },
+      {
+        "tag": "a",
+        "text": "Home",
+        "href": "./#hero"
+      },
+      {
+        "tag": "a",
+        "text": "Why HydraDB",
+        "href": "./#why-hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "Features",
+        "href": "./#features"
+      },
+      {
+        "tag": "a",
+        "text": "Architecture",
+        "href": "./#Architecture"
+      },
+      {
+        "tag": "a",
+        "text": "FAQs",
+        "href": "./#faq"
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "href": "./contact"
+      },
+      {
+        "tag": "a",
+        "text": "Use Cases",
+        "href": "https://hydradb.com/use-cases"
+      },
+      {
+        "tag": "a",
+        "text": "Customer Support",
+        "href": "./use-cases/ai-agent-memory-for-customer-support"
+      },
+      {
+        "tag": "a",
+        "text": "Research Intelligence",
+        "href": "./use-cases/ai-agent-memory-for-research-intelligence"
+      },
+      {
+        "tag": "a",
+        "text": "AI Coding Assistants",
+        "href": "./use-cases/ai-coding-assistant-memory-layer"
+      },
+      {
+        "tag": "a",
+        "text": "Benchmark",
+        "href": "https://benchmarks.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Main Paper",
+        "href": "https://research.hydradb.com/hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "BEAM 1M",
+        "href": "https://research.hydradb.com/beam-1m"
+      },
+      {
+        "tag": "a",
+        "text": "FinanceBench",
+        "href": "https://research.hydradb.com/financebench"
+      },
+      {
+        "tag": "a",
+        "text": "Compare",
+        "href": "./alternatives"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs FalkorDB",
+        "href": "./alternatives/falkordb-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Neo4j",
+        "href": "./alternatives/neo4j-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Mem0",
+        "href": "./alternatives/mem0-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Zep",
+        "href": "./alternatives/zep-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Memgraph",
+        "href": "./alternatives/memgraph-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "Trust Centre",
+        "href": "https://trust.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Privacy Policy",
+        "href": "./privacy-policy"
+      },
+      {
+        "tag": "a",
+        "text": "Terms of Service",
+        "href": "./terms-of-service"
+      },
+      {
+        "tag": "a",
+        "text": "X / Twitter",
+        "href": "https://x.com/Hydra_DB"
+      },
+      {
+        "tag": "a",
+        "text": "LinkedIn",
+        "href": "https://www.linkedin.com/company/hydradb/posts/?feedView=all"
+      },
+      {
+        "tag": "a",
+        "text": "Discord",
+        "href": "https://discord.gg/9mdpt4Xaf"
+      }
+    ],
+    "forms": [],
+    "media_element_counts": {
+      "images": 34,
+      "videos": 5,
+      "iframes": 0
+    },
+    "interaction_evidence": "static captured SSR inspection; behaviour not yet verified in browser",
+    "interaction_notes": [
+      "listing cards link to primary-domain use-case detail pages; contact and external signup CTA links are present."
+    ],
+    "has_visible_ssr_heading": true,
+    "actual_browser_viewport": null
+  },
+  {
+    "template": "use-case-detail",
+    "url": "https://hydradb.com/use-cases/ai-agent-memory-for-customer-support",
+    "capture_path": "src/source/routes/use-cases/ai-agent-memory-for-customer-support/index.html",
+    "screenshot_target": "evidence/hydra/source-use-case-detail-desktop.jpg",
+    "screenshot_status": "pending root browser capture; subagent has no enabled browser surface",
+    "dom_source": "preserved HTTP SSR; no rendered browser DOM available in this subagent",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "HydraDB for"
+      },
+      {
+        "tag": "h1",
+        "text": "Customer Support AI"
+      },
+      {
+        "tag": "h2",
+        "text": "Why customer support AI keeps failing"
+      },
+      {
+        "tag": "h3",
+        "text": "Support agents built on stateless RAG treat every query as brand new. The result: bots that force users to repeat themselves, fail to understand informal chat transcripts, and escalate issues that human agents already solved."
+      },
+      {
+        "tag": "h2",
+        "text": "An agent that actually remembers"
+      },
+      {
+        "tag": "h3",
+        "text": "HydraDB structures your historical tickets, chat transcripts, and issue tracking into a temporal graph. Before responding, your agent retrieves precise multi-session context so it knows what was tried, what failed, and what shipped."
+      },
+      {
+        "tag": "h2",
+        "text": "Context Infrastructure for Support Agents"
+      },
+      {
+        "tag": "h3",
+        "text": "HydraDB replaces brittle RAG pipelines with graph-native memory designed for support workflows. It provides the persistent brain your CX automation needs."
+      },
+      {
+        "tag": "h2",
+        "text": "Three steps to production-ready memory"
+      },
+      {
+        "tag": "h3",
+        "text": "HydraDB works with any LLM. Stop building metadata indexes and start retrieving structured history."
+      },
+      {
+        "tag": "h2",
+        "text": "HydraDB vs. Standard Vector Search for Customer Support"
+      },
+      {
+        "tag": "h3",
+        "text": "HydraDB gives support automation persistent user history, relationship-aware retrieval, temporal context, and structured ingestion where standard vector search treats every query as an isolated lookup."
+      },
+      {
+        "tag": "h2",
+        "text": "Trusted by teams building support automation"
+      },
+      {
+        "tag": "h2",
+        "text": "Don\u2019t see your use case?"
+      },
+      {
+        "tag": "h2",
+        "text": "Frequently Asked questions"
+      },
+      {
+        "tag": "h3",
+        "text": "What is HydraDB? How is it different from other graph databases?"
+      },
+      {
+        "tag": "h3",
+        "text": "Why use a graph database like HydraDB for AI agents?"
+      },
+      {
+        "tag": "h3",
+        "text": "When should I use HydraDB instead of a vector database?"
+      },
+      {
+        "tag": "h3",
+        "text": "Does HydraDB work with GraphRAG?"
+      },
+      {
+        "tag": "h3",
+        "text": "How does HydraDB improve retrieval for AI agents?"
+      },
+      {
+        "tag": "h3",
+        "text": "Can I use HydraDB with my existing AI stack?"
+      },
+      {
+        "tag": "h3",
+        "text": "How does HydraDB use context graphs for AI agents?"
+      },
+      {
+        "tag": "h3",
+        "text": "What AI use cases is HydraDB best suited for?"
+      },
+      {
+        "tag": "h2",
+        "text": "Build AI with compounding intelligence"
+      },
+      {
+        "tag": "h3",
+        "text": "Use Cases"
+      },
+      {
+        "tag": "h3",
+        "text": "Benchmark"
+      },
+      {
+        "tag": "h3",
+        "text": "Compare"
+      },
+      {
+        "tag": "h3",
+        "text": "Frequently Asked questions"
+      },
+      {
+        "tag": "h3",
+        "text": "What is AI agent memory for customer support?"
+      },
+      {
+        "tag": "h3",
+        "text": "Why isn't vector search enough for customer support agents?"
+      },
+      {
+        "tag": "h3",
+        "text": "How does HydraDB help support agents remember previous conversations?"
+      },
+      {
+        "tag": "h3",
+        "text": "What customer support data can I store in HydraDB?"
+      },
+      {
+        "tag": "h3",
+        "text": "How does HydraDB handle information that changes over time?"
+      },
+      {
+        "tag": "h3",
+        "text": "How can we bring support data into HydraDB?"
+      },
+      {
+        "tag": "h3",
+        "text": "Why is HydraDB a strong choice for building customer support AI?"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "a",
+        "text": "Architecture",
+        "href": "https://hydradb.com/#Architecture"
+      },
+      {
+        "tag": "a",
+        "text": "Benchmarks",
+        "href": "https://research.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Pricing",
+        "href": "../#pricing"
+      },
+      {
+        "tag": "a",
+        "text": "Use Cases",
+        "href": "../use-cases"
+      },
+      {
+        "tag": "a",
+        "text": "Documentation",
+        "href": "https://docs.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Log In",
+        "href": "https://app.hydradb.com/sign-in"
+      },
+      {
+        "tag": "a",
+        "text": "Sign Up",
+        "href": "https://app.hydradb.com/sign-up"
+      },
+      {
+        "tag": "a",
+        "text": "Start building",
+        "href": "https://app.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Book a demo",
+        "href": "https://cal.com/nish-sri/book-a-demo"
+      },
+      {
+        "tag": "a",
+        "text": "Read the docs"
+      },
+      {
+        "tag": "a",
+        "text": "Talk to us",
+        "href": "https://cal.com/nish-sri/book-a-demo"
+      },
+      {
+        "tag": "a",
+        "text": "Home",
+        "href": "../#hero"
+      },
+      {
+        "tag": "a",
+        "text": "Why HydraDB",
+        "href": "../#why-hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "Features",
+        "href": "../#features"
+      },
+      {
+        "tag": "a",
+        "text": "Architecture",
+        "href": "../#Architecture"
+      },
+      {
+        "tag": "a",
+        "text": "FAQs",
+        "href": "../#faq"
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "href": "../contact"
+      },
+      {
+        "tag": "a",
+        "text": "Use Cases",
+        "href": "https://hydradb.com/use-cases"
+      },
+      {
+        "tag": "a",
+        "text": "Customer Support",
+        "href": "./ai-agent-memory-for-customer-support"
+      },
+      {
+        "tag": "a",
+        "text": "Research Intelligence",
+        "href": "./ai-agent-memory-for-research-intelligence"
+      },
+      {
+        "tag": "a",
+        "text": "AI Coding Assistants",
+        "href": "./ai-coding-assistant-memory-layer"
+      },
+      {
+        "tag": "a",
+        "text": "Benchmark",
+        "href": "https://benchmarks.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Main Paper",
+        "href": "https://research.hydradb.com/hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "BEAM 1M",
+        "href": "https://research.hydradb.com/beam-1m"
+      },
+      {
+        "tag": "a",
+        "text": "FinanceBench",
+        "href": "https://research.hydradb.com/financebench"
+      },
+      {
+        "tag": "a",
+        "text": "Compare",
+        "href": "../alternatives"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs FalkorDB",
+        "href": "../alternatives/falkordb-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Neo4j",
+        "href": "../alternatives/neo4j-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Mem0",
+        "href": "../alternatives/mem0-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Zep",
+        "href": "../alternatives/zep-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Memgraph",
+        "href": "../alternatives/memgraph-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "Trust Centre",
+        "href": "https://trust.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Privacy Policy",
+        "href": "../privacy-policy"
+      },
+      {
+        "tag": "a",
+        "text": "Terms of Service",
+        "href": "../terms-of-service"
+      },
+      {
+        "tag": "a",
+        "text": "X / Twitter",
+        "href": "https://x.com/Hydra_DB"
+      },
+      {
+        "tag": "a",
+        "text": "LinkedIn",
+        "href": "https://www.linkedin.com/company/hydradb/posts/?feedView=all"
+      },
+      {
+        "tag": "a",
+        "text": "Discord",
+        "href": "https://discord.gg/9mdpt4Xaf"
+      }
+    ],
+    "forms": [],
+    "media_element_counts": {
+      "images": 36,
+      "videos": 5,
+      "iframes": 0
+    },
+    "interaction_evidence": "static captured SSR inspection; behaviour not yet verified in browser",
+    "interaction_notes": [
+      "detail template includes use-case narrative sections, supporting graphics and conversion links; copied header/footer preserve shared navigation."
+    ],
+    "has_visible_ssr_heading": true,
+    "actual_browser_viewport": null
+  },
+  {
+    "template": "alternatives",
+    "url": "https://hydradb.com/alternatives",
+    "capture_path": "src/source/routes/alternatives/index.html",
+    "screenshot_target": "evidence/hydra/source-alternatives-desktop.jpg",
+    "screenshot_status": "pending root browser capture; subagent has no enabled browser surface",
+    "dom_source": "preserved HTTP SSR; no rendered browser DOM available in this subagent",
+    "headings": [],
+    "controls": [],
+    "forms": [],
+    "media_element_counts": {
+      "images": 0,
+      "videos": 0,
+      "iframes": 0
+    },
+    "interaction_evidence": "static captured SSR inspection; behaviour not yet verified in browser",
+    "interaction_notes": [
+      "captured HTML has no visible body text or headings; client runtime rendering must be checked in the root browser."
+    ],
+    "has_visible_ssr_heading": false,
+    "actual_browser_viewport": null
+  },
+  {
+    "template": "alternative-detail",
+    "url": "https://hydradb.com/alternatives/mem0-alternative",
+    "capture_path": "src/source/routes/alternatives/mem0-alternative/index.html",
+    "screenshot_target": "evidence/hydra/source-alternative-detail-desktop.jpg",
+    "screenshot_status": "pending root browser capture; subagent has no enabled browser surface",
+    "dom_source": "preserved HTTP SSR; no rendered browser DOM available in this subagent",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "A Mem0 alternative for Agent Memory"
+      },
+      {
+        "tag": "h2",
+        "text": "Why teams choose HydraDB over Mem0"
+      },
+      {
+        "tag": "h3",
+        "text": "Mem0 is a strong choice for compact, continuously updated memory. Prefer HydraDB when agents must keep history, reason across relationships, and return context with a clear trail."
+      },
+      {
+        "tag": "h3",
+        "text": "Frequently Asked questions"
+      },
+      {
+        "tag": "h3",
+        "text": "What is the biggest difference between HydraDB and Mem0?"
+      },
+      {
+        "tag": "h3",
+        "text": "Why would I use HydraDB instead of Mem0 for agent memory?"
+      },
+      {
+        "tag": "h3",
+        "text": "How do HydraDB and Mem0 represent relationships differently?"
+      },
+      {
+        "tag": "h3",
+        "text": "How do HydraDB and Mem0 handle changing memories?"
+      },
+      {
+        "tag": "h3",
+        "text": "How is retrieval different in HydraDB and Mem0?"
+      },
+      {
+        "tag": "h2",
+        "text": "Build agent context that stays correct over time"
+      },
+      {
+        "tag": "h2",
+        "text": "Build AI with compounding intelligence"
+      },
+      {
+        "tag": "h3",
+        "text": "Use Cases"
+      },
+      {
+        "tag": "h3",
+        "text": "Benchmark"
+      },
+      {
+        "tag": "h3",
+        "text": "Compare"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "a",
+        "text": "Architecture",
+        "href": "https://hydradb.com/#Architecture"
+      },
+      {
+        "tag": "a",
+        "text": "Benchmarks",
+        "href": "https://research.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Pricing",
+        "href": "../#pricing"
+      },
+      {
+        "tag": "a",
+        "text": "Use Cases",
+        "href": "../use-cases"
+      },
+      {
+        "tag": "a",
+        "text": "Documentation",
+        "href": "https://docs.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Log In",
+        "href": "https://app.hydradb.com/sign-in"
+      },
+      {
+        "tag": "a",
+        "text": "Sign Up",
+        "href": "https://app.hydradb.com/sign-up"
+      },
+      {
+        "tag": "a",
+        "text": "Read the docs"
+      },
+      {
+        "tag": "a",
+        "text": "Talk to us",
+        "href": "https://cal.com/nish-sri/book-a-demo"
+      },
+      {
+        "tag": "a",
+        "text": "Home",
+        "href": "../#hero"
+      },
+      {
+        "tag": "a",
+        "text": "Why HydraDB",
+        "href": "../#why-hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "Features",
+        "href": "../#features"
+      },
+      {
+        "tag": "a",
+        "text": "Architecture",
+        "href": "../#Architecture"
+      },
+      {
+        "tag": "a",
+        "text": "FAQs",
+        "href": "../#faq"
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "href": "../contact"
+      },
+      {
+        "tag": "a",
+        "text": "Use Cases",
+        "href": "https://hydradb.com/use-cases"
+      },
+      {
+        "tag": "a",
+        "text": "Customer Support",
+        "href": "../use-cases/ai-agent-memory-for-customer-support"
+      },
+      {
+        "tag": "a",
+        "text": "Research Intelligence",
+        "href": "../use-cases/ai-agent-memory-for-research-intelligence"
+      },
+      {
+        "tag": "a",
+        "text": "AI Coding Assistants",
+        "href": "../use-cases/ai-coding-assistant-memory-layer"
+      },
+      {
+        "tag": "a",
+        "text": "Benchmark",
+        "href": "https://benchmarks.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Main Paper",
+        "href": "https://research.hydradb.com/hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "BEAM 1M",
+        "href": "https://research.hydradb.com/beam-1m"
+      },
+      {
+        "tag": "a",
+        "text": "FinanceBench",
+        "href": "https://research.hydradb.com/financebench"
+      },
+      {
+        "tag": "a",
+        "text": "Compare",
+        "href": "../alternatives"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs FalkorDB",
+        "href": "./falkordb-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Neo4j",
+        "href": "./neo4j-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Mem0",
+        "href": "./mem0-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Zep",
+        "href": "./zep-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Memgraph",
+        "href": "./memgraph-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "Trust Centre",
+        "href": "https://trust.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Privacy Policy",
+        "href": "../privacy-policy"
+      },
+      {
+        "tag": "a",
+        "text": "Terms of Service",
+        "href": "../terms-of-service"
+      },
+      {
+        "tag": "a",
+        "text": "X / Twitter",
+        "href": "https://x.com/Hydra_DB"
+      },
+      {
+        "tag": "a",
+        "text": "LinkedIn",
+        "href": "https://www.linkedin.com/company/hydradb/posts/?feedView=all"
+      },
+      {
+        "tag": "a",
+        "text": "Discord",
+        "href": "https://discord.gg/9mdpt4Xaf"
+      }
+    ],
+    "forms": [],
+    "media_element_counts": {
+      "images": 4,
+      "videos": 1,
+      "iframes": 0
+    },
+    "interaction_evidence": "static captured SSR inspection; behaviour not yet verified in browser",
+    "interaction_notes": [
+      "comparison detail has hero, reasons-to-switch sections and comparison content; shared navigation and conversion links remain active through runtime."
+    ],
+    "has_visible_ssr_heading": true,
+    "actual_browser_viewport": null
+  },
+  {
+    "template": "privacy-policy",
+    "url": "https://hydradb.com/privacy-policy",
+    "capture_path": "src/source/routes/privacy-policy/index.html",
+    "screenshot_target": "evidence/hydra/source-privacy-policy-desktop.jpg",
+    "screenshot_status": "pending root browser capture; subagent has no enabled browser surface",
+    "dom_source": "preserved HTTP SSR; no rendered browser DOM available in this subagent",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Privacy Policy"
+      },
+      {
+        "tag": "h2",
+        "text": "Build AI with compounding intelligence"
+      },
+      {
+        "tag": "h3",
+        "text": "Use Cases"
+      },
+      {
+        "tag": "h3",
+        "text": "Benchmark"
+      },
+      {
+        "tag": "h3",
+        "text": "Compare"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "a",
+        "text": "Architecture",
+        "href": "https://hydradb.com/#Architecture"
+      },
+      {
+        "tag": "a",
+        "text": "Benchmarks",
+        "href": "https://research.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Pricing",
+        "href": "./#pricing"
+      },
+      {
+        "tag": "a",
+        "text": "Use Cases",
+        "href": "./use-cases"
+      },
+      {
+        "tag": "a",
+        "text": "Documentation",
+        "href": "https://docs.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Log In",
+        "href": "https://app.hydradb.com/sign-in"
+      },
+      {
+        "tag": "a",
+        "text": "Sign Up",
+        "href": "https://app.hydradb.com/sign-up"
+      },
+      {
+        "tag": "a",
+        "text": "founders@hydradb.com",
+        "href": "mailto:founders@hydradb.com"
+      },
+      {
+        "tag": "a",
+        "text": "Home",
+        "href": "./#hero"
+      },
+      {
+        "tag": "a",
+        "text": "Why HydraDB",
+        "href": "./#why-hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "Features",
+        "href": "./#features"
+      },
+      {
+        "tag": "a",
+        "text": "Architecture",
+        "href": "./#Architecture"
+      },
+      {
+        "tag": "a",
+        "text": "FAQs",
+        "href": "./#faq"
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "href": "./contact"
+      },
+      {
+        "tag": "a",
+        "text": "Use Cases",
+        "href": "https://hydradb.com/use-cases"
+      },
+      {
+        "tag": "a",
+        "text": "Customer Support",
+        "href": "./use-cases/ai-agent-memory-for-customer-support"
+      },
+      {
+        "tag": "a",
+        "text": "Research Intelligence",
+        "href": "./use-cases/ai-agent-memory-for-research-intelligence"
+      },
+      {
+        "tag": "a",
+        "text": "AI Coding Assistants",
+        "href": "./use-cases/ai-coding-assistant-memory-layer"
+      },
+      {
+        "tag": "a",
+        "text": "Benchmark",
+        "href": "https://benchmarks.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Main Paper",
+        "href": "https://research.hydradb.com/hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "BEAM 1M",
+        "href": "https://research.hydradb.com/beam-1m"
+      },
+      {
+        "tag": "a",
+        "text": "FinanceBench",
+        "href": "https://research.hydradb.com/financebench"
+      },
+      {
+        "tag": "a",
+        "text": "Compare",
+        "href": "./alternatives"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs FalkorDB",
+        "href": "./alternatives/falkordb-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Neo4j",
+        "href": "./alternatives/neo4j-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Mem0",
+        "href": "./alternatives/mem0-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Zep",
+        "href": "./alternatives/zep-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Memgraph",
+        "href": "./alternatives/memgraph-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "Trust Centre",
+        "href": "https://trust.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Privacy Policy",
+        "href": "./privacy-policy"
+      },
+      {
+        "tag": "a",
+        "text": "Terms of Service",
+        "href": "./terms-of-service"
+      },
+      {
+        "tag": "a",
+        "text": "X / Twitter",
+        "href": "https://x.com/Hydra_DB"
+      },
+      {
+        "tag": "a",
+        "text": "LinkedIn",
+        "href": "https://www.linkedin.com/company/hydradb/posts/?feedView=all"
+      },
+      {
+        "tag": "a",
+        "text": "Discord",
+        "href": "https://discord.gg/9mdpt4Xaf"
+      }
+    ],
+    "forms": [],
+    "media_element_counts": {
+      "images": 18,
+      "videos": 5,
+      "iframes": 0
+    },
+    "interaction_evidence": "static captured SSR inspection; behaviour not yet verified in browser",
+    "interaction_notes": [
+      "legal text template with shared header/footer links; no source form controls."
+    ],
+    "has_visible_ssr_heading": true,
+    "actual_browser_viewport": null
+  },
+  {
+    "template": "terms-of-service",
+    "url": "https://hydradb.com/terms-of-service",
+    "capture_path": "src/source/routes/terms-of-service/index.html",
+    "screenshot_target": "evidence/hydra/source-terms-of-service-desktop.jpg",
+    "screenshot_status": "pending root browser capture; subagent has no enabled browser surface",
+    "dom_source": "preserved HTTP SSR; no rendered browser DOM available in this subagent",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Terms of Service"
+      },
+      {
+        "tag": "h2",
+        "text": "Build AI with compounding intelligence"
+      },
+      {
+        "tag": "h3",
+        "text": "Use Cases"
+      },
+      {
+        "tag": "h3",
+        "text": "Benchmark"
+      },
+      {
+        "tag": "h3",
+        "text": "Compare"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "a",
+        "text": "Architecture",
+        "href": "https://hydradb.com/#Architecture"
+      },
+      {
+        "tag": "a",
+        "text": "Benchmarks",
+        "href": "https://research.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Pricing",
+        "href": "./#pricing"
+      },
+      {
+        "tag": "a",
+        "text": "Use Cases",
+        "href": "./use-cases"
+      },
+      {
+        "tag": "a",
+        "text": "Documentation",
+        "href": "https://docs.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Log In",
+        "href": "https://app.hydradb.com/sign-in"
+      },
+      {
+        "tag": "a",
+        "text": "Sign Up",
+        "href": "https://app.hydradb.com/sign-up"
+      },
+      {
+        "tag": "a",
+        "text": "founders@hydradb.com",
+        "href": "mailto:founders@hydradb.com"
+      },
+      {
+        "tag": "a",
+        "text": "Home",
+        "href": "./#hero"
+      },
+      {
+        "tag": "a",
+        "text": "Why HydraDB",
+        "href": "./#why-hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "Features",
+        "href": "./#features"
+      },
+      {
+        "tag": "a",
+        "text": "Architecture",
+        "href": "./#Architecture"
+      },
+      {
+        "tag": "a",
+        "text": "FAQs",
+        "href": "./#faq"
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "href": "./contact"
+      },
+      {
+        "tag": "a",
+        "text": "Use Cases",
+        "href": "https://hydradb.com/use-cases"
+      },
+      {
+        "tag": "a",
+        "text": "Customer Support",
+        "href": "./use-cases/ai-agent-memory-for-customer-support"
+      },
+      {
+        "tag": "a",
+        "text": "Research Intelligence",
+        "href": "./use-cases/ai-agent-memory-for-research-intelligence"
+      },
+      {
+        "tag": "a",
+        "text": "AI Coding Assistants",
+        "href": "./use-cases/ai-coding-assistant-memory-layer"
+      },
+      {
+        "tag": "a",
+        "text": "Benchmark",
+        "href": "https://benchmarks.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Main Paper",
+        "href": "https://research.hydradb.com/hydradb"
+      },
+      {
+        "tag": "a",
+        "text": "BEAM 1M",
+        "href": "https://research.hydradb.com/beam-1m"
+      },
+      {
+        "tag": "a",
+        "text": "FinanceBench",
+        "href": "https://research.hydradb.com/financebench"
+      },
+      {
+        "tag": "a",
+        "text": "Compare",
+        "href": "./alternatives"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs FalkorDB",
+        "href": "./alternatives/falkordb-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Neo4j",
+        "href": "./alternatives/neo4j-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Mem0",
+        "href": "./alternatives/mem0-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Zep",
+        "href": "./alternatives/zep-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "HydraDB vs Memgraph",
+        "href": "./alternatives/memgraph-alternative"
+      },
+      {
+        "tag": "a",
+        "text": "Trust Centre",
+        "href": "https://trust.hydradb.com/"
+      },
+      {
+        "tag": "a",
+        "text": "Privacy Policy",
+        "href": "./privacy-policy"
+      },
+      {
+        "tag": "a",
+        "text": "Terms of Service",
+        "href": "./terms-of-service"
+      },
+      {
+        "tag": "a",
+        "text": "X / Twitter",
+        "href": "https://x.com/Hydra_DB"
+      },
+      {
+        "tag": "a",
+        "text": "LinkedIn",
+        "href": "https://www.linkedin.com/company/hydradb/posts/?feedView=all"
+      },
+      {
+        "tag": "a",
+        "text": "Discord",
+        "href": "https://discord.gg/9mdpt4Xaf"
+      }
+    ],
+    "forms": [],
+    "media_element_counts": {
+      "images": 18,
+      "videos": 5,
+      "iframes": 0
+    },
+    "interaction_evidence": "static captured SSR inspection; behaviour not yet verified in browser",
+    "interaction_notes": [
+      "legal text template with shared header/footer links; viewing only, no agreement accepted."
+    ],
+    "has_visible_ssr_heading": true,
+    "actual_browser_viewport": null
+  }
+]

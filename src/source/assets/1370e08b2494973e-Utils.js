@@ -1,0 +1,9 @@
+import{jsx as _jsx}from"react/jsx-runtime";import{cloneElement}from"react";import UtilsComponentMessage from"https://framer.com/m/Utils-Component-Message-ZVoG.js@cRfVFRl0izzBulKFjOAe";export const ComponentMessage=({title,subtitle,style})=>{return /*#__PURE__*/_jsx(UtilsComponentMessage,{yeAnKbEUZ:title,WuF2iG84P:subtitle,style:{width:"100%",height:"100%",...style}});};/* 
+    This function is also used many times to make sure components work even if we set a color style like "Accent" on their color properties. We can make this into a utility function.
+*/export const extractRGBColorFromString=str=>{const rgbRegex=/(rgba|rgb)\(.*?\)/g;const match=str.match(rgbRegex);return match?match[0]:str;};/*
+    This function makes a connected layer use the sizing of the component it is inside,
+    preventing it from being larger or smaller than the component's size.
+    Use this on layers connected with ControlType.ComponentInstance.
+*/export function styleLayer(layer,style={}){layer=Array.isArray(layer)?layer[0]:layer;let newLayer=layer;const{width,height,...otherStyle}=style;if(layer&&layer.props&&style&&(width||height)){if(typeof layer.type==="function"&&typeof layer.props.children==="object"){newLayer=/*#__PURE__*/cloneElement(layer,{children:{...layer.props.children,props:{...layer.props.children.props,style:{...layer.props.children.props.style,...width&&{width},...height&&{height},...otherStyle}}}});}else{newLayer=/*#__PURE__*/cloneElement(layer,{style:{...layer.props.style,...width&&{width},...height&&{height},...otherStyle}});}}return newLayer;}
+export const __FramerMetadata__ = {"exports":{"ComponentMessage":{"type":"variable","annotations":{"framerContractVersion":"1"}},"extractRGBColorFromString":{"type":"variable","annotations":{"framerContractVersion":"1"}},"styleLayer":{"type":"function","annotations":{"framerContractVersion":"1"}},"__FramerMetadata__":{"type":"variable"}}}
+//# sourceMappingURL=./Utils.map

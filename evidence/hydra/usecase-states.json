@@ -1,0 +1,37 @@
+[
+  {
+    "label": "02 ONTOLOGIES",
+    "heading": [
+      "Give structure to domain knowledge with an operational digital twin of your business."
+    ],
+    "text": "// Use Cases //\n\nWhat Engineers Are \nBuilding With HydraDB\n\n01 AGENT MEMORY\n\n02 ONTOLOGIES\n\nOntologies\n\n03 COMPANY BRAIN\n\n04 AGENTIC ACTIONS\n\n05 CONTEXT ENGINEERING\n\nGive Structure To Domain Knowledge With An Operational Digital Twin Of Your Business.\n\nModel entities, relationships, permissions, and rules in one operational graph.\n\nBridge raw data with the real-world concepts your teams use every day.\n\nKeep business meaning durable as tools, workflows, and teams change."
+  },
+  {
+    "label": "03 COMPANY BRAIN",
+    "heading": [
+      "Connect everything your organization knows across tools, documents, chats, and apps."
+    ],
+    "text": "// Use Cases //\n\nWhat Engineers Are \nBuilding With HydraDB\n\n01 AGENT MEMORY\n\n02 ONTOLOGIES\n\n03 COMPANY BRAIN\n\nCompany Brain\n\n04 AGENTIC ACTIONS\n\n05 CONTEXT ENGINEERING\n\nConnect Everything Your Organization Knows Across Tools, Documents, Chats, And Apps.\n\nUnify knowledge from every system without flattening it into static summaries.\n\nLet AI retrieve the right context with source, time, and relationship awareness.\n\nGive teams a shared memory layer instead of scattered institutional knowledge."
+  },
+  {
+    "label": "04 AGENTIC ACTIONS",
+    "heading": [
+      "Teach agents how to take actions across tools with context-aware operating skills."
+    ],
+    "text": "// Use Cases //\n\nWhat Engineers Are \nBuilding With HydraDB\n\n01 AGENT MEMORY\n\n02 ONTOLOGIES\n\n03 COMPANY BRAIN\n\n04 AGENTIC ACTIONS\n\nAgentic Actions\n\n05 CONTEXT ENGINEERING\n\nTeach Agents How To Take Actions Across Tools With Context-Aware Operating Skills.\n\nStore tool capabilities, action history, and decision traces together.\n\nLet agents choose actions based on remembered outcomes, not isolated prompts.\n\nCoordinate multi-step workflows while preserving state and accountability."
+  },
+  {
+    "label": "05 CONTEXT ENGINEERING",
+    "heading": [
+      "Retrieve structured, ranked context for every query from across your data landscape."
+    ],
+    "text": "// Use Cases //\n\nWhat Engineers Are \nBuilding With HydraDB\n\n01 AGENT MEMORY\n\n02 ONTOLOGIES\n\n03 COMPANY BRAIN\n\n04 AGENTIC ACTIONS\n\n05 CONTEXT ENGINEERING\n\nContext Engineering\n\nRetrieve Structured, Ranked Context For Every Query From Across Your Data Landscape.\n\nRank context by relationship, freshness, confidence, and downstream task needs.\n\nBuild context windows that are precise, explainable, and grounded in graph memory.\n\nReduce hallucinations by giving models the right structured context before generation."
+  },
+  {
+    "label": "01 AGENT MEMORY",
+    "heading": [
+      "Own your memory layer. No third-party abstraction. No data leaving your stack."
+    ],
+    "text": "// Use Cases //\n\nWhat Engineers Are \nBuilding With HydraDB\n\n01 AGENT MEMORY\n\nBuild in-house memory systems. With your ideas, for your AI.\n\n02 ONTOLOGIES\n\n03 COMPANY BRAIN\n\n04 AGENTIC ACTIONS\n\n05 CONTEXT ENGINEERING\n\nOwn Your Memory Layer. No Third-Party Abstraction. No Data Leaving Your Stack.\n\nGraphs work better for storing user preferences, past interactions, and agent traces.\n\nGit-style temporal versioning recalls what was true at any point in time.\n\nEntity resolution and preference checks across sessions prevent duplicate memory records."
+  }
+]

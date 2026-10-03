@@ -1,0 +1,46 @@
+{
+  "primary_capture": "src/source/404.html",
+  "canonical_route_inventory_unchanged": true,
+  "responses": [
+    {
+      "source_url": "https://hydradb.com/demo",
+      "final_url": "https://hydradb.com/demo",
+      "status": 404,
+      "content_type": "text/html",
+      "capture_path": "src/source/404.html",
+      "bytes": 297476,
+      "sha256": "84cf5183189b44034b7c23557f3341f144adbd2c7eb92f5bc5a5f338e8499a0e",
+      "captured_at": "2026-10-03T11:38:57.445977+00:00"
+    },
+    {
+      "source_url": "https://hydradb.com/hydragraph",
+      "final_url": "https://hydradb.com/hydragraph",
+      "status": 404,
+      "content_type": "text/html",
+      "capture_path": "src/source/not-found/hydragraph.html",
+      "bytes": 297476,
+      "sha256": "84cf5183189b44034b7c23557f3341f144adbd2c7eb92f5bc5a5f338e8499a0e",
+      "captured_at": "2026-10-03T11:38:57.691474+00:00"
+    },
+    {
+      "source_url": "https://hydradb.com/use-cases/:BPfi8yO2p",
+      "final_url": "https://hydradb.com/use-cases/:BPfi8yO2p",
+      "status": 404,
+      "content_type": "text/html",
+      "capture_path": "src/source/not-found/use-cases--_BPfi8yO2p.html",
+      "bytes": 297476,
+      "sha256": "84cf5183189b44034b7c23557f3341f144adbd2c7eb92f5bc5a5f338e8499a0e",
+      "captured_at": "2026-10-03T11:38:57.932976+00:00"
+    },
+    {
+      "source_url": "https://hydradb.com/use-cases/ai-agent-memory-for-customer-success",
+      "final_url": "https://hydradb.com/use-cases/ai-agent-memory-for-customer-success",
+      "status": 404,
+      "content_type": "text/html",
+      "capture_path": "src/source/not-found/use-cases--ai-agent-memory-for-customer-success.html",
+      "bytes": 297476,
+      "sha256": "84cf5183189b44034b7c23557f3341f144adbd2c7eb92f5bc5a5f338e8499a0e",
+      "captured_at": "2026-10-03T11:38:58.181100+00:00"
+    }
+  ]
+}

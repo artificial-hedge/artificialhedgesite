@@ -1,0 +1,18 @@
+{
+  "brand": "artificial hedge",
+  "models": [
+    "fx-1",
+    "fx-1 lite"
+  ],
+  "public_pages": 14,
+  "legacy_redirects": 263,
+  "original_capture": "src/source",
+  "evaluations": 23,
+  "evaluation_model": "fx-1",
+  "score_source": "user-provided",
+  "GDPval_AA_v2": "1732 Elo",
+  "pricing_type": "model usage subscriptions",
+  "dipcatcher_status": "under development / releasing soon / waitlist",
+  "dipcatcher_free_bundle": "when available until research preview ends",
+  "research_preview_ends": "2026-12-12"
+}

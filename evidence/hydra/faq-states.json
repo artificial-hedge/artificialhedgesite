@@ -1,0 +1,50 @@
+[
+  {
+    "question": "What is HydraDB? How is it different from other graph databases?",
+    "classes": "framer-701xp5",
+    "height": 66.3984375,
+    "text": "What Is HydraDB? How Is It Different From Other Graph Databases?"
+  },
+  {
+    "question": "Why use a graph database like HydraDB for AI agents?",
+    "classes": "framer-701xp5",
+    "height": 66.3984375,
+    "text": "Why Use A Graph Database Like HydraDB For AI Agents?"
+  },
+  {
+    "question": "When should I use HydraDB instead of a vector database?",
+    "classes": "framer-701xp5",
+    "height": 66.3984375,
+    "text": "When Should I Use HydraDB Instead Of A Vector Database?"
+  },
+  {
+    "question": "Does HydraDB work with GraphRAG?",
+    "classes": "framer-701xp5",
+    "height": 66.3984375,
+    "text": "Does HydraDB Work With GraphRAG?"
+  },
+  {
+    "question": "How does HydraDB improve retrieval for AI agents?",
+    "classes": "framer-701xp5",
+    "height": 66.3984375,
+    "text": "How Does HydraDB Improve Retrieval For AI Agents?"
+  },
+  {
+    "question": "Can I use HydraDB with my existing AI stack?",
+    "classes": "framer-701xp5",
+    "height": 66.3984375,
+    "text": "Can I Use HydraDB With My Existing AI Stack?"
+  },
+  {
+    "question": "How does HydraDB use context graphs for AI agents?",
+    "classes": "framer-701xp5",
+    "height": 66.3984375,
+    "text": "How Does HydraDB Use Context Graphs For AI Agents?"
+  },
+  {
+    "question": "What AI use cases is HydraDB best suited for?",
+    "classes": "framer-701xp5",
+    "height": 66.3984375,
+    "text": "What AI Use Cases Is HydraDB Best Suited For?"
+  }
+]

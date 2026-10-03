@@ -1,0 +1,158 @@
+[
+  {
+    "headings": [
+      "What Engineers Are Building With HydraDB"
+    ],
+    "height": 10773,
+    "y": 483.5
+  },
+  {
+    "headings": [
+      "What Engineers Are Building With HydraDB",
+      "Own your memory layer. No third-party abstraction. No data leaving your stack."
+    ],
+    "height": 10773,
+    "y": 1057
+  },
+  {
+    "headings": [
+      "Own your memory layer. No third-party abstraction. No data leaving your stack.",
+      "Similarity isn't Always relevance. ",
+      "Without graphs",
+      "With HydraDB"
+    ],
+    "height": 10773,
+    "y": 1586.5
+  },
+  {
+    "headings": [
+      "Similarity isn't Always relevance. ",
+      "Without graphs",
+      "With HydraDB",
+      "Everything you need to Compound Intelligence"
+    ],
+    "height": 10773,
+    "y": 2254
+  },
+  {
+    "headings": [
+      "Everything you need to Compound Intelligence"
+    ],
+    "height": 10773,
+    "y": 2795.5
+  },
+  {
+    "headings": [
+      "Recall degradation As a bottleneck",
+      "Accuracy vs Context length"
+    ],
+    "height": 10773,
+    "y": 3352
+  },
+  {
+    "headings": [
+      "HydraDB",
+      "VectorDB",
+      "Full Context GPT-4o",
+      "Graph native context infrastructure for agents",
+      "Purpose-Built To Deliver Precise Context & Observability Into Why Agents Act The Way They Do."
+    ],
+    "height": 10773,
+    "y": 4220.5
+  },
+  {
+    "headings": [
+      "Graph native context infrastructure for agents",
+      "Purpose-Built To Deliver Precise Context & Observability Into Why Agents Act The Way They Do.",
+      "Total documents ingested",
+      "Retrievals per month",
+      "Trusted by"
+    ],
+    "height": 10773,
+    "y": 4593.5
+  },
+  {
+    "headings": [
+      "Total documents ingested",
+      "Retrievals per month",
+      "Trusted by",
+      "Architecture Overview"
+    ],
+    "height": 10773,
+    "y": 5225
+  },
+  {
+    "headings": [
+      "Architecture Overview"
+    ],
+    "height": 10773,
+    "y": 5704.5
+  },
+  {
+    "headings": [
+      "State of the art on various benchmarks",
+      "Gemini 3.0 primary"
+    ],
+    "height": 10773,
+    "y": 6244.5
+  },
+  {
+    "headings": [
+      "State of the art on various benchmarks",
+      "Gemini 3.0 primary",
+      "GPT 5 Mini (Compact)",
+      "GPT 5.2 (Latest)",
+      "Category",
+      "HydraDB",
+      "mem0-oSS",
+      "ZEP"
+    ],
+    "height": 10773,
+    "y": 6931.5
+  },
+  {
+    "headings": [
+      "Category",
+      "HydraDB",
+      "mem0-oSS",
+      "ZEP",
+      "Full Context",
+      "Pricing"
+    ],
+    "height": 10773,
+    "y": 7419
+  },
+  {
+    "headings": [],
+    "height": 10773,
+    "y": 8273.5
+  },
+  {
+    "headings": [
+      "Frequently Asked  questions",
+      "What is HydraDB? How is it different from other graph databases?",
+      "Why use a graph database like HydraDB for AI agents?",
+      "When should I use HydraDB instead of a vector database?",
+      "Does HydraDB work with GraphRAG?",
+      "How does HydraDB improve retrieval for AI agents?",
+      "Can I use HydraDB with my existing AI stack?",
+      "How does HydraDB use context graphs for AI agents?"
+    ],
+    "height": 10773,
+    "y": 9085
+  },
+  {
+    "headings": [
+      "Frequently Asked  questions",
+      "What is HydraDB? How is it different from other graph databases?",
+      "Why use a graph database like HydraDB for AI agents?",
+      "When should I use HydraDB instead of a vector database?",
+      "Does HydraDB work with GraphRAG?",
+      "How does HydraDB improve retrieval for AI agents?",
+      "Can I use HydraDB with my existing AI stack?",
+      "How does HydraDB use context graphs for AI agents?"
+    ],
+    "height": 10773,
+    "y": 9274
+  }
+]
